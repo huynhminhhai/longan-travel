@@ -742,6 +742,7 @@
     height: 220px;
     overflow: hidden;
     margin-inline: auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .guide-list .card-img img {
@@ -969,4 +970,28 @@
 
 .map .nav-tabs .nav-link.active {
     background-color: var(--primary-color);
+}
+
+/* .map .leaflet-control-search {
+    margin: 10px;
+    width: 250px;
+} */
+
+.map .leaflet-control-search .search-input {
+    outline: none;
+    border: none;
+}
+
+
+.map .leaflet-control-search .search-cancel {
+    right: 38px;
+    margin: 5px 0;
+}
+
+.map .leaflet-control-search .search-tip {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px;
 }

@@ -13,7 +13,6 @@ $(document).ready(function () {
             popupAnchor: [0, -32]
         };
 
-        // Define icons outside the loadMarkers function to avoid re-creating them on each call
         const icons = {
             restaurant: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/948/948036.png',
@@ -27,13 +26,18 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/7060/7060110.png',
                 ...defaultIconOptions,
             }),
+            bus: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/1042/1042263.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
             })
         };
 
-        // Get marker bounds
+        let allMarkers = [];
+
         function getMarkersBounds(layerGroup) {
             const bounds = L.latLngBounds();
             layerGroup.eachLayer(layer => {
@@ -46,8 +50,9 @@ $(document).ready(function () {
 
         function loadMarkers(type) {
             markers.clearLayers();
-            const icon = icons[type] || icons.default; // Use the appropriate icon
+            allMarkers = [];
 
+            const icon = icons[type] || icons.default;
             const activeTabPane = document.querySelector(`#${type}-map`);
             const items = activeTabPane.querySelectorAll('.map-item');
 
@@ -58,7 +63,11 @@ $(document).ready(function () {
                 const name = item.querySelector('.name').textContent;
                 const address = item.querySelector('.address').textContent;
 
-                const marker = L.marker([lat, lng], { icon }).addTo(markers).bindPopup(`
+                const marker = L.marker([lat, lng], {
+                    icon,
+                    title: name,
+                    alt: address
+                }).addTo(markers).bindPopup(`
                     <div class="card">
                         <div class="card-img">
                             <img src="${img}" alt="${name}" />
@@ -72,7 +81,9 @@ $(document).ready(function () {
                         </div>
                     </div>
                 `);
+
                 item._marker = marker;
+                allMarkers.push(marker);
             });
 
             const bounds = getMarkersBounds(markers);
@@ -82,9 +93,39 @@ $(document).ready(function () {
                     maxZoom: 14
                 });
             }
+
+            if (map.searchControl) {
+                map.removeControl(map.searchControl);
+            }
+            addSearchControl();
         }
 
-        // Event listener for tab changes
+        function addSearchControl() {
+            map.searchControl = new L.Control.Search({
+                layer: markers,
+                initial: false,
+                propertyName: 'title',
+                marker: false,
+                caseSensitive: false,
+                filter: function (searchText, marker) {
+                    return marker.options.title.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+                },
+                moveToLocation: function (latlng, name, map) {
+                    map.setView(latlng, 15);
+                    markers.eachLayer(function(layer) {
+                        if (layer.options.title === name) {
+                            layer.openPopup();
+                        }
+                    });
+                },
+                textPlaceholder: 'Tìm kiếm địa điểm...',
+                textErr: 'Không tìm thấy địa điểm',
+                textCancel: 'Hủy',
+            });
+
+            map.addControl(map.searchControl);
+        }
+
         document.querySelectorAll('.map-nav-item').forEach(navItem => {
             navItem.querySelector('button').addEventListener('shown.bs.tab', function () {
                 const type = navItem.getAttribute('data-type');
@@ -92,7 +133,6 @@ $(document).ready(function () {
             });
         });
 
-        // Click event for map items
         document.querySelectorAll('.map-item').forEach(item => {
             item.addEventListener('click', function () {
                 const lat = parseFloat(this.getAttribute('data-lat'));
@@ -105,7 +145,6 @@ $(document).ready(function () {
             });
         });
 
-        // Load default markers on initial load
         loadMarkers('restaurant');
     }
 });
