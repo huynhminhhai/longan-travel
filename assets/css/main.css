@@ -85,6 +85,7 @@
     --grey-light-color: #F5F5F5;
     --primary-color: #355933;
     --secondary-color: #80876d;
+    --third-color: #c5a47e;
     --text-color: #3a3a3a;
     --bg-color: #fefef4;
     --bg-color-2: #fefef4;
@@ -178,7 +179,7 @@ section.section-py {
     content: "";
     display: block;
     width: 60px;
-    height: 2px;
+    height: 1px;
     background-color: var(--primary-color);
     position: absolute;
     bottom: 0;
@@ -553,7 +554,7 @@ section.section-py {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    padding-top: 12px;
+    padding-top: 18px;
     position: relative;
     overflow-x: hidden;
     padding-bottom: 48px;
