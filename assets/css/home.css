@@ -1,0 +1,972 @@
+/**
+* DISCOVER
+**/
+
+.discover {
+    padding-block: 24px;
+}
+
+.discover .discover-container {
+    display: grid;
+    grid-template-columns: calc(45% - 24px) calc(55% - 24px);
+    gap: 48px;
+    align-items: center;
+}
+
+.discover .discover-container .title {
+    font-size: 46px;
+    line-height: 66px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin-bottom: 18px;
+    word-spacing: 2px;
+}
+
+.discover .discover-container .title span {
+    color: var(--primary-color);
+}
+
+.discover .discover-container .desc {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black-color);
+}
+
+.discover .discover-container .images {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.discover .images .shape-map {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    transform: translate(-50%, 0%);
+    width: 150%;
+    height: auto;
+}
+
+.discover .group-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr 2fr;
+    align-items: center;
+    grid-gap: 24px;
+    height: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.discover .group-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: all 0.3s linear;
+}
+
+.discover .group-images img:hover {
+    transform: scale(1.04);
+}
+
+.discover .group-images img:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1/3;
+    height: 400px;
+    object-position: center;
+}
+
+.discover .group-images img:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.discover .group-images img:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/**
+* DESTINATION
+**/
+
+.destination .destination-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 12px;
+}
+
+.destination .destination-list .card {
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.destination .destination-list .card:hover .card-body {
+    transform: translateY(0%);
+}
+
+.destination .destination-list .card-img {
+    height: 240px;
+    width: 100%;
+    position: relative;
+}
+
+.destination .destination-list .card-img::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.destination .destination-list .card-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.destination .destination-list .card-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(54, 81, 64, 0.9);
+    transform: translateY(77%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s linear;
+}
+
+.destination .destination-list .card-title {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    color: var(--white-color);
+    margin-bottom: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.destination .destination-list .card-text {
+    color: var(--white-color);
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.destination .destination-heading {
+    padding: 0px 24px 24px 0;
+}
+
+.destination .destination-heading .title {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--primary-color);
+    text-align: left;
+    justify-content: start;
+    padding-bottom: 6px;
+}
+
+.destination .destination-heading .title::after {
+    left: 0;
+    transform: unset;
+}
+
+.destination .destination-heading .desc {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
+.destination.destination-all {
+    padding-block: 60px;
+    padding-top: 0;
+}
+
+.destination .card-button {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    align-items: self-end;
+}
+
+.destination .card-button button,
+.destination .card-button a {
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid #fff;
+    width: fit-content;
+    padding: 8px 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s linear all;
+}
+
+.destination .card-button button:hover,
+.destination .card-button a:hover {
+    background-color: var(--white-color);
+    color: #365140;
+}
+
+/**
+* NEWS
+**/
+
+.news {
+    padding-block: 60px 120px;
+    background-color: var(--bg-color-2);
+    position: relative;
+    overflow: hidden;
+}
+
+.news .seemore {
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 42px;
+}
+
+.news.event .seemore {
+    margin-inline: unset;
+    margin-top: unset;
+}
+
+.news.event {
+    padding-top: 0;
+}
+
+.news .shape-1 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100%;
+}
+
+.news .container {
+    position: relative;
+    z-index: 2;
+}
+
+.news .news-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px 24px;
+    padding-top: 24px;
+    padding-bottom: 6px;
+}
+
+.news .news-list .news-item .card {
+    border: 0;
+    background-color: transparent;
+}
+
+.news .news-list .card-img {
+    width: 100%;
+    height: 166px;
+    overflow: hidden;
+    position: relative;
+}
+
+.news .card-img .actions {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.news .card-img .actions button {
+    border-radius: 100%;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    transition: all 0.3s linear;
+}
+
+.news .card-img .btn-bookmark:hover img,
+.news .card-img .btn-bookmark.active img {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.news .card-img .btn-bookmark:hover,
+.news .card-img .btn-bookmark.active {
+    background-color: var(--primary-color);
+}
+
+.news .card-img .btn-bookmark img {
+    width: 18px;
+    opacity: 0.6;
+    transition: all 0.3s linear;
+}
+
+.news .news-list .news-item .card-img-top {
+    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    transition: .3s linear all;
+}
+
+.news .news-list .news-item .card:hover .card-img-top {
+    transform: scale(1.04);
+}
+
+.news .news-list .card-body {
+    padding: 0;
+    padding-top: 18px;
+}
+
+.news .news-list .card-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.news .news-list .card-sub .category {
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.news .news-list .card-sub .published-date {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.news .news-list .card-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--primary-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 44px;
+    transition: all 0.3s linear;
+}
+
+.news.event .news-list .card-title {
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    min-height: 22px;
+}
+
+.news .news-list .card-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    min-height: 75px;
+}
+
+.news.event .news-list .card-text {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    min-height: 50px;
+}
+
+.news .news-list .card-title:hover {
+    color: var(--primary-color);
+}
+
+.news .news-list .card-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 14px;
+    line-height: 1;
+    padding: 8px 28px 8px;
+    border-radius: 18px;
+    text-decoration: none;
+    margin-top: 18px;
+    display: block;
+    width: fit-content;
+    transition: all .3s linear;
+}
+
+.news.event .news-list .card-btn {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    padding: 6px 22px;
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.news .news-list .card-btn:hover {
+    transform: scale(1.04);
+}
+
+.news .news-seemore {
+    margin-top: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.news .news-seemore a {
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.news .news-seemore a svg {
+    transition: all 0.3s linear;
+}
+
+.news .news-seemore a:hover svg {
+    transform: translateX(6px);
+}
+
+/**
+* NEWS DETAIL
+**/
+
+#news-detail .news {
+    background-color: var(--bg-color);
+    padding-top: 60px;
+}
+
+.detail {
+    padding: 80px 0 0px;
+}
+
+.detail .detail-container {
+    padding-inline: 120px;
+}
+
+.detail .detail-header {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.detail .detail-header .title {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin: 12px 0;
+}
+
+.detail .detail-header .type {
+    font-size: 22px;
+    color: var(--primary-color);
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.detail .detail-header .time {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--primary-color);
+}
+
+.detail .detail-content {
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.detail .detail-content img {
+    width: 100%;
+    height: auto;
+}
+
+.detail .detail-content * {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+
+/**
+* FOOD
+**/
+
+.food {
+    background-color: var(--bg-color-2);
+    /* padding-block: 120px; */
+    position: relative;
+    overflow: hidden;
+}
+
+.food .section-title {
+    justify-content: center;
+}
+
+.food .seemore {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.food .shape-trongdong {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -6%);
+    opacity: 0.2;
+    filter: invert(100%) sepia(2%) saturate(1537%) hue-rotate(327deg) brightness(100%) contrast(75%);
+}
+
+.food .food-list {
+    position: relative;
+    padding-top: 24px;
+}
+
+.food .food-list .swiper-wrapper {
+    padding-bottom: 24px;
+}
+
+.food .food-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+}
+
+.food .food-item .food-img {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.food .food-item .food-img img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.food .food-item .food-infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.food .food-item .name {
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+}
+
+.food .food-item .category {
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.5px;
+}
+
+.food .food-item .category::after,
+.food .food-item .category::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.food .food-item .category::before {
+    width: 10px;
+}
+
+.food .food-item .desc {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    max-width: 450px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.food .swiper-pagination {
+    bottom: unset;
+}
+
+.food .food-item.swiper-slide {
+    padding-block: 36px;
+    scale: 0.9;
+    opacity: 0.6;
+    transition: all 0.3s linear;
+}
+
+.food .food-item.swiper-slide-active {
+    opacity: 1;
+    scale: 1.15;
+}
+
+.food .card-button {
+    margin-top: 12px;
+    display: flex;
+    align-content: center;
+    gap: 12px;
+}
+
+.food .card-button button,
+.food .card-button a {
+    display: block;
+    background-color: transparent;
+    font-size: 14px;
+    color: var(--primary-color);
+    line-height: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    width: fit-content;
+    padding: 3px 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .3s linear all;
+}
+
+.food .card-button button:hover,
+.food .card-button a:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/**
+* TOURS
+**/
+
+/**
+* HOTEL
+**/
+
+.hotel .component-list .card ul li:first-child {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 36px;
+}
+
+/**
+* RESTAURANT
+**/
+
+.restaurant .component-list .card ul li:first-child {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 36px;
+}
+
+/**
+** GUIDE
+**/
+
+.guide {
+    padding-block: 120px 60px;
+}
+
+.guide-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-block: 48px 56px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.guide-list .card {
+    text-align: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.guide-list .card-img {
+    border-radius: 100%;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin-inline: auto;
+}
+
+.guide-list .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-list .card-title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.guide-list .card-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.guide-list .card-text img {
+    width: 18px;
+}
+
+/**
+* MAP
+**/
+
+#map {
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.map {
+    padding-block: 80px;
+}
+
+.map .map-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: calc(75% - 6px) calc(25% - 6px);
+    gap: 12px;
+}
+
+.map .card-img-top {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.map .leaflet-popup-content {
+    width: 220px !important;
+    margin: 12px;
+}
+
+.map .card-body {
+    padding: 10px;
+}
+
+.map .leaflet-container a.leaflet-popup-close-button {
+    background-color: var(--white-color);
+}
+
+#location-list {
+    position: absolute;
+    left: 12px;
+    top: 100px;
+    bottom: 12px;
+    z-index: 1001;
+    background-color: var(--white-color);
+    padding: 12px 18px;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+
+#location-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#location-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#location-list::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#location-list li {
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    transition: all 0.3s linear;
+}
+
+#location-list li:hover,
+#location-list li.active {
+    color: var(--primary-color);
+}
+
+.map .leaflet-touch .leaflet-control-attribution {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.map .leaflet-touch .leaflet-control-attribution a,
+.map .leaflet-touch .leaflet-control-attribution span {
+    display: none;
+}
+
+.map .nav-tabs {
+    padding-top: 0;
+    margin-bottom: 12px;
+    gap: 6px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-block: 2px 12px;
+    flex-wrap: nowrap;
+}
+
+.map .nav-tabs::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.map .nav-tabs::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.map .nav-tabs::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+.map .nav-tabs .nav-link {
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.map .nav-tabs .nav-link img {
+    width: 35px;
+}
+
+.map .map-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 430px;
+    overflow-y: auto;
+}
+
+.map .map-list .map-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    /* margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--primary-color); */
+}
+
+.map .map-list .map-item .name {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.map .map-list .map-item .address,
+.map .map-list .map-item a {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.map .map-list .map-item .address {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: none;
+}
+
+.map .map-list .map-item img {
+    width: 65px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.map .leaflet-popup-content .card-img {
+    height: 120px;
+}
+
+.map .leaflet-popup-content .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map .leaflet-popup-content .card-title {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.map .leaflet-popup-content .card-text {
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.map .leaflet-popup-content .card-text>div {
+    margin-bottom: 4px;
+}
+
+.map .nav-tabs .nav-link.active {
+    background-color: var(--primary-color);
+}

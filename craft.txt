@@ -1,0 +1,44 @@
+<section class="banner d-none">
+            <div class="banner-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://vinhtour.vn/wp-content/uploads/2024/09/VT_Khu-Du-Lich-Canh-Dong-Bat-Tan-Long-An-Ve-Dep-Moc-Mac-Dam-Chat-Tay-Nam-Bo1.jpg"
+                            alt="banner">
+                    </div>
+                    <!-- <div class="swiper-slide">
+                        <img src="https://vcdn1-dulich.vnecdn.net/2024/10/21/Tan-Lap1-2269-1729507892.jpg?w=0&h=0&q=100&dpr=1&fit=crop&s=4JS_1N5gEjh19Hm-bha7vg"
+                            alt="banner">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/L%C3%A0ng_n%E1%BB%95i_T%C3%A2n_L%E1%BA%ADp.jpg"
+                            alt="banner">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://thamhiemmekong.com/wp-content/uploads/2020/08/donrachcat.jpg" alt="banner">
+                    </div> -->
+                </div>
+                <div class="banner-pagi">
+                    <div class="swiper-btn-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                <path fill="currentColor"
+                                    d="M13.707 8.465a1 1 0 0 1 0 1.414L11.586 12l2.121 2.121a1 1 0 0 1-1.414 1.415l-2.828-2.829a1 1 0 0 1 0-1.414l2.828-2.828a1 1 0 0 1 1.414 0" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+                            <g fill="none" fill-rule="evenodd">
+                                <path
+                                    d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z" />
+                                <path fill="currentColor"
+                                    d="M10.293 8.465a1 1 0 0 0 0 1.414L12.414 12l-2.121 2.121a1 1 0 0 0 1.414 1.415l2.829-2.829a1 1 0 0 0 0-1.414l-2.829-2.828a1 1 0 0 0-1.414 0" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>

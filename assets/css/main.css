@@ -1,95 +1,93 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-        url('../fonts/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
-        url('../fonts/Roboto-Medium.woff') format('woff');
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-Medium.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Light.woff2') format('woff2'),
-        url('../fonts/Roboto-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
-        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-Bold.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Light.woff2') format('woff2'),
-        url('../OpenSans-Light.woff') format('woff');
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-Light.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Medium.woff2') format('woff2'),
-        url('../OpenSans-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-SemiBold.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-SemiBold.woff') format('woff');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Bold.woff2') format('woff2'),
-        url('../OpenSans-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-Thin.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-Thin.woff') format('woff');
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url('../OpenSans-Regular.woff2') format('woff2'),
-        url('../OpenSans-Regular.woff') format('woff');
+    font-family: 'Be Vietnam Pro';
+    src: url('../fonts/BeVietnamPro-Regular.woff2') format('woff2'),
+        url('../fonts/BeVietnamPro-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SFD-Medium';
-    src: url('SanFranciscoDisplay-Medium.woff2') format('woff2'),
-        url('SanFranciscoDisplay-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Bold.woff2') format('woff2'),
+        url('../fonts/Merriweather-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'SFD-Bold';
-    src: url('SanFranciscoDisplay-Bold.woff2') format('woff2'),
-        url('SanFranciscoDisplay-Bold.woff') format('woff');
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-SemiBold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 :root {
-    --hover-color: #4db2ec;
+    --white-color: #ffffff;
+    --black-color: #222222;
+    --grey-light-color: #F5F5F5;
+    --primary-color: #355933;
+    --secondary-color: #80876d;
+    --text-color: #3a3a3a;
+    --bg-color: #fefef4;
+    --bg-color-2: #fefef4;
 }
 
 ul {
@@ -99,11 +97,18 @@ ul {
 }
 
 body {
-    font-family: 'SFD-Medium', sans-serif;
-    font-size: 14px;
+    padding-top: 76px;
+    font-family: 'Be Vietnam Pro';
+    font-size: 16px;
     line-height: 22px;
-    color: #222222;
-    background-color: #f4f4f4;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+html {
+    position: relative;
     overflow-x: hidden;
 }
 
@@ -114,5 +119,581 @@ a {
 h3,
 h2,
 h1 {
-    font-family: 'SFD-Bold', sans-serif;
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding-block: 80px;
+}
+
+section.section-py {
+    padding-block: 12px 0;
+}
+
+.section-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 4px;
+}
+
+.section-header .section-title {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    justify-content: start;
+}
+
+.section-header .seemore {
+    margin-top: 0;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--primary-color);
+    position: relative;
+    /* padding-bottom: 12px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.section-title.has-after {
+    padding-bottom: 6px;
+}
+
+.section-title.has-after::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-desc {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.section {
+    padding-bottom: 12px;
+}
+
+.seemore {
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.seemore:hover {
+    color: var(--primary-color);
+}
+
+.seemore svg,
+.seemore img {
+    margin-bottom: 3px;
+    transition: all 0.3s linear;
+}
+
+.seemore:hover svg,
+.seemore:hover img {
+    transform: translateX(6px);
+}
+
+.seemore img {
+    width: 20px;
+    height: auto;
+}
+
+.section-title-sub {
+    font-family: 'Be Vietnam Pro';
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.dropdown-toggle {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    /* border: 1px solid var(--black-color); */
+    border-radius: 8px;
+    padding: 0px 6px;
+    height: 32px;
+}
+
+.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-toggle img {
+    height: 22px;
+    width: auto;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding-block: 8px;
+    transition: all 0.3s linear;
+}
+
+.dropdown-menu {
+    padding-block: 0;
+}
+
+.dropdown-item:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-color-2);
+}
+
+/**
+* SWIPER
+**/
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+
+.pagination {
+    gap: 24px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-top: 40px;
+    padding-block: 20px;
+}
+
+.pagination .pagination-list {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.pagination .btn-next,
+.pagination .btn-prev {
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.pagination .btn-next svg,
+.pagination .btn-prev svg {
+    flex: 1;
+    width: 16px;
+    height: 16px;
+}
+
+.pagination .number {
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 14px;
+    gap: 12px;
+    display: inline-grid;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 0.3s linear;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: 1px solid transparent;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    border: 1px solid var(--primary-color);
+}
+
+.pagination .number.active,
+.pagination .number:hover {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+
+/**
+* POPUP
+**/
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    content: '';
+    background: 0 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1004;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .1);
+    visibility: hidden;
+    transition: all .3s linear;
+}
+
+.blur.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-infor {
+    max-width: 70%;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1004;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 68px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+.popup-infor.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-infor .title {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--primary-color);
+    line-height: 37px;
+    margin: 0px 0 12px;
+    text-align: center;
+}
+
+.popup-infor .desc {
+    width: 90%;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #5d5d5d;
+    display: block;
+    text-align: center;
+    margin: auto;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.popup-infor .desc::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.popup-infor .desc::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.popup-infor .desc::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+.popup-infor .close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 36px;
+    right: 24px;
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 99;
+    transition: all 0.3s linear;
+}
+
+.scroll-top.active {
+    opacity: 0.6;
+}
+
+.scroll-top:hover {
+    opacity: 1;
+}
+
+.scroll-top img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+    height: auto;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 1;
+    padding: 8px 28px 8px;
+    border-radius: 24px;
+    text-decoration: none;
+    margin-top: 24px;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all .3s linear;
+}
+
+.button:hover {
+    transform: scale(1.04);
+}
+
+.button img {
+    width: 20px;
+    height: auto;
+}
+
+.button-l {
+    font-size: 16px;
+    padding: 12px 36px;
+}
+
+.button-m {
+    font-size: 12px;
+    padding: 6px 22px;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: var(--white-color);
+}
+
+.button-secondary {
+    background-color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button-primary img {
+    filter: brightness(0) invert(1);
+}
+
+/**
+* TABS
+**/
+
+.nav-tabs {
+    border-bottom: 0;
+    padding-top: 12px;
+}
+
+.nav-tabs .nav-link {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s linear;
+}
+
+.nav-tabs .nav-link,
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+    border: 0;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* COMPONENT */
+
+.component-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-top: 12px;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 48px;
+    padding-inline: 2px;
+}
+
+.component-list .component-item .card {
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--white-color);
+    border: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.component-list .component-item .card .card-body {
+    background-color: var(--white-color);
+}
+
+.component-list .component-item .card-img {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 180px;
+    width: 100%;
+}
+
+.component-list .component-item .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.component-list .card .card-title {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--primary-color);
+    min-height: 22px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.component-list .card li img {
+    width: 16px;
+}
+
+.component-list .card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.component-list .card ul li {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.component-list .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    padding-block: 16px;
+}
+
+.component-list .card-footer .price {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.component-list .card-footer .button {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    padding: 6px 22px;
+}
+
+/**
+* 991
+**/
+
+@media screen and (max-width: 991px) {
+    /**
+    * POPUP
+    **/
+
+    .popup-infor {
+        max-width: 90%;
+        padding: 42px;
+    }
+
+    .popup-infor .desc {
+        max-height: 60vh;
+    }
+}
+
+/**
+* 576
+**/
+
+@media screen and (max-width: 576px) {
+
+    .section-title-sub {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .popup-infor {
+        padding: 36px 12px;
+        max-width: 100%;
+        border-radius: 0;
+        height: 90vh;
+    }
+
+    .popup-infor .desc {
+        width: 100%;
+        padding-right: 12px;
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        line-height: 34px;
+    } 
+
+    .section-desc {
+        font-size: 14px;
+        padding-inline: 12px;
+    }
+
+    .seemore {
+        justify-content: center;
+    }
 }

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cổng thông tin du lịch - Trang chủ</title>
-    <link rel="icon" type="image/png" href="./assets/images/favico.png">
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- library -->
     <link rel="stylesheet" href="./assets/library/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/library/slick/slick/slick.css">
-    <link rel="stylesheet" href="./assets/library/slick/slick/slick-theme.css">
+    <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -17,11 +18,1316 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/home.css">
 </head>
+
 <body>
     <header>
-        
+        <div class="container">
+            <div class="header">
+                <a href="./index.html" class="logo">
+                    <div class="img">
+                        <img src="./assets/images/logo.png" alt="Logo">
+                    </div>
+                </a>
+                <nav class="navbar">
+                    <a href="./news.html">Tin tức</a>
+                    <a href="./news.html">Địa điểm</a>
+                    <a href="./news.html">Ẩm thực</a>
+                    <a href="./news.html">Lưu trú</a>
+                </nav>
+                <div class="others">
+                    <div class="btn-search">
+                        <img src="./assets/images/search.svg" alt="search">
+                    </div>
+                    <div class="account">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/images/mdi--account.svg" alt="tài khoản">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-mb">
+                        <img src="./assets/images/ic--round-menu.svg" alt="menu mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="container">
+                <div class="search-wrap">
+                    <div class="search-input">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin Tân Trụ..."
+                            fdprocessedid="4i5j0h">
+                        <img src="./assets/images/search.svg" alt="search" class="icon-search">
+                        <ul id="results"></ul>
+                    </div>
+                </div>
+                <!-- <div class="search-button">
+                    <div class="text">Tìm nhanh</div>
+                    <div class="group-btn">
+                        <a href="./news-list.html">Tin tức</a>
+                        <a href="./member.html">Ủy viên</a>
+                        <a href="./destination.html">Điểm đến</a>
+                        <a href="./index.html#food">Đặc sản</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </header>
     <main>
+        <div class="blur"></div>
+        <section class="discover">
+            <div class="container">
+                <div class="discover-container">
+                    <div class="content">
+                        <h1 class="title">
+                            <div>Khám phá</div>
+                            <div>du lịch</div>
+                            <div>tỉnh <span>Long An</span></div>
+                        </h1>
+                        <div class="desc">
+                            Long An, vùng đất miền Tây gần TP.HCM, nổi bật với sông ngòi, đồng lúa và rừng tràm Tân Lập.
+                            Du khách khám phá Nhà Trăm Cột, văn hóa Óc Eo, thưởng thức cá lóc nướng trui. Bình dị, thân
+                            thiện, Long An mang đến trải nghiệm du lịch sông nước độc đáo
+                        </div>
+                        <div class="button button-primary button-l">Khám phá ngay
+                            <img src="./assets/images/arrow-right.svg" alt="Khám phá ngay">
+                        </div>
+                    </div>
+                    <div class="images">
+                        <img src="https://pngimg.com/d/world_map_PNG28.png" alt="world map" class="shape-map">
+                        <div class="group-images">
+                            <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2024/03/dia-diem-du-lich-long-an-1.jpg"
+                                alt="Long An Travel">
+                            <img src="https://ik.imagekit.io/tvlk/blog/2022/12/dia-diem-du-lich-long-an-3.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2"
+                                alt="Long An Travel">
+                            <img src="https://vinhtour.vn/wp-content/uploads/2024/09/VT_Khu-Du-Lich-Canh-Dong-Bat-Tan-Long-An-Ve-Dep-Moc-Mac-Dam-Chat-Tay-Nam-Bo1.jpg"
+                                alt="Long An Travel">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="destination">
+            <div class="container">
+                <div class="destination-list">
+                    <div class="destination-heading">
+                        <h2 class="title section-title has-after">Địa điểm nổi bật</h2>
+                        <div class="desc">
+                            Khám phá địa điểm nổi bật tại Long An, vùng đất miền Tây đầy hấp dẫn. Làng Nổi Tân Lập xanh
+                            mát, Nhà Trăm Cột cổ kính, Cánh Đồng Bất Tận hoang sơ mang đến trải nghiệm du lịch đậm chất
+                            Nam Bộ.
+                        </div>
+                        <a href="./destination.html" class="seemore">Xem tất cả địa điểm <img
+                                src="./assets/images/arrow-right.svg" alt="Tất cả địa điểm"></a>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/huongvamco/huyen_can_duoc/nga_tu_rach_kien/diem_qua_7_di_tich_lich_su_noi_bat_o_long_an_2_218845898.jpg"
+                                    alt="DI TÍCH NGÃ TƯ RẠCH KIẾN" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">DI TÍCH NGÃ TƯ RẠCH KIẾN</div>
+                                <div class="card-text">
+                                    Di tích Ngã tư Rạch Kiến là địa điểm ghi dấu sự hình thành và phát triển của Vành
+                                    đai diệt Mỹ Rạch Kiến nổi tiếng ở Long An trong kháng chiến chống Mỹ. Phạm vi của
+                                    Vành đai diệt Mỹ Rạch Kiến được xác định gồm 13 xã giải phóng, trong đó có 10 xã
+                                    thuộc huyện Cần Đước là Long Hòa, Long Tạch, Tân Trạch, Long Khê, Phước Vân, Long
+                                    Sơn, Long Định, Long Cang, Mỹ Lệ, Phước Tuy và 3 xã thuộc huyện Cần Giuộc là Phước
+                                    Lâm, Thuận Thàn và Phước Hậu.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/huongvamco/huyen_can_duoc/phuoc_lam/chua_phuoc_lam_long_an_1_700x385_242728256.jpg"
+                                    alt="DI TÍCH CHÙA PHƯỚC LÂM" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">DI TÍCH CHÙA PHƯỚC LÂM</div>
+                                <div class="card-text">
+                                    Chùa Phước Lâm – xóm Chùa, xã Tân Lân, huyện Cần Đước, tỉnh Long An - được ông Bùi
+                                    Văn Minh thành lập năm 1881 để vừa thờ Phật vừa làm từ đường cho dòng họ Bùi. Nhìn
+                                    về tổng thể, ngôi chùa gồm ba phần: chánh điện - hậu tổ, khu mộ tháp và nhà trù.
+                                    Chánh điện là một ngôi nhà lớn được xây dựng theo kiểu “bánh ít”, có móng đá xanh,
+                                    tường gạch, lợp ngói vẩy cá.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm.lan/hinh_diem/khudulichcanhdongbattan_263205966.jpg"
+                                    alt="Trung tâm Nghiên cứu Bảo tồn và Phát triển Dược liệu Đồng Tháp Mười"
+                                    class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Trung tâm Nghiên cứu Bảo tồn và Phát triển Dược liệu Đồng Tháp
+                                    Mười</div>
+                                <div class="card-text">
+                                    Có một “rừng thuốc” vô cùng đặc biệt giữa vùng Đồng Tháp Mười (ĐTM), bởi đi đâu
+                                    chúng ta cũng nhìn thấy những cây thuốc chữa bệnh - đó là Khu Bảo tồn (KBT) dược
+                                    liệu ĐTM ở xã Bình Phong Thạnh, huyện Mộc Hóa, tỉnh Long An do Công ty Cổ phần
+                                    Nghiên cứu Bảo tồn và Phát triển dược liệu ĐTM quản lý.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/dia_diem/dinh_tong_than/8566_nha_tong_than_637189153551780877.jpg"
+                                    alt="DI TÍCH LỊCH SỬ NHÀ TỔNG THẬN" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">DI TÍCH LỊCH SỬ NHÀ TỔNG THẬN</div>
+                                <div class="card-text">
+                                    Tổng Thận tên thật là Trần Khắc Thận xuất thân từ một gia đình vọng tộc thân Pháp,
+                                    theo công giáo, gốc người Quảng Nam di cư vào vùng Cù Lao Giêng (Long Xuyên). Cuối
+                                    thế kỷ XIX, ông được thực dân Pháp bổ nhiệm về tỉnh Tân An làm Cai tổng, tổng Thạnh
+                                    Hội Thượng, quận Châu Thành, làng Bình Lập.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="https://www.baolongan.vn/image/news/2017/20171025/fckimage/7118_B%C3%ACnh-Th%C3%A0nh.jpg"
+                                    alt="KHU DI TÍCH LỊCH SỬ CÁCH MẠNG TỈNH LONG AN" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">KHU DI TÍCH LỊCH SỬ CÁCH MẠNG TỈNH LONG AN</div>
+                                <div class="card-text">
+                                    Khu di tích lịch sử cách mạng tỉnh Long An còn được gọi là căn cứ Bình Thành, nay
+                                    tọa lạc tại xã Bình Hòa Hưng, huyện Đức Huệ. Đây là vùng đất trũng thấp nằm giữa hai
+                                    con sông Vàm Cỏ Đông và Vàm Cỏ Tây, là điểm tiếp giáp giữa miền Đông và miền Tây Nam
+                                    Bộ, rất gần với Sài Gòn, có thể liên kết với chiến khu Đồng Tháp Mười, chiến khu
+                                    vùng rừng già Đông Nam bộ, liền kề biên giới nước bạn Campuchia.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="food" id="food">
+            <!-- <img class="shape-trongdong" src="https://staticv2.vnptigate.vn/logo/trong-dong.png" alt="trong dong"> -->
+            <div class="section-title has-after">
+                Đặc sản địa phương
+            </div>
+            <div class="section-desc">
+                Đặc sản Long An mang đậm hương vị miền Tây, nổi bật với gạo Nàng Thơm Chợ Đào ngọt dẻo, thanh long Đức
+                Hòa thơm ngon, rượu đế Gò Đen cay nồng. Du khách không thể bỏ qua cá lóc nướng trui, lẩu mắm đậm đà và
+                bánh tráng phơi sương mềm dai, đậm chất Nam Bộ.
+            </div>
+            <a href="#" class="seemore">Xem tất cả đặc sản <img src="./assets/images/arrow-right.svg"
+                    alt="See more"></a>
+            <div class="food-list">
+                <div class="swiper-wrapper">
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://cdn.buffetposeidon.com/app/media/uploaded-files/110724-lau-mam-mien-tay-cung-buffet-poseidon-1-1.jpg"
+                                alt="Lẩu mắm Long An">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Lẩu mắm Long An</h3>
+                            <div class="desc">
+                                Lẩu mắm đặc sản Long An được chế biến với sự kết hợp đặc biệt từ nguồn nguyên liệu phong
+                                phú từ biển, sông, ao, hồ, và đồng ruộng. Trong lẩu mắm, ta có thể tìm thấy cá, tôm,
+                                cua, mực, heo, bò... Đồ ăn được kết hợp với một loạt các loại rau khác nhau như rau
+                                muống, giá đỗ, rau cải, dưa leo, khóm (thơm),...
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://www.thatlangon.com/wp-content/uploads/2021/09/canh-chua-ca-tln1-e1633942511539.jpg"
+                                alt="Canh chua cá chốt">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Canh chua cá chốt</h3>
+                            <div class="desc">
+                                Canh chua cá chốt là một món ăn dac san Long An thưởng thức vô cùng đặc biệt, thường
+                                xuất hiện trong các bữa cơm đoàn viên và các dịp lễ hội quan trọng. Món canh chua này
+                                được chế biến từ cá chốt - một loại cá nhỏ có da trơn, thường có kích thước không quá
+                                lớn, chỉ khoảng 1kg.
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://cdn.tgdd.vn/Files/2022/11/18/1488658/gao-nang-thom-cho-dao-la-gi-mua-o-dau-gia-bao-nhieu-202211181548390865.jpg"
+                                alt="Gạo nàng thơm chợ Đào">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Gạo nàng thơm chợ Đào</h3>
+                            <div class="desc">
+                                Gạo Nàng Thơm Chợ Đào là một loại gạo nổi tiếng và được xem là đặc sản hàng đầu của Long
+                                An. Nó có liên quan đến câu chuyện tình yêu giữa chàng Lúa và nàng Thơm tại khu chợ Đào.
+                                Gạo Nàng Thơm có hương thơm đặc trưng mà không thể so sánh với loại gạo nào khác.
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://images.baoangiang.com.vn/image/media/2023/20231222/video/thumbnail/690x420/4299_img_1569.jpg"
+                                alt="Cá lóc nướng trui">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Cá lóc nướng trui</h3>
+                            <div class="desc">
+                                Người trồng vườn thường nói nhau rằng, để có một món ăn ngon và làm hài lòng mọi người,
+                                cá lóc nướng trui là sự lựa chọn hấp dẫn. Cá lóc chỉ cần được làm sạch, xếp lên que tre
+                                thành hàng dài và được phủ bằng rơm để nướng. Sự khéo léo của người nướng trui là chỉ
+                                phủ rơm một lần duy nhất. Khi rơm cháy hết, cá lóc trở nên giòn tan và vàng rực, với
+                                đuôi nhô lên trời như đang nhảy múa.
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://daylambanh.edu.vn/wp-content/uploads/2019/01/banh-tet-la-cam-thom-ngon-600x400.jpg"
+                                alt="Bánh tét Long An">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Bánh tét Long An</h3>
+                            <div class="desc">
+                                Bánh tét là một loại bánh quen thuộc trong văn hóa ẩm thực của người dân Việt Nam, đặc
+                                biệt được ưa chuộng vào mỗi dịp tết đến xuân về. Miền Bắc thường gắn liền với bánh
+                                chưng, trong khi miền Nam thì nhắc đến bánh tét. Tuy nhiên, ở mỗi vùng, cách làm và
+                                hương vị của bánh tét lại mang những đặc điểm riêng.
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item swiper-slide">
+                        <div class="food-img">
+                            <img src="https://degoden.vn/wp-content/uploads/sites/312/2020/10/75196391_137526940916607_1884075339550818304_o.jpg"
+                                alt="Rượu đế Gò Đen">
+                        </div>
+                        <div class="food-infor">
+                            <div class="category">Đặc sản</div>
+                            <h3 class="name">Rượu đế Gò Đen</h3>
+                            <div class="desc">
+                                Rượu đế Gò Đen được coi là "đệ nhất tửu" trong lòng người dân Nam Bộ và được yêu thích
+                                bởi những người sành rượu. Được biết đến từ thời kỳ Pháp thuộc, rượu đế Gò Đen xuất xứ
+                                từ khu vực nổi tiếng ở huyện Bến Lức, tỉnh Long An. Người dân trong vùng đã sáng tạo ra
+                                một phương pháp nấu rượu độc đáo, bằng cách sử dụng những đám cỏ đế thân cao để nấu. Sau
+                                khi rượu được nấu chín, nó được rót vào bong bóng trâu hoặc lợn để lưu trữ và vận
+                                chuyển.
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <h2 class="section-title has-after">Tin mới nhất</h2>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                    <button class="btn-bookmark active"><img src="./assets/images/bookmark.svg"
+                                            alt="mục quan tâm"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://www.baolongan.vn/image/news/2025/20250228/images/62_766_img-1316.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Xã hội</div>
+                                    <div class="published-date">22/02/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Trồng khoai mì ruột vàng mang lại thu
+                                    nhập cao</a>
+                                <p class="card-text">
+                                    Trong quá trình sản xuất nông nghiệp, nhiều nông dân nhạy bén nắm bắt nhu cầu thị
+                                    trường, mạnh dạn chuyển đổi cơ cấu cây trồng, bước đầu mang lại hiệu quả kinh tế.
+                                    Ông Võ Văn Cư (ấp 2, xã Hựu Thạnh, huyện Đức Hòa, tỉnh Long An) là một trong những
+                                    nông dân như thế.
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark active"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                    <button class="btn-bookmark"><img src="./assets/images/bookmark.svg"
+                                            alt="mục quan tâm"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://www.baolongan.vn/image/news/2025/20250203/images/19_2025-37_52534448_475437088-1149167247217145-3869741133198436879-n.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Văn hóa - Giải trí</div>
+                                    <div class="published-date">04/03/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Du lịch Long An - Thêm nhiều hứa hẹn</a>
+                                <p class="card-text">
+                                    Năm 2024, lần đầu tiên tỉnh đón hơn 2 triệu lượt du khách trong năm với tổng doanh
+                                    thu vượt 1.000 tỉ đồng. Dịp Tết Nguyên đán Ất Tỵ năm 2025, mặc dù một số điểm du
+                                    lịch trong tỉnh không mở cửa đón khách (khu du lịch (KDL) Happy Land, KDL Vàm Cỏ
+                                    farmstay) nhưng lượt du khách đến Long An không giảm.
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark active"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                    <button class="btn-bookmark active"><img src="./assets/images/bookmark.svg"
+                                            alt="mục quan tâm"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://www.baolongan.vn/image/news/2025/20250226/images/2_2025-36_94342599_ngu-o-i-da-n-di-xu-c-ca-lia-thia-o-ca-c-ca-nh-do-ng-nga-p-nu-o-c.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Văn hóa - Giải trí</div>
+                                    <div class="published-date">04/03/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Về xứ đồng bưng thưởng thức món ngon dân
+                                    dã</a>
+                                <p class="card-text">
+                                    Về huyện Đức Huệ, tỉnh Long An, chúng ta không chỉ tận hưởng khung cảnh yên bình mà
+                                    còn được thưởng thức các món ăn dân dã gắn liền với người dân nơi đây qua bao thế
+                                    hệ. Xứ sở đồng bưng ấy được thiên nhiên ưu ái ban tặng nhiều sản vật làm ra những
+                                    món ăn ngon, bình dị, trong đó một số món trở thành đặc sản mang đậm đà hương vị quê
+                                    hương.
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                    <button class="btn-bookmark"><img src="./assets/images/bookmark.svg"
+                                            alt="mục quan tâm"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://www.baolongan.vn/image/news/2025/20250303/thumbnail/510x286/734_1741003486.jpeg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Địa phương</div>
+                                    <div class="published-date">04/03/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Phát huy hiệu quả các mô hình bảo đảm an
+                                    ninh, trật tự
+                                </a>
+                                <p class="card-text">
+                                    Ban Chỉ đạo phòng, chống tội phạm, tệ nạn xã hội và xây dựng phong trào Toàn dân bảo
+                                    vệ an ninh Tổ quốc huyện Bến Lức đã chủ động củng cố, kiện toàn và nâng cao chất
+                                    lượng các mô hình tổ chức quần chúng.
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="seemore">Xem tất cả tin tức <img src="./assets/images/arrow-right.svg"
+                        alt="see more"></a>
+            </div>
+        </section>
+        <section class="news event section-py">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sự kiện sắp diễn ra</h2>
+                    <a class="seemore" href="#">Xem tất cả <img src="./assets/images/arrow-right.svg"
+                            alt="Xem tất cả"></a>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm.lan/2024/z6064936543707_e78248ae6d5959b5ba6ba1a560e91a61_916470942.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Sự kiện</div>
+                                    <div class="published-date">22/02/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Du lịch Long An nhiều chương trình hấp
+                                    dẫn phục vụ 𝐓𝐮𝐚̂̀𝐧 𝐕𝐚̆𝐧 𝐡𝐨́𝐚 – 𝐓𝐡𝐞̂̉ 𝐭𝐡𝐚𝐨 – 𝐃𝐮 𝐥𝐢̣𝐜𝐡
+                                    𝐭𝐢̉𝐧𝐡 𝐥𝐚̂̀𝐧 𝐭𝐡𝐮̛́ 𝟐 𝐧𝐚̆𝐦 𝟐𝟎𝟐𝟒 (28/11 - 04/12/2024) </a>
+                                <p class="card-text">
+                                    Xách vali và đến Long An để cùng 𝐊𝐡𝐚́𝐭 𝐯𝐨̣𝐧𝐠 𝐬𝐨̂𝐧𝐠 𝐕𝐚̀𝐦 𝟐𝟎𝟐𝟒 trải
+                                    nghiệm
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm/2024/z6055808802997_04702604dc1650e5cde5d49bd5c45781_895515248.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Sự kiện</div>
+                                    <div class="published-date">22/02/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">Tuần Văn hóa – Thể thao – Du lịch tỉnh
+                                    Long An</a>
+                                <p class="card-text">
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="card">
+                            <div class="card-img">
+                                <div class="actions">
+                                    <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                            alt="mục yêu thích"></button>
+                                </div>
+                                <img class="card-img-top"
+                                    src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm/2024/467404204_122100529274628028_4299896698637172696_n_100185913.jpg"
+                                    alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-sub">
+                                    <div class="category">Sự kiện</div>
+                                    <div class="published-date">22/02/2025</div>
+                                </div>
+                                <a href="./news-detail.html" class="card-title">KHÁT VỌNG SÔNG VÀM 2024 - LONG AN ĐÃ SẴN
+                                    SÀNG</a>
+                                <p class="card-text">
+                                    Là điểm hẹn giao thoa giữa văn hoá Việt Nam, đặc biệt là các tỉnh miền Tây với xứ sở
+                                    kim chi - Hàn Quốc, sự kiện hứa hẹn là điểm bùng nổ cuối năm 2024. Tỉnh Long An đã
+                                    sát sao, chuẩn bị kỹ lưỡng về mọi mặt, đảm bảo sự kiện được diễn ra an toàn, thành
+                                </p>
+                                <a href="./news-detail.html" class="card-btn">Đọc thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tour section-py">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tour du lịch</h2>
+                    <a class="seemore" href="#">Xem tất cả <img src="./assets/images/arrow-right.svg"
+                            alt="Xem tất cả"></a>
+                </div>
+                <ul class="nav nav-tabs" id="tour-list" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="noidia-tab" data-bs-toggle="tab" data-bs-target="#noidia"
+                            type="button" role="tab" aria-controls="noidia" aria-selected="true">Nội tỉnh</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="lientinh-tab" data-bs-toggle="tab" data-bs-target="#lientinh"
+                            type="button" role="tab" aria-controls="lientinh" aria-selected="false">Liên tỉnh</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="noidia" role="tabpanel" aria-labelledby="noidia-tab">
+                        <div class="component-list">
+                            <div class="swiper-wrapper">
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/duc_hoa/lang_co_phuoc_loc_tho/cropper_637189358343630424.jpg"
+                                                alt="Tour 2 ngày 1 đêm- khách nội địa" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Tour 2 ngày 1 đêm- khách nội địa</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        3 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        2 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">0đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://datviettour.com.vn/uploads/images/mien-nam/long-an/danh-thang/tour-lang-noi-tan-lap-long-an.jpg"
+                                                alt="Tour 01 ngày- khách nội địa" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Tour 01 ngày- khách nội địa</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        1 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        1 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">220.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://ik.imagekit.io/tvlk/blog/2022/12/dia-diem-du-lich-long-an-1.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2"
+                                                alt="Vi vu buổi tối tại Long An" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Vi vu buổi tối tại Long An</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        2 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        1 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">199.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://i.ytimg.com/vi/UqZjr4CA-PE/maxresdefault.jpg"
+                                                alt="Thưởng thức ẩm thực" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Thưởng thức ẩm thực</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        2 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        1 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">300.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tanlap_41619006.jpg"
+                                                alt="Làng nổi Tân Lập" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Làng nổi Tân Lập</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        1 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        1 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">550.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="lientinh" role="tabpanel" aria-labelledby="lientinh-tab">
+                        <div class="component-list">
+                            <div class="swiper-wrapper">
+                                <div class="component-item swiper-slide">
+                                    <div class="card">
+                                        <div class="card-img">
+                                            <img src="https://mediadulich.tiengiang.gov.vn/resources/portal/Images/TGG/vhttdl/bai_t3/khu_du_lich_cu_lao_thoi_son_con_lan_tien_giang_co_gi_thu_vi_11_1650893631_430771376.jpeg"
+                                                alt="Tiền Giang - Làng nổi Tân Tập- Chùa nổi" class="card-top-img">
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">Tiền Giang - Làng nổi Tân Tập- Chùa nổi</div>
+                                            <div class="card-text">
+                                                <ul class="infor">
+                                                    <li>
+                                                        <img src="./assets/images/place.svg" alt="place">
+                                                        1 địa điểm
+                                                    </li>
+                                                    <li>
+                                                        <img src="./assets/images/date.svg" alt="place">
+                                                        1 ngày
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="button button-secondary">Khám phá</div>
+                                            <div class="price">190.000đ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hotel section-py">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Cơ sở lưu trú</h2>
+                    <a class="seemore" href="#">Xem tất cả <img src="./assets/images/arrow-right.svg"
+                            alt="Xem tất cả"></a>
+                </div>
+                <div class="component-list">
+                    <div class="swiper-wrapper">
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://i.vntrip.vn/800x550/smart/https://statics.vntrip.vn/data-v2/hotels/611930/img_max/611930_1576550162_ru.jpg"
+                                        alt="Khách sạn Ruby" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Khách sạn Ruby</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Đường Số 2, Khu Dân Cư Trung Tâm, Thị Trấn Bến Lức, Huyện Bến Lức, Tỉnh
+                                                Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/Tan%20An/Khac%20San%20Truong%20Diem/2018-04-06_637013868099419589.jpg"
+                                        alt="Khách sạn Trường Diễm" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Khách sạn Trường Diễm</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Số 12, 14 Hùng Vương Nối Dài, Phường 2, Tân An, Long An Phường 1, Thành
+                                                Phố Tân An, Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/Can%20Giuoc/Khach%20san%20Kim%20Linh/av_637025786230053746.jpg"
+                                        alt="Khách sạn Kim Linh" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Khách sạn Kim Linh</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Áp Hòa Thuận I, Xã Trường Bình Xã Trường Bình, Huyện Cần Giuộc, Tỉnh
+                                                Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm.lan/luu_tru/ks_binh_minh_103110833.png"
+                                        alt="Khách sạn Bình Minh" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Khách sạn Bình Minh</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Ấp 3, Xã Long Hậu, Huyện Cần Giuộc Xã Long Hậu, Huyện Cần Giuộc, Tỉnh
+                                                Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toansauconkun994/thumb/1_647964214.jpg"
+                                        alt="HOMESTAY VÀM CỎ FARMSTAY" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">HOMESTAY VÀM CỎ FARMSTAY</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Đường Rạch Tre, ấp 5, xã An Thạnh, huyện Bến Lức, tỉnh Long An Thị trấn
+                                                Bến Lức, Huyện Bến Lức, Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="restaurant section-py">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nhà hàng</h2>
+                    <a class="seemore" href="#">Xem tất cả <img src="./assets/images/arrow-right.svg"
+                            alt="Xem tất cả"></a>
+                </div>
+                <div class="component-list">
+                    <div class="swiper-wrapper">
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                        alt="Nhà Hàng Sân Golf West Lakes" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Nhà Hàng Sân Golf West Lakes</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Số 145, ĐT822, ấp Chánh, Đức Hòa, Long An Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/hai_san_phu_quy/hai_san_phu_quy_11_521496205.jpg"
+                                        alt="Khách sạn Trường Diễm" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Khách sạn Trường Diễm</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                09 Đường số 1, KDC Đường 10 Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0937049249
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://lh4.googleusercontent.com/proxy/1kWPmEJzM6rbgs0UMGzb9Wbd-mWw-PBlMjSNHHoUvJ7vqU8ZndjLHdo9lRdvR0Uzu3B6Da5DeFSJcESahFUPSVPqL0GaAzXbDHXFnw5djkkepJOU9pE0FyeLnHKPTHzG3so6tvXigKnW_so4kAlh7owKkQ"
+                                        alt="Hải sản Hoàng" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Hải sản Hoàng</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/khongthoigian_nhahang/286790269_106682885406028_1760308845243080320_n_994156856.jpg"
+                                        alt="Nhà Hàng Không Thời Gian" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Nhà Hàng Không Thời Gian</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Số 48, Nguyễn Văn Tạo, Phường 4, Tp. Tân An, Long An Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/tienthanhboat/thumb/275123386_126484249944621_2786125216814893871_n_161423593.jpg"
+                                        alt="TIẾN THÀNH BOATS" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">TIẾN THÀNH BOATS</div>
+                                    <div class="card-text">
+                                        <ul class="infor">
+                                            <li>
+                                                <img src="./assets/images/place.svg" alt="place">
+                                                Ấp Thạnh Trung, xã Phước Vĩnh Đông, Cần Giuộc, Long An Xã Phước Vĩnh
+                                                Đông, Huyện Cần Giuộc, Tỉnh Long An
+                                            </li>
+                                            <li>
+                                                <img src="./assets/images/phone.svg" alt="phone">
+                                                0902516123
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="button button-secondary">Khám phá</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="container">
+                <h3 class="section-title">Hướng dẫn viên địa phương</h3>
+                <div class="guide-list">
+                    <div class="swiper-wrapper">
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-item swiper-slide">
+                            <div class="card">
+                                <div class="card-img">
+                                    <img src="https://cdn.toursbylocals.com/guides/44/44475/2023333131221611-v3.jpg"
+                                        alt="tour guide" class="card-top-img">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Lên Văn Thanh</div>
+                                    <div class="card-text">
+                                        <img src="./assets/images/place.svg" alt="place">
+                                        Bến Lức, Long An
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <div class="container">
+                <div class="section-title">Bản đồ du lịch</div>
+                <div class="map-wrap">
+                    <div id="map"></div>
+                    <div class="sidebar">
+                        <ul class="nav nav-tabs" id="mapTab" role="tablist">
+                            <li class="nav-item map-nav-item" role="presentation" data-type="restaurant">
+                                <button class="nav-link active" id="restaurant-map-tab" data-bs-toggle="tab"
+                                    data-bs-target="#restaurant-map" type="button" role="tab"
+                                    aria-controls="restaurant-map" aria-selected="true">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png" alt="resturant">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="hotel">
+                                <button class="nav-link" id="hotel-map-tab" data-bs-toggle="tab"
+                                    data-bs-target="#hotel-map" type="button" role="tab" aria-controls="hotel-map"
+                                    aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3009/3009489.png" alt="hotel">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="tourist">
+                                <button class="nav-link" id="tourist-map-tab" data-bs-toggle="tab"
+                                    data-bs-target="#tourist-map" type="button" role="tab" aria-controls="tourist-map"
+                                    aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/7060/7060110.png" alt="tourist">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="bus">
+                                <button class="nav-link" id="bus-map-tab" data-bs-toggle="tab"
+                                    data-bs-target="#bus-map" type="button" role="tab" aria-controls="bus-map"
+                                    aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/1042/1042263.png" alt="bus">
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="mapTab">
+                            <div class="tab-pane fade show active" id="restaurant-map" role="tabpanel"
+                                aria-labelledby="restaurant-map-tab">
+                                <div class="map-list">
+                                    <div class="map-item" data-lat="10.5333" data-lng="106.4167">
+                                        <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                            alt="Nhà hàng 1">
+                                        <div>
+                                            <div class="name">Nhà Hàng Sân Golf West Lakes</div>
+                                            <div class="address">Số 145, ĐT822, ấp Chánh, Đức Hòa, Long An Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.63054139415159" data-lng="106.49339875274006">
+                                        <img src="https://lh4.googleusercontent.com/proxy/1kWPmEJzM6rbgs0UMGzb9Wbd-mWw-PBlMjSNHHoUvJ7vqU8ZndjLHdo9lRdvR0Uzu3B6Da5DeFSJcESahFUPSVPqL0GaAzXbDHXFnw5djkkepJOU9pE0FyeLnHKPTHzG3so6tvXigKnW_so4kAlh7owKkQ"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">Hải sản Hoàng</div>
+                                            <div class="address">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="hotel-map" role="tabpanel" aria-labelledby="hotel-map-tab">
+                                <div class="map-list">
+                                    <div class="map-item" data-lat="10.670525872464392" data-lng="106.48918070856237">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toansauconkun994/thumb/1_647964214.jpg"
+                                            alt="HOMESTAY VÀM CỎ FARMSTAY">
+                                        <div>
+                                            <div class="name">HOMESTAY VÀM CỎ FARMSTAY</div>
+                                            <div class="address">Đường Rạch Tre, ấp 5, xã An Thạnh, huyện Bến Lức, tỉnh Long An Thị trấn Bến Lức, Huyện Bến Lức, Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tourist-map" role="tabpanel" aria-labelledby="tourist-map-tab">
+                                <div class="map-list">
+                                    <div class="map-item" data-lat="10.725328531863696" data-lng="106.0848699385032">
+                                        <img src="https://vinhtour.vn/wp-content/uploads/2024/09/VT_Khu-Du-Lich-Canh-Dong-Bat-Tan-Long-An-Ve-Dep-Moc-Mac-Dam-Chat-Tay-Nam-Bo1.jpg"
+                                            alt="Cánh đồng bất tận">
+                                        <div>
+                                            <div class="name">Cánh đồng bất tận</div>
+                                            <div class="address">KP3, Bình Phong Thạnh, Mộc Hóa, Long An, Việt Nam</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="bus-map" role="tabpanel" aria-labelledby="bus-map-tab">
+                                <div class="map-list">
+                                    <div class="map-item" data-lat="10.537756992964985" data-lng="106.40477113174349">
+                                        <img src="https://lh5.googleusercontent.com/p/AF1QipOiLB-YjvNrtDq57hKeypJC61pjiU2E2rghlebz=w408-h306-k-no"
+                                            alt="Cánh đồng bất tận">
+                                        <div>
+                                            <div class="name">Bến xe Long An</div>
+                                            <div class="address">68/48, Hẻm, 68 Đ. Hùng Vương, Phường 2, Tân An, Long An, Việt Nam</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="category" data-type="restaurant">
+                            <h3>Nhà Hàng</h3>
+                            <div class="items">
+                                <div class="item" data-lat="10.5333" data-lng="106.4167">
+                                    <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                        alt="Nhà hàng 1">
+                                    <div>
+                                        <p>Nhà Hàng Sông Nước</p>
+                                        <a href="https://maps.google.com/?q=10.5333,106.4167" target="_blank">Xem trên
+                                            Google Maps</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <div class="item" data-lat="10.63054139415159" data-lng="106.49339875274006">
+                                    <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                        alt="Nhà hàng 2">
+                                    <div>
+                                        <p>Hải Sản Hoàng</p>
+                                        <a href="https://maps.google.com/?q=10.63054139415159,106.49339875274006"
+                                            target="_blank">Xem trên Google Maps</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category" data-type="hotel">
+                            <h3>Khách Sạn</h3>
+                            <div class="items">
+                                <div class="item" data-lat="10.5500" data-lng="106.4000">
+                                    <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                        alt="Khách sạn 1">
+                                    <div>
+                                        <p>Khách Sạn Long An</p>
+                                        <a href="https://maps.google.com/?q=10.5500,106.4000" target="_blank">Xem trên
+                                            Google Maps</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category" data-type="tourist">
+                            <h3>Địa Điểm Du Lịch</h3>
+                            <div class="items">
+                                <div class="item" data-lat="10.6667" data-lng="106.5667">
+                                    <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                        alt="Làng Nổi">
+                                    <div>
+                                        <p>Làng Nổi Tân Lập</p>
+                                        <a href="https://maps.google.com/?q=10.6667,106.5667" target="_blank">Xem trên
+                                            Google Maps</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
@@ -30,11 +1336,13 @@
 
 <!-- library -->
 <script src="./assets/library/jquery/jquery.min.js"></script>
-<script src="./assets/library/slick/slick/slick.min.js"></script>
 <script src="./assets/library/validate/jquery.validate.js"></script>
 <script src="./assets/library/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+<script src="./assets/library/leaflet/leaflet.js"></script>
 
 <!-- js -->
 <script src="./assets/js/main.js"></script>
-<script src="./assets/js/home.js"></script>
+<script src="./assets/js/map.js"></script>
+
 </html>

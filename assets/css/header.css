@@ -1,0 +1,316 @@
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 1002;
+    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 12px;
+    position: relative;
+}
+
+.header .logo img {
+    width: auto;
+    height: 52px;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding-block: 0;
+}
+
+.header .navbar a {
+    position: relative;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    transition: all 0.3s linear;
+}
+
+.header .navbar a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s linear;
+}
+
+.header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+.header .navbar a:hover::after {
+    width: 100%;
+}
+
+.header .others {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.header .others .menu-mb {
+    cursor: pointer;
+    display: none;
+}
+
+.header .others .menu-mb img {
+    width: 36px;
+    height: auto;
+}
+
+.header .others .btn-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 6px;
+    border: 1px solid var(--white-color);
+    border-radius: 8px;
+    transition: all 0.3s linear;
+}
+
+.header .others .btn-search.active {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.header .others .btn-search.active img {
+    filter: brightness(0) invert(1);
+}
+
+.header .others .btn-search img {
+    width: 18px;
+    height: auto;
+}
+
+header .search-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding-block: 24px;
+    background-color: var(--bg-color-2);
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+    border-bottom: 1px solid var(--primary-color);
+    border-radius: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+header .search-input #results li {
+    background-color: var(--bg-color);
+}
+
+header .search-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+header .search-button {
+    width: 80%;
+    margin-inline: auto;
+    padding-top: 12px;
+}
+
+.search-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    position: relative;
+    width: 80%;
+}
+
+.search-input input {
+    width: 100%;
+    height: 42px;
+    margin-inline: auto;
+    outline: none;
+    padding-inline: 24px;
+    border-radius: 24px;
+    border: 1px solid #5d5d5d;
+    color: #5d5d5d;
+    font-size: 14px;
+    line-height: 1;
+    background-color: var(--bg-color);
+}
+
+.search-input #results {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: var(--white-color);
+    box-shadow: 0px 30px 40px #00405315;
+    display: none;
+}
+
+.search-input #results.active {
+    display: block;
+}
+
+.search-input #results li:not(:last-child) {
+    margin-bottom: 2px;
+}
+
+.search-input #results li {
+    padding: 8px 24px;
+    background-color: var(--white-color);
+    background-color: var(--bg-color-2);
+    cursor: pointer;
+}
+
+.search-input #results li a {
+    font-size: 14px;
+    color: var(--text-color);
+    transition: all 0.3s linear;
+}
+
+.search-input #results li a:hover {
+    color: var(--primary-color);
+}
+
+.icon-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    width: 18px;
+}
+
+.search-button .text {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.search-button {
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    gap: 36px;
+}
+
+.search-button .group-btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    flex: 1;
+}
+
+.search-button .group-btn a {
+    display: inline-block;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 8px 36px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.search-sub {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: unset;
+    padding-block: 0;
+}
+
+/**
+* 1200px
+**/
+
+@media screen and (max-width: 1200px) {
+    .header .navbar a {
+        font-size: 10px;
+    }
+}
+
+/**
+* 991px
+**/
+
+@media screen and (max-width: 991px) {
+
+    .header .others .menu-mb {
+        display: block;
+    }
+    
+    .header .navbar {
+        flex-direction: column;
+        position: absolute;
+        background-color: #fff;
+        top: 76px;
+        right: -450px;
+        padding: 0px 0 48px;
+        gap: 0px;
+        align-items: start;
+        height: 100vh;
+        justify-content: start;
+        border-left: 1px solid #e8e8e8;
+        transition: all 0.3s linear;
+    }
+
+    .header .navbar::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-color: #fff;
+    }
+
+    .header .navbar.active {
+        right: calc(-0% - 60px);
+    }
+
+    .header .navbar a {
+        width: 100%;
+        display: block;
+        padding: 18px 100px 18px 28px;
+        text-align: start;
+        font-size: 16px;
+        border-bottom: 1px solid #e8e8e8;
+    }
+}
+
+/**
+* 576
+**/
+
+@media screen and (max-width: 576px) {
+    /* .header .navbar {
+        right: calc(-80%);
+    }  */
+}
