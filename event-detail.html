@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng thông tin du lịch - Sự kiện</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- library -->
+    <link rel="stylesheet" href="./assets/library/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="./index.html" class="logo">
+                    <div class="img">
+                        <img src="./assets/images/logo.png" alt="Logo">
+                    </div>
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tin tức
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tin nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sự kiện nổi bật</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Điểm đến
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Địa điểm nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Địa điểm du lịch</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Ẩm thực
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Đặc sản địa phương</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nhà hàng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Lịch trình
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tour du lịch</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hướng dẫn viên</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">Lưu trú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Mua sắm
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Điểm mua sắm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Chợ địa phương</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tiện ích
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tuyến xe buýt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bến xe</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hãng taxi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trạm xăng dầu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ATM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Y tế</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="others">
+                    <div class="btn-search">
+                        <img src="./assets/images/search.svg" alt="search">
+                    </div>
+                    <div class="account">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/images/mdi--account.svg" alt="tài khoản">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-mb">
+                        <img src="./assets/images/ic--round-menu.svg" alt="menu mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="container">
+                <div class="search-wrap">
+                    <div class="search-input">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin Tân Trụ..."
+                            fdprocessedid="4i5j0h">
+                        <img src="./assets/images/search.svg" alt="search" class="icon-search">
+                        <ul id="results"></ul>
+                    </div>
+                </div>
+                <!-- <div class="search-button">
+                    <div class="text">Tìm nhanh</div>
+                    <div class="group-btn">
+                        <a href="./news-list.html">Tin tức</a>
+                        <a href="./member.html">Ủy viên</a>
+                        <a href="./destination.html">Điểm đến</a>
+                        <a href="./index.html#food">Đặc sản</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-img">
+                <img src="https://ik.imagekit.io/tvlk/blog/2024/02/khu-du-lich-canh-dong-bat-tan-cover.jpg" alt="banner">
+            </div>
+            <div class="content">
+                <h1>
+                    Chi tiết sự kiện
+                </h1>
+            </div>
+        </section>
+        <section class="detail news-detail">
+            <div class="container">
+                <div class="detail-container">
+                    <div class="detail-body">
+                        <div class="detail-header">
+                            <div class="type">Sự kiện</div>
+                            <h1 class="title">Tuần Văn hóa - Thể thao - Du lịch tỉnh Long An lần thứ 2 năm 2024 - Thành
+                                công tốt đẹp</h1>
+                            <span class="time">04/02/2025</span>
+                            <div class="actions">
+                                <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                        alt="mục yêu thích"></button>
+                                <button class="btn-bookmark"><img src="./assets/images/bookmark.svg"
+                                        alt="mục quan tâm"></button>
+                            </div>
+                        </div>
+                        <div class="detail-content">
+                            <div class="content-fck slider-jsgallery" style="margin: 0; padding: 0; text-align: center">
+                                <p style="margin: 0 0 10px; padding: 0; text-align: center"><span
+                                        style="color: rgba(0, 0, 0, 1)"><img alt=""
+                                            title="Tuần Văn hóa - Thể thao - Du lịch tỉnh Long An lần thứ 2 năm 2024 - Thành công tốt đẹp"
+                                            class="zoomimg i-img-slider-jsgallery"
+                                            src="https://www.baolongan.vn/image/news/2024/20241205/images/khai%20m%E1%BA%A1c%20(38).jpg"
+                                            style="height: 334px; width: 500px; margin: 0; padding: 5px 0; border: 0"></span>
+                                </p>
+                                <span style="color: rgba(0, 0, 0, 1)"><em
+                                        style="width: 510px; margin: auto; padding: 0">Chương trình nghệ thuật đặc sắc,
+                                        được đầu tư kỹ lưỡng tại lễ khai mạc</em></span>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)"><em style="margin: 5px; padding: 0"><span
+                                                style="margin: 0; padding: 0"><strong>- PV: Ông có nhận xét gì sau 7
+                                                    ngày diễn ra Tuần VHTTDL tỉnh Long An lần thứ 2 năm
+                                                    2024?</strong></span></em></span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)"><span
+                                            style="margin: 0; padding: 0; color: rgba(0, 0, 0, 1)">Ông Nguyễn Thành
+                                            Thanh:</span>&nbsp;Được sự quan tâm chỉ đạo sâu sát của Tỉnh ủy, UBND tỉnh,
+                                        đến thời điểm này, có thể khẳng định&nbsp;<span
+                                            style="margin: 0; padding: 0">Tuần VHTTDL tỉnh Long An lần thứ 2 năm
+                                            2024</span>&nbsp;đã diễn ra thành công tốt đẹp. Qua đây, góp phần không nhỏ
+                                        trong việc giới thiệu, quảng bá tiềm năng, thế mạnh, thu hút đầu tư - thương
+                                        mại - du lịch của tỉnh, gắn với việc phát huy các giá trị truyền thống, văn hóa,
+                                        nhân văn và tài nguyên thiên nhiên của tỉnh với nhân dân và du khách.</span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)">Qua Tuần VHTTDL tỉnh lần thứ 2 năm 2024, tỉnh
+                                        quảng bá đến bạn bè quốc tế rằng Long An có tiềm năng du lịch sinh thái, du lịch
+                                        văn hóa, lịch sử cũng như du lịch vui chơi, giải trí, du lịch thể thao,... Từ
+                                        đó, thu hút du khách nhiều hơn nữa trong thời gian tới, giúp ngành Du lịch phát
+                                        triển bền vững, góp phần vào sự phát triển chung của tỉnh.</span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)"><strong>-&nbsp;</strong><em
+                                            style="margin: 5px; padding: 0"><span
+                                                style="margin: 0; padding: 0"><strong>PV: Một số kết quả nổi bật của
+                                                    Tuần VHTTDL tỉnh Long An lần thứ 2 năm 2024 là gì, thưa
+                                                    ông?</strong></span></em></span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)"><span
+                                            style="margin: 0; padding: 0; color: rgba(0, 0, 0, 1)">Ông Nguyễn Thành
+                                            Thanh:</span>&nbsp;Trong khuôn khổ sự kiện, 10 hoạt động được tổ chức theo
+                                        đúng kế hoạch tạo nên không gian lễ hội hoành tráng, sôi động trong những ngày
+                                        qua. Trong đó có thể kể đến những hoạt động chính như Lễ khai mạc Tuần VHTTDL
+                                        tỉnh Long An lần thứ 2 năm 2024; Hội nghị Liên kết, hợp tác, xúc tiến du lịch và
+                                        sản phẩm OCOP giữa TP.HCM và 13 tỉnh, thành phố Vùng Đồng bằng sông Cửu Long;
+                                        cuộc thi “Tỏa sáng tài năng sinh viên”;&nbsp;<span
+                                            style="margin: 0; padding: 0">Lễ hội Âm nhạc - Hite Jinro Festival
+                                            2024</span>&nbsp;và các chương trình thể thao;...</span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)">Chỉ trong vòng 7 ngày diễn ra sự kiện, Long An
+                                        đón và phục vụ hơn 500.000 lượt khách du lịch trong nước, quốc tế và nhân dân
+                                        trong tỉnh đến tham quan, trải nghiệm các hoạt động VHTTDL, ẩm thực và các không
+                                        gian giới thiệu, trưng bày, triển lãm,... Trong đó, các chuỗi sự kiện chính thu
+                                        hút du khách bao gồm Hội chợ Thương mại, Ẩm thực, Du lịch đón hơn 160.000 lượt
+                                        người đến ăn uống, mua sắm; Lễ hội Âm nhạc&nbsp; - Hite Jinro Festival 2024 với
+                                        hơn 60.000 khán giả; trình diễn drone cùng nghệ thuật sân khấu đêm khai mạc đón
+                                        hơn 20.000 người;...</span></p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)">Số lượng người đến dự các sự kiện quan trọng lên
+                                        đến hàng&nbsp;trăm ngàn lượt người. Số lượng truy cập qua Báo Long An điện tử,
+                                        các nền tảng mạng xã hội của Báo Long An, Đài Phát thanh và Truyền hình Long An
+                                        cũng ở mức cao, tạo sự lan tỏa lớn. Đây là cơ hội để Long An quảng bá môi trường
+                                        đầu tư, các khu, điểm du lịch trong tỉnh đến bạn bè trong và ngoài nước.</span>
+                                </p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)">Chắc chắn rằng qua sự kiện này sẽ thu hút được
+                                        khách du lịch đến Long An nhiều hơn cũng như thu hút được nhà đầu tư đến đầu tư
+                                        vào các khu, điểm du lịch, giúp du lịch Long An phát triển bền vững hơn.</span>
+                                </p>
+                                <p style="margin: 0 0 10px; padding: 0; text-align: justify"><span
+                                        style="color: rgba(0, 0, 0, 1)"><strong>-&nbsp;</strong><em
+                                            style="margin: 5px; padding: 0"><span
+                                                style="margin: 0; padding: 0"><strong>PV: Xin cảm ơn ông về cuộc phỏng
+                                                    vấn này!./.</strong></span></em></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-sidebar">
+                        <div class="sidebar-item">
+                            <h2 class="sidebar-title">Tin tức liên quan</h2>
+                            <div class="detail-others">
+                                <div class="list">
+                                    <div class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm.lan/2024/z6064936543707_e78248ae6d5959b5ba6ba1a560e91a61_916470942.jpg"
+                                                alt="Du lịch Long An nhiều chương trình hấp
+                                                dẫn phục vụ 𝐓𝐮𝐚̂̀𝐧 𝐕𝐚̆𝐧 𝐡𝐨́𝐚 – 𝐓𝐡𝐞̂̉ 𝐭𝐡𝐚𝐨 – 𝐃𝐮 𝐥𝐢̣𝐜𝐡
+                                                𝐭𝐢̉𝐧𝐡 𝐥𝐚̂̀𝐧 𝐭𝐡𝐮̛́ 𝟐 𝐧𝐚̆𝐦 𝟐𝟎𝟐𝟒 (28/11 - 04/12/2024) ">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Du lịch Long An nhiều chương trình hấp
+                                                dẫn phục vụ 𝐓𝐮𝐚̂̀𝐧 𝐕𝐚̆𝐧 𝐡𝐨́𝐚 – 𝐓𝐡𝐞̂̉ 𝐭𝐡𝐚𝐨 – 𝐃𝐮 𝐥𝐢̣𝐜𝐡
+                                                𝐭𝐢̉𝐧𝐡 𝐥𝐚̂̀𝐧 𝐭𝐡𝐮̛́ 𝟐 𝐧𝐚̆𝐦 𝟐𝟎𝟐𝟒 (28/11 - 04/12/2024) </div>
+                                            <div class="date">25/02/2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm/2024/z6055808802997_04702604dc1650e5cde5d49bd5c45781_895515248.jpg"
+                                                alt="Du lịch Long An - Thêm nhiều hứa hẹn">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Tuần Văn hóa – Thể thao – Du lịch tỉnh
+                                                Long An</div>
+                                            <div class="date">25/02/2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm/2024/467404204_122100529274628028_4299896698637172696_n_100185913.jpg"
+                                                alt="Phát huy hiệu quả các mô hình bảo đảm an ninh, trật tự">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">KHÁT VỌNG SÔNG VÀM 2024 - LONG AN ĐÃ SẴN
+                                                SÀNG
+                                            </div>
+                                            <div class="date">25/02/2025</div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://storage-vnportal.vnpt.vn/gov-lan/1/FileQuanTriTinTuc/IMG_0313.jpg"
+                                                alt="Sôi nổi Giải đua xuồng ba lá tại Tuần Văn hóa - Thể thao - Du lịch tỉnh Long An lần thứ 2 năm 2024 ​">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Sôi nổi Giải đua xuồng ba lá tại Tuần Văn hóa - Thể thao - Du lịch tỉnh Long An lần thứ 2 năm 2024 ​</div>
+                                            <div class="date">25/02/2025</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sidebar-item">
+                            <h2 class="sidebar-title">Chia sẽ bài viết</h2>
+                            <div class="socicals">
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://hidosport.vn/wp-content/uploads/2023/09/zalo-icon.png"
+                                        alt="social">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-bottom">
+                    <div class="comment">
+                        <div class="detail-form">
+                            <h3 class="title">
+                                Để lại bình luận
+                            </h3>
+                            <form action="#" id="comment-form" novalidate="novalidate">
+                                <div class="form-input">
+                                    <input type="text" name="author" id="author" placeholder="Họ tên * "
+                                        required="required">
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="comment" id="message" cols="40" rows="3" aria-required="true"
+                                        placeholder="Viết bình luận..." required="required"></textarea>
+                                </div>
+                                <button class="button button-primary" type="submit">Bình luận</button>
+                            </form>
+                        </div>
+                        <div class="comment-list">
+                            <div class="detail-comment">
+                                <div class="avatar">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
+                                </div>
+                                <div class="infor">
+                                    <div class="title">
+                                        <div class="name">Huỳnh Minh Hải</div><span class="date">05/03/2025</span>
+                                    </div>
+                                    <span class="desc">
+                                        Tuyệt vời!!!
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="detail-comment">
+                                <div class="avatar">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
+                                </div>
+                                <div class="infor">
+                                    <div class="title">
+                                        <div class="name">Nguyễn Thị Thúy Quỳnh</div><span
+                                            class="date">05/03/2025</span>
+                                    </div>
+                                    <span class="desc">
+                                        Bài viết hay quá, thông tin rất hữu ích!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="rating-container">
+                            <h2>Đánh giá bài viết</h2>
+                            <div class="stars" id="ratingStars">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <div class="result" id="ratingResult">
+                                <div>
+                                    <span id="averageRating">4.9</span>/5 (Tổng: <span id="totalVotes">84</span> lượt
+                                    đánh
+                                    giá)
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-item">
+                                        <div>5 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 90%;"></div>
+                                        </div>
+                                        <div>
+                                            90%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>4 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>3 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>2 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>1 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="blur"></div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <div class="logo">
+                            <img src="./assets/images/logo.png" alt="Logo">
+                        </div>
+                        <div class="desc">
+                            Cổng thông tin du lịch Long An giới thiệu các điểm đến, văn hóa, ẩm thực và sự kiện đặc sắc
+                            của tỉnh, giúp du khách khám phá dễ dàng.
+                        </div>
+                        <div class="socials">
+                            <a class="socials-link"
+                                href="https://www.facebook.com/profile.php?id=100041639027052&ref=embed_page"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                            <a class="socials-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-center">
+                        <div class="footer-wrap">
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <!-- <div class="footer-title">Trao đổi</div> -->
+                        <div class="content">
+                            <div>Có kế hoạch du lịch Long An?</div>
+                            <div>Hãy cùng khám phá vẻ đẹp của vùng đất này!</div>
+                            <div>091 407 13 79</div>
+                            <div>Huongvamco@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-footer">
+                    <div class="container">
+                        <div class="code-by">
+                            Phát triển bởi <img src="./assets/images/logo-vnpt.png" alt="VNPT LONG AN"> VNPT LONG AN
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- library -->
+<script src="./assets/library/jquery/jquery.min.js"></script>
+<script src="./assets/library/validate/jquery.validate.js"></script>
+<script src="./assets/library/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+<script src="./assets/library/leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+
+<!-- js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/map.js"></script>
+
+</html>

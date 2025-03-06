@@ -89,6 +89,57 @@
 }
 
 /**
+* BANNER
+**/
+
+.banner {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner .banner-img {
+    width: 100%;
+    height: calc(70vh - 76px);
+}
+
+.banner .banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .banner-img::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.banner .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    z-index: 3;
+}
+
+.banner .content h1 {
+    font-size: 70px;
+    line-height: 80px;
+    font-weight: 700;
+    color: var(--white-color);
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/**
 * DESTINATION
 **/
 
@@ -303,7 +354,7 @@
     gap: 6px;
 }
 
-.news .card-img .actions button {
+.actions button {
     border-radius: 100%;
     border: 0;
     display: flex;
@@ -313,18 +364,18 @@
     transition: all 0.3s linear;
 }
 
-.news .card-img .btn-bookmark:hover img,
-.news .card-img .btn-bookmark.active img {
+.btn-bookmark:hover img,
+.btn-bookmark.active img {
     filter: brightness(0) invert(1);
     opacity: 1;
 }
 
-.news .card-img .btn-bookmark:hover,
-.news .card-img .btn-bookmark.active {
+.btn-bookmark:hover,
+.btn-bookmark.active {
     background-color: var(--primary-color);
 }
 
-.news .card-img .btn-bookmark img {
+.btn-bookmark img {
     width: 18px;
     opacity: 0.6;
     transition: all 0.3s linear;
@@ -478,16 +529,8 @@
     padding-top: 60px;
 }
 
-.detail {
-    padding: 80px 0 0px;
-}
-
-.detail .detail-container {
-    padding-inline: 120px;
-}
-
 .detail .detail-header {
-    padding-bottom: 40px;
+    padding-bottom: 12px;
     margin-bottom: 40px;
     border-bottom: 2px solid var(--primary-color);
 }
@@ -501,14 +544,15 @@
 }
 
 .detail .detail-header .type {
-    font-size: 22px;
+    font-size: 16px;
     color: var(--primary-color);
     font-weight: 500;
     line-height: 24px;
+    text-transform: uppercase;
 }
 
 .detail .detail-header .time {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 500;
     line-height: 30px;
     color: var(--primary-color);
@@ -520,8 +564,8 @@
 }
 
 .detail .detail-content img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
 }
 
 .detail .detail-content * {
