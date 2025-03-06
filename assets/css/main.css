@@ -731,7 +731,7 @@ section.section-py {
 .detail-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 36px;
 }
 
 .detail-bottom {
@@ -747,6 +747,7 @@ section.section-py {
     padding: 12px;
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .detail-comment .infor {

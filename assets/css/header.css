@@ -311,6 +311,19 @@ header .search-button {
     padding-block: 0;
 }
 
+.language .dropdown-menu {
+    min-width: fit-content;
+}
+
+.language .dropdown-item {
+    padding: 4px 12px;
+}
+
+.language .dropdown-menu img {
+    width: 18px;
+    height: auto;
+}
+
 /**
 * 1200px
 **/
