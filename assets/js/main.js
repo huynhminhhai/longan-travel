@@ -177,5 +177,28 @@ $(document).ready(function () {
             }
         },
     });
-    
+
+    const mainSwiper = new Swiper('.main-slider', {
+        slidesPerView: 1,
+        initialSlide: 0,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    // Khởi tạo Thumbnail Swiper (Ảnh thu nhỏ)
+    const thumbnailSwiper = new Swiper('.thumbnail-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        centeredSlides: true,
+        loop: true,
+        slideToClickedSlide: true
+    });
+
+    mainSwiper.controller.control = thumbnailSwiper;
+    thumbnailSwiper.controller.control = mainSwiper;
+
+
 });
