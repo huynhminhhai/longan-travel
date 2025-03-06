@@ -93,34 +93,37 @@ $(document).ready(function () {
         },
     });
 
-    new Swiper(".food-list", {
-        slidesPerView: 1.3,
-        centeredSlides: true,
-        spaceBetween: 12,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-btn-next",
-            prevEl: ".swiper-btn-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        autoplay: {
-            delay: 8000,
-        },
-        breakpoints: {
-            1500: {
-                slidesPerView: 1.8,
+    if ($('.food-list .swiper-wrapper').length > 0) {
+        new Swiper(".food-list", {
+            slidesPerView: 1.3,
+            centeredSlides: true,
+            spaceBetween: 12,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
             },
-            991: {
-                slidesPerView: 1.5,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            768: {
-                slidesPerView: 1,
-            }
-        },
-    });
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                1500: {
+                    slidesPerView: 1.8,
+                },
+                991: {
+                    slidesPerView: 1.5,
+                },
+                768: {
+                    slidesPerView: 1,
+                }
+            },
+        });
+    }
+
 
     new Swiper(".guide-list", {
         spaceBetween: 24,
