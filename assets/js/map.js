@@ -145,6 +145,12 @@ $(document).ready(function () {
             });
         });
 
-        loadMarkers('restaurant');
+        function getFirstTabType() {
+            const firstTab = document.querySelector('.map-nav-item:first-child');
+            return firstTab ? firstTab.getAttribute('data-type') : 'restaurant';
+        }
+
+        const initialType = getFirstTabType();
+        loadMarkers(initialType);
     }
 });
