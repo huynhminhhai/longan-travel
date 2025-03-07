@@ -549,8 +549,8 @@
 }
 
 .detail .detail-header .title {
-    font-size: 32px;
-    line-height: 42px;
+    font-size: 38px;
+    line-height: 48px;
     font-weight: 600;
     color: var(--primary-color);
     margin: 12px 0;

@@ -503,7 +503,8 @@ section.section-py {
     padding: 6px 22px;
 }
 
-.button-primary {
+.button-primary,
+a.button-primary {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: var(--white-color);
@@ -734,6 +735,22 @@ section.section-py {
     display: grid;
     grid-template-columns: calc(65% - 24px) calc(35% - 12px);
     gap: 36px;
+}
+
+.detail-container .detail-title {
+    display: flex;
+    align-items: end;
+    gap: 42px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.detail-container .detail-title .title {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0;
 }
 
 .detail-sidebar {
@@ -1008,7 +1025,7 @@ section.section-py {
 
 .infor-map .map .map-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     max-height: 180px;
 }
