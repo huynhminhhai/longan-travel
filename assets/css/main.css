@@ -1042,6 +1042,11 @@ section.section-py {
     gap: 12px;
 }
 
+.infor-detail ul.schedule-tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .infor-detail li {
     display: flex;
     align-items: self-start;
