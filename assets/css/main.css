@@ -874,6 +874,17 @@ section.section-py {
     gap: 12px;
 }
 
+.detail-others.circle .list .item {
+    align-items: center;
+}
+
+.detail-others.circle .list .item .thumbnail {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
 .detail-others .list .item .content {
     flex: 1 0 0;
 }
@@ -943,6 +954,29 @@ section.section-py {
 
 .detail-body .detail-body--item {
     margin-bottom: 36px;
+}
+
+.detail-body--item .guide-list {
+    padding: 0;
+    grid-template-columns: 1fr;
+}
+
+.detail-body--item .guide-list .card {
+    flex-direction: row;
+}
+
+.detail-body--item .guide-list .card-body {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+}
+
+.detail-body--item .guide-list .card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: unset;
 }
 
 .detail-body .detail-body--item .title  {

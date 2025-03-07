@@ -819,6 +819,7 @@
     padding-block: 48px 56px;
     overflow-x: hidden;
     position: relative;
+    gap: 36px 24px;
 }
 
 .guide-list .card {

@@ -124,34 +124,37 @@ $(document).ready(function () {
         });
     }
 
+    if ($('.guide-list .swiper-wrapper').length > 0) {
+        new Swiper(".guide-list", {
+            spaceBetween: 24,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
 
-    new Swiper(".guide-list", {
-        spaceBetween: 24,
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-btn-next",
-            prevEl: ".swiper-btn-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        autoplay: {
-            delay: 8000,
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
-            },
-            991: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            }
-        },
-    });
+
 
     if ($('.component-list .swiper-wrapper').length > 0) {
         new Swiper(".component-list", {
