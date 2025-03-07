@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng thông tin du lịch - Chi tiết bệnh viện</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- library -->
+    <link rel="stylesheet" href="./assets/library/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="./index.html" class="logo">
+                    <div class="img">
+                        <img src="./assets/images/logo.png" alt="Logo">
+                    </div>
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tin tức
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tin nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sự kiện nổi bật</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Điểm đến
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Địa điểm nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Địa điểm du lịch</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Ẩm thực
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Đặc sản địa phương</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nhà hàng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Lịch trình
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tour du lịch</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hướng dẫn viên</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">Lưu trú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Mua sắm
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Điểm mua sắm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Chợ địa phương</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tiện ích
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tuyến xe buýt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bến xe</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hãng taxi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trạm xăng dầu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ATM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Y tế</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="others">
+                    <div class="btn-search">
+                        <img src="./assets/images/search.svg" alt="search">
+                    </div>
+                    <div class="language">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://cdn-icons-png.flaticon.com/128/323/323319.png" alt="Tiếng Việt">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><img
+                                            src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/images/mdi--account.svg" alt="tài khoản">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-mb">
+                        <img src="./assets/images/ic--round-menu.svg" alt="menu mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="container">
+                <div class="search-wrap">
+                    <div class="search-input">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin Tân Trụ..."
+                            fdprocessedid="4i5j0h">
+                        <img src="./assets/images/search.svg" alt="search" class="icon-search">
+                        <ul id="results"></ul>
+                    </div>
+                </div>
+                <!-- <div class="search-button">
+                    <div class="text">Tìm nhanh</div>
+                    <div class="group-btn">
+                        <a href="./news-list.html">Tin tức</a>
+                        <a href="./member.html">Ủy viên</a>
+                        <a href="./destination.html">Điểm đến</a>
+                        <a href="./index.html#food">Đặc sản</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-img">
+                <img src="https://res.cloudinary.com/globes/image/upload/t_desktop_article_content_header_800*392/v1624885267/direct/shutterstock_1653066394%D7%90%D7%A7%D7%9C%D7%99%D7%9D_qgekx3.jpg"
+                    alt="banner">
+            </div>
+            <div class="content">
+                <h1>
+                    Trung tâm Y tế huyện Bến Lức
+                </h1>
+            </div>
+        </section>
+        <section class="detail news-detail">
+            <div class="container">
+                <div class="detail-container">
+                    <div class="detail-body">
+                        <div class="detail-body--item">
+                            <div class="gallery">
+                                <div class="swiper-container main-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img
+                                                src="https://ttytbenluc.com.vn/wp-content/uploads/2024/04/11-715x400.png"
+                                                alt="Image 1"></div>
+                                        <div class="swiper-slide"><img
+                                                src="https://media.la34.com.vn/upload/image/202502/medium/1318868_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_10_09271021.jpg"
+                                                alt="Image 2"></div>
+                                        <div class="swiper-slide"><img
+                                                src="https://media.la34.com.vn/upload/image/202502/medium/1318870_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_2_09292521.jpg"
+                                                alt="Image 3"></div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-container thumbnail-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img
+                                                src="https://ttytbenluc.com.vn/wp-content/uploads/2024/04/11-715x400.png"
+                                                alt="Thumbnail 1"></div>
+                                        <div class="swiper-slide"><img
+                                                src="https://media.la34.com.vn/upload/image/202502/medium/1318868_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_10_09271021.jpg"
+                                                alt="Thumbnail 2"></div>
+                                        <div class="swiper-slide"><img
+                                                src="https://media.la34.com.vn/upload/image/202502/medium/1318870_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_2_09292521.jpg"
+                                                alt="Thumbnail 3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-body--item">
+                            <h3 class="title">
+                                Thông tin
+                                <div class="actions">
+                                    <button class="btn-bookmark" fdprocessedid="6tjr26"><img
+                                            src="./assets/images/favorite.svg" alt="mục yêu thích"></button>
+                                </div>
+                            </h3>
+                            <div class="infor-detail">
+                                <ul>
+                                    <li>
+                                        <img src="./assets/images/place.svg" alt="location">
+                                        <span>126 Nguyễn Hữu Thọ- KP3- TTBL- Bến Lức – Long An</span>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/email.svg" alt="email">
+                                        <span>ttytbenluc@longan.gov.vn </span>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/phone.svg" alt="phone">
+                                        <span>0723 871 480</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-body--item">
+                            <h3 class="title">
+                                Mô tả
+                            </h3>
+                            <div class="detail-content">
+                                <div class="ExternalClassFCD6FB87A52E4388B8304B8249402EC2"><p style="text-align:justify;"><strong>I- Thông tin chung:</strong></p><p style="text-align:justify;">1- Tên đơn vị (chữ HOA): TRUNG TÂM Y TẾ HUYỆN BẾN LỨC</p><p style="text-align:justify;">2- Địa chỉ: 126 Nguyễn Hữu Thọ- KP3- TTBL- Bến Lức – Long An</p><p style="text-align:justify;">3- Điện thọai: 0723 871 480&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0723 891 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p style="text-align:justify;">4- Cơ quan chủ quản: SỞ Y TẾ LONG AN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p style="text-align:justify;">5-Email: ttytbenluc@longan.gov.vn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p style="text-align:justify;"><strong>II- Thông tin riêng: </strong></p><p style="text-align:justify;"><strong>1- Lãnh đạo bệnh viện</strong>:</p><p style="text-align:justify;">Giám đốc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phạm Hồng Thái</p><p style="text-align:justify;">Phó Giám đốc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nguyễn Văn Đấu</p><p style="text-align:justify;">Phó Giám dốc:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phan Tấn Thanh​​</p><p style="text-align:justify;"><strong>2- Cơ cấu tổ chức đơn vị: </strong></p><p style="text-align:justify;"><strong>2.1 Sơ đồ tổ chức đơn vị: ( Kèm sơ đồ)</strong></p><p style="text-align:justify;"><strong>2.2</strong> Quy mô đơn vị (nếu là bệnh viện hoặc TTYT có giường bệnh)</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Bệnh viện đa khoa (chuyên khoa) hạng: III</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Tổng số giường bệnh: 160 giường bệnh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p style="text-align:justify;"><strong>2.3</strong> Cơ cấu nhân lực: </p><p style="text-align:justify;">Tổng số CBCCVC: 321, trong đó:</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Tiến sĩ Y:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thạc sĩ Y:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;01</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thạc sĩ điện:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;01</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Bác sĩ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Bác sĩ CK1: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;26</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Bác sĩ CK2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Tiến sĩ Dược:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thạc sĩ Dược:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Dược sĩ đại học: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;01</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Dược sĩ CK1:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Dược sĩ CK2:&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Y sĩ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;91</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - KTV Y đại học:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;03</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - KTV Y trung học:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;04</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - DS trung học:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - KTV trung học dược: &nbsp;00</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Y tá điều dưỡng đại học: 08</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Y tá điều dưỡng trung học:&nbsp;&nbsp;&nbsp;51</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - NHS đại học:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;09</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - NHS trung học:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Đại học khác:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Cao đẳng khác:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;05</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Trung học khác:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;07</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Sơ học, cán bộ khác:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20</p><p style="text-align:justify;"><strong>3. Vị trí, chức năng, nhiệm vụ của đơn vị: </strong></p><p style="text-align:justify;">Trung tâm Y tế Bến Lức giáp ranh Thành phố Hồ Chí Minh, có 2 chức năng khám điều trị và thực hiện các chương trình y tế quốc gia, y tế dự phòng. </p><p style="text-align:justify;"><strong>3.1. Chức năng:</strong></p><p style="text-align:justify;">Trung tâm Y tế huyện Bến Lức chịu sự chỉ đạo và quản lý trực tiếp, toàn diện của UBND huyện Bến Lức, đồng thời chịu sự hướng dẫn về nghiệp vụ chuyên môn theo ngành của Sở Y tế.</p><p style="text-align:justify;">Trung tâm Y tế huyện Bến Lức có chức năng khám chữa bệnh, thực hiện các chương chương trình quốc gia về y tế, hướng dẫn các hoạt động thuộc lĩnh vực được giao theo đúng chính sách, pháp luật, các quy định của Nhà nước.</p><p><strong>3.2. Nhiệm vụ:</strong><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Xây dựng kế hoạch, chương trình và các giải pháp thực hiện công tác chăm sóc sức khỏe nhân dân trên địa bàn huyện Bến Lức và tổ chức triển khai thực hiện theo sự chỉ đạo và hướng dẫn của Sở Y tế và UBND huyện Bến Lức.</p><p style="text-align:justify;">Khám chữa bệnh, cấp cứu, thực hiện các chương trình quốc gia về y tế, dự phòng, kết hợp y học hiện đại với y học cổ truyền dân tộc, tiêm chủng, phòng chống dịch bệnh, phòng chống sốt rét, bướu cổ, quản lý thai sản, bảo vệ sức khỏe bà mẹ, trẻ em và nhiệm vụ chuyên môn, kỹ thuật về kế hoạch hóa gia đình trên địa bàn nhằm làm tốt công tác chăm sóc và bảo vệ sức khỏe nhân dân, đặc biệt là nhiệm vụ chăm sóc sức khỏe ban đầu theo quy định của ngành Y tế.</p><p style="text-align:justify;">Thực hiện tốt, nâng cao chất lượng&nbsp; tiêu chí quốc gia huyện-xã.</p><p style="text-align:justify;">Quản lý tốt tổ chức bộ máy, cán bộ, kinh phí, dược, vật tư trang thiết bị y tế tuyến huyện và tuyến xã.</p><p style="text-align:justify;">Xây dựng, củng cố mạng lưới y tế và hướng dẫn, kiểm tra các mặt hoạt động chuyên môn, nghiệp vụ đối với các Trạm y tế xã.</p><p style="text-align:justify;">Chủ trì phối hợp với các Ngành, Đoàn thể trong huyện thực hiện công tác truyền thông giáo dục sức khỏe và tham gia vào các hoạt động chăm sóc, bảo vệ sức khỏe nhân dân.</p><p style="text-align:justify;">Thực hiện những nhiệm vụ, quyền hạn khác do Uỷ ban nhân dân huyện giao và hướng dẫn của Sở Y tế.</p><p style="text-align:justify;"><strong>4. Quy mô, năng lực, trang thiết bị:</strong></p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Kể tên các phòng, các khoa (nếu có) của đơn vị và số giường bệnh tại mỗi khoa (nếu có): 160 giường bệnh.</p><table cellspacing="0" width="100%" class="ms-rteTable-default"><tbody><tr><td class="ms-rteTable-default" style="width:20%;"><strong>STT</strong></td><td class="ms-rteTable-default" style="width:20%;"><strong>KHOA/PHÒNG</strong></td><td class="ms-rteTable-default" style="width:20%;"><strong>Chỉ tiêu giường bệnh</strong></td><td class="ms-rteTable-default" style="width:20%;"><strong>Chỉ tiêu </strong><strong>&nbsp;</strong><strong>hiện phấn đấu</strong></td><td class="ms-rteTable-default" style="width:20%;"><strong>Ghi chú</strong></td></tr><tr><td class="ms-rteTable-default">1</td><td class="ms-rteTable-default">Cấp cứu</td><td class="ms-rteTable-default">5</td><td class="ms-rteTable-default">5</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">2</td><td class="ms-rteTable-default">Nội</td><td class="ms-rteTable-default">60</td><td class="ms-rteTable-default">65</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">3</td><td class="ms-rteTable-default">Nhi</td><td class="ms-rteTable-default">30</td><td class="ms-rteTable-default">35</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">4</td><td class="ms-rteTable-default">Nhiễm</td><td class="ms-rteTable-default">15</td><td class="ms-rteTable-default">15</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">5</td><td class="ms-rteTable-default">Ngoại</td><td class="ms-rteTable-default">15</td><td class="ms-rteTable-default">17</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">6</td><td class="ms-rteTable-default">Sản</td><td class="ms-rteTable-default">20</td><td class="ms-rteTable-default">25</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">7</td><td class="ms-rteTable-default">Đông Y</td><td class="ms-rteTable-default">15</td><td class="ms-rteTable-default">18</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">8</td><td class="ms-rteTable-default">Phòng khám KVGĐ</td><td class="ms-rteTable-default">25</td><td class="ms-rteTable-default">25</td><td class="ms-rteTable-default">&nbsp;</td></tr><tr><td class="ms-rteTable-default">&nbsp;</td><td class="ms-rteTable-default"><strong>Tổng cộng:</strong></td><td class="ms-rteTable-default"><strong>185</strong></td><td class="ms-rteTable-default"><strong>205</strong></td><td class="ms-rteTable-default">&nbsp;</td></tr></tbody></table><p style="text-align:justify;">&nbsp;</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Giới thiệu về các phương pháp điều trị, chẩn đoán, máy móc trang thiết bị hiện có phục vụ khám chữa bệnh, xét nghiệm tại đơn vị:</p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Siêu âm 3D, 4D, Xquang cố định, tại giường, xét nghiệm sinh hóa, khí máu động mạch…</p><p style="text-align:justify;"><strong>5. Các hoạt động, thành tích nổi bật và các hình thức khen thưởng của bệnh viện: </strong></p><p style="text-align:justify;">- Giới thiệu một số hoạt động chuyên môn nổi bật thời gian qua trên từng lĩnh vực của đơn vị phụ trách (có thể cung cấp môt số hình ảnh minh hoạ) </p><p style="text-align:justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Thành tích thời gian qua: Danh hiệu anh hùng, thầy thuốc ưu tú, Huân chương, Huy chương, Cờ thi đua, Bằng khen của các cấp... </p><p style="text-align:justify;"><strong>6. Định hướng phát triển của đơn vị thời gian tới: </strong>(về tổ chức, cơ sở vật chất, lĩnh vực phụ trách, trang thiết bị, đào tạo nguồn lực....)</p><p style="text-align:justify;">- Về tổ chức: Trung tâm nâng cao công suất sử dụng giường bệnh từ 160 giường lên 200 giường bệnh.</p><p style="text-align:justify;">- Về cơ sở vật chất: Cơ sở vật chất được xây dựng mới đã được đưa vào sử dụng các khối, khoa/phòng chức năng như khu khám bệnh áp dụng phần mềm trong việc quản lý khám chữa bệnh, khu mổ đi vào hoạt động, khu cấp cứu tổng hợp, chạy thận nhân tạo…</p><p style="text-align:justify;">- Về trang thiết bị: Đưa vào sử dụng chụp CT Scaner, phòng công nghệ thông tin mạng lưới vi tính hóa-Internet…</p><p style="text-align:justify;">- Về đào tạo: Đưa cán bộ đi đào tạo các chuyên khoa như ngoại sản, da liểu, Nội-Nhi, và các lớp sơ bộ khác nhằm đáp ứng nhu cầu phát triển chuyên môn của đơn vị. Tuy nhiên cần bổ sung thêm nguồn nhân lực y tế để đảm bảo phục vụ so với chỉ tiêu giường bệnh.</p><p style="text-align:justify;">- Nâng cao chất lượng bệnh viện đạt mức &gt; 3 theo tiêu chí của Bộ y tế.</p><p style="text-align:justify;">- Xây dựng và cũng cố các trạm y tế thực hiện bộ tiêu chí quốc gia xề y tế xã.</p><p style="text-align:justify;">- Triển khai và thực hiện tốt các chương trình mục tiêu y tế quốc gia.​</p></div>
+                            </div>
+                        </div>
+                        <div class="detail-body--item">
+                            <h3 class="title">Bản đồ</h3>
+                            <div class="infor-map">
+                                <section class="map py-0">
+                                    <div class="map-wrap d-block">
+                                        <div id="map"></div>
+                                        <div class="sidebar d-none">
+                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
+                                                <li class="nav-item map-nav-item" role="presentation"
+                                                    data-type="hospital">
+                                                    <button class="nav-link active" id="hospital-map-tab"
+                                                        data-bs-toggle="tab" data-bs-target="#hospital-map" type="button"
+                                                        role="tab" aria-controls="hospital-map" aria-selected="true">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png"
+                                                            alt="resturant">
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="mapTab">
+                                                <div class="tab-pane fade show active" id="hospital-map" role="tabpanel"
+                                                    aria-labelledby="hospital-map-tab">
+                                                    <div class="map-list">
+                                                        <div class="map-item" data-lat="10.537824636906599"
+                                                            data-lng="106.40475073924593">
+                                                            <img src="https://media.la34.com.vn/upload/image/202502/medium/1318868_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_10_09271021.jpg"
+                                                                alt="Trung tâm Y tế huyện Bến Lức">
+                                                            <div>
+                                                                <div class="name">Trung tâm Y tế huyện Bến Lức</div>
+                                                                <div class="address">126 Nguyễn Hữu Thọ- KP3- TTBL- Bến Lức – Long An</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-sidebar">
+                        <div class="sidebar-item">
+                            <h2 class="sidebar-title">Các cơ sở y tế khác</h2>
+                            <div class="detail-others">
+                                <div class="list">
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://images2.thanhnien.vn/zoom/686_429/Uploaded/trangtt/2021_07_17/la_NDJQ.jpg"
+                                                alt="Bệnh viện Đa khoa tỉnh ">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Bệnh viện Đa khoa tỉnh </div>
+                                            <div class="date">
+                                                Số 211, Nguyễn Thông, Phường 3, Thành phố Tân An, tỉnh Long An
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://media.la34.com.vn/upload/image/202208/medium/1268397_ngay_3_8_2022_ben_luc_tan_hoa_tren_duong_xay_dung_ntm_5_09534803.jpg"
+                                                alt="Trạm Y tế xã Tân Hòa">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Trạm Y tế xã Tân Hòa</div>
+                                            <div class="date">
+                                                
+                                            Ấp 1, xã Tân Hòa, huyện Bến Lức, tỉnh Long An
+                                        
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy584buK1OguddfONg8r4F1oHVjfy4ZVOSuQ&s"
+                                                alt="Trạm Y tế xã Thạnh Lợi">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Trạm Y tế xã Thạnh Lợi
+                                            </div>
+                                            <div class="date">
+                                                Ấp 5, xã Thạnh Lợi, huyện Bến Lức, tỉnh Long An
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://file4.batdongsan.com.vn/resize/745x510/2024/06/28/20240628091218-d868_wm.jpg"
+                                                alt="Trạm Y tế xã Mỹ Yên">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Trạm Y tế xã Mỹ Yên</div>
+                                            <div class="date">
+                                                Ấp 4, xã Mỹ Yên, huyện Bến Lức, tỉnh Long An
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-bottom">
+                    <div class="comment">
+                        <div class="detail-form">
+                            <h3 class="title">
+                                Để lại bình luận
+                            </h3>
+                            <form action="#" id="comment-form" novalidate="novalidate">
+                                <div class="form-input">
+                                    <input type="text" name="author" id="author" placeholder="Họ tên * "
+                                        required="required">
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="comment" id="message" cols="40" rows="3" aria-required="true"
+                                        placeholder="Viết bình luận..." required="required"></textarea>
+                                </div>
+                                <button class="button button-primary" type="submit">Bình luận</button>
+                            </form>
+                        </div>
+                        <div class="comment-list">
+                            <div class="detail-comment">
+                                <div class="avatar">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
+                                </div>
+                                <div class="infor">
+                                    <div class="title">
+                                        <div class="name">Huỳnh Minh Hải</div><span class="date">05/03/2025</span>
+                                    </div>
+                                    <span class="desc">
+                                        Tuyệt vời!!!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="rating-container">
+                            <h2>Chia sẻ thông tin</h2>
+                            <div class="socicals">
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://hidosport.vn/wp-content/uploads/2023/09/zalo-icon.png"
+                                        alt="social">
+                                </a>
+                            </div>
+                            <h2>Đánh giá</h2>
+                            <div class="stars" id="ratingStars">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <div class="result" id="ratingResult">
+                                <div>
+                                    <span id="averageRating">4.9</span>/5 (Tổng: <span id="totalVotes">84</span> lượt
+                                    đánh
+                                    giá)
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-item">
+                                        <div>5 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 90%;"></div>
+                                        </div>
+                                        <div>
+                                            90%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>4 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>3 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>2 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>1 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="blur"></div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <div class="logo">
+                            <img src="./assets/images/logo.png" alt="Logo">
+                        </div>
+                        <div class="desc">
+                            Cổng thông tin du lịch Long An giới thiệu các điểm đến, văn hóa, ẩm thực và sự kiện đặc sắc
+                            của tỉnh, giúp du khách khám phá dễ dàng.
+                        </div>
+                        <div class="socials">
+                            <a class="socials-link"
+                                href="https://www.facebook.com/profile.php?id=100041639027052&ref=embed_page"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                            <a class="socials-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-center">
+                        <div class="footer-wrap">
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <!-- <div class="footer-title">Trao đổi</div> -->
+                        <div class="content">
+                            <div>Có kế hoạch du lịch Long An?</div>
+                            <div>Hãy cùng khám phá vẻ đẹp của vùng đất này!</div>
+                            <div>091 407 13 79</div>
+                            <div>Huongvamco@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-footer">
+                    <div class="container">
+                        <div class="code-by">
+                            Phát triển bởi <img src="./assets/images/logo-vnpt.png" alt="VNPT LONG AN"> VNPT LONG AN
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- library -->
+<script src="./assets/library/jquery/jquery.min.js"></script>
+<script src="./assets/library/validate/jquery.validate.js"></script>
+<script src="./assets/library/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+<script src="./assets/library/leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<!-- js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/map.js"></script>
+
+</html>

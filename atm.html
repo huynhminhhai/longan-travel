@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng thông tin du lịch - ATM</title>
+    <link rel="icon" type="image/png" href="./assets/images/logo.png">
+
+    <!-- library -->
+    <link rel="stylesheet" href="./assets/library/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="./index.html" class="logo">
+                    <div class="img">
+                        <img src="./assets/images/logo.png" alt="Logo">
+                    </div>
+                </a>
+                <nav class="navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tin tức
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tin nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sự kiện nổi bật</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Điểm đến
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Địa điểm nổi bật</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Địa điểm du lịch</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Ẩm thực
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Đặc sản địa phương</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Nhà hàng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Lịch trình
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tour du lịch</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hướng dẫn viên</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./news.html">Lưu trú</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Mua sắm
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Điểm mua sắm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Chợ địa phương</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                Tiện ích
+                                <img src="./assets/images/caret-down-solid.svg" alt="dropdown">
+                            </a>
+                            <div class="sub-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">Tuyến xe buýt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bến xe</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hãng taxi</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trạm xăng dầu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">ATM</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Y tế</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="others">
+                    <div class="btn-search">
+                        <img src="./assets/images/search.svg" alt="search">
+                    </div>
+                    <div class="language">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="https://cdn-icons-png.flaticon.com/128/323/323319.png" alt="Tiếng Việt">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><img
+                                            src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="account">
+                        <div class="btn-group">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/images/mdi--account.svg" alt="tài khoản">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Đăng nhập</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu-mb">
+                        <img src="./assets/images/ic--round-menu.svg" alt="menu mobile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="container">
+                <div class="search-wrap">
+                    <div class="search-input">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin Tân Trụ..."
+                            fdprocessedid="4i5j0h">
+                        <img src="./assets/images/search.svg" alt="search" class="icon-search">
+                        <ul id="results"></ul>
+                    </div>
+                </div>
+                <!-- <div class="search-button">
+                    <div class="text">Tìm nhanh</div>
+                    <div class="group-btn">
+                        <a href="./news-list.html">Tin tức</a>
+                        <a href="./member.html">Ủy viên</a>
+                        <a href="./destination.html">Điểm đến</a>
+                        <a href="./index.html#food">Đặc sản</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-img">
+                <img src="https://mk.com.vn/public/media/nationalatmandnyc.jpg" alt="banner">
+            </div>
+            <div class="content">
+                <h1>
+                    ATM
+                </h1>
+            </div>
+        </section>
+        <section class="search">
+            <div class="container">
+                <div class="search-wrap">
+                    <div class="search-main">
+                        <div class="search-field">
+                            <select name="category" id="category">
+                                <option value="tatca">Ngân hàng</option>
+                                <option value="tatca">Vietcombank</option>
+                                <option value="vanhoa-giaitri">Sacombank</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <button>
+                                <img src="./assets/images/search.svg" alt="search">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map pt-0">
+            <div class="container">
+                <div class="map-wrap">
+                    
+                    <div class="sidebar">
+                        <ul class="nav nav-tabs d-none" id="mapTab" role="tablist">
+                            <li class="nav-item map-nav-item" role="presentation" data-type="atm">
+                                <button class="nav-link active" id="atm-map-tab" data-bs-toggle="tab"
+                                    data-bs-target="#atm-map" type="button" role="tab"
+                                    aria-controls="atm-map" aria-selected="true">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png" alt="resturant">
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="mapTab">
+                            <div class="tab-pane fade show active" id="atm-map" role="tabpanel"
+                                aria-labelledby="atm-map-tab">
+                                <div class="map-list">
+                                    <div class="map-item" data-lat="10.5333" data-lng="106.4167">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 1">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block"> DNTN Toàn Thắng, QL 1A, xã Mỹ Yên, H. Bến Lức, Long An
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.63054139415159" data-lng="106.49339875274006">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh
+                                                Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.5333" data-lng="106.4167">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 1">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block"> DNTN Toàn Thắng, QL 1A, xã Mỹ Yên, H. Bến Lức, Long An
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.63054139415159" data-lng="106.49339875274006">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh
+                                                Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.5333" data-lng="106.4167">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 1">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block"> DNTN Toàn Thắng, QL 1A, xã Mỹ Yên, H. Bến Lức, Long An
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.63054139415159" data-lng="106.49339875274006">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/icon_mau/atm/1_637019050405061625_637193380923884587.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">ATM - Vietcombank</div>
+                                            <div class="address d-block">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh
+                                                Long An</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="blur"></div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-container">
+                    <div class="footer-left">
+                        <div class="logo">
+                            <img src="./assets/images/logo.png" alt="Logo">
+                        </div>
+                        <div class="desc">
+                            Cổng thông tin du lịch Long An giới thiệu các điểm đến, văn hóa, ẩm thực và sự kiện đặc sắc
+                            của tỉnh, giúp du khách khám phá dễ dàng.
+                        </div>
+                        <div class="socials">
+                            <a class="socials-link"
+                                href="https://www.facebook.com/profile.php?id=100041639027052&ref=embed_page"
+                                target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                            <a class="socials-link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="#fff"
+                                        d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23"
+                                        stroke-width="0.5" stroke="#3a3a3a" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-center">
+                        <div class="footer-wrap">
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="footer-list">
+                                <li>
+                                    <a href="#">
+                                        Tin tức
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Địa điểm
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Ẩm thực
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Lưu trú
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <!-- <div class="footer-title">Trao đổi</div> -->
+                        <div class="content">
+                            <div>Có kế hoạch du lịch Long An?</div>
+                            <div>Hãy cùng khám phá vẻ đẹp của vùng đất này!</div>
+                            <div>091 407 13 79</div>
+                            <div>Huongvamco@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-footer">
+                    <div class="container">
+                        <div class="code-by">
+                            Phát triển bởi <img src="./assets/images/logo-vnpt.png" alt="VNPT LONG AN"> VNPT LONG AN
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- library -->
+<script src="./assets/library/jquery/jquery.min.js"></script>
+<script src="./assets/library/validate/jquery.validate.js"></script>
+<script src="./assets/library/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="./assets/library/swiper/swiper-bundle.min.js"></script>
+<script src="./assets/library/leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+
+<!-- js -->
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/map.js"></script>
+
+</html>

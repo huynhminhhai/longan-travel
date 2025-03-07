@@ -39,6 +39,14 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1791/1791150.png',
                 ...defaultIconOptions,
             }),
+            atm: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/3016/3016352.png',
+                ...defaultIconOptions,
+            }),
+            hospital: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
