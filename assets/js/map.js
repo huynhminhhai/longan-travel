@@ -47,6 +47,10 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/3448/3448513.png',
                 ...defaultIconOptions,
             }),
+            taxi: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/2401/2401174.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
