@@ -51,6 +51,10 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/2401/2401174.png',
                 ...defaultIconOptions,
             }),
+            market: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/862/862819.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
