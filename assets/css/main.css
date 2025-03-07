@@ -571,6 +571,8 @@ section.section-py {
 
 .component-list .component-item .card .card-body {
     background-color: var(--white-color);
+    padding-inline: 12px;
+    padding-block: 18px 24px;
 }
 
 .component-list .component-item .card-img {

@@ -31,6 +31,10 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1042/1042263.png',
                 ...defaultIconOptions,
             }),
+            shopping: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/2331/2331970.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
