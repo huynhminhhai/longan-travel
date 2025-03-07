@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cổng thông tin du lịch - Chi tiết bến xe</title>
+    <title>Cổng thông tin du lịch - Trạm xăng dầu</title>
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- library -->
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -204,265 +203,169 @@
     <main>
         <section class="banner">
             <div class="banner-img">
-                <img src="https://res.cloudinary.com/globes/image/upload/t_desktop_article_content_header_800*392/v1624885267/direct/shutterstock_1653066394%D7%90%D7%A7%D7%9C%D7%99%D7%9D_qgekx3.jpg"
-                    alt="banner">
+                <img src="https://cms-image-bucket-production-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com/images/0/0/2/9/30239200-1-eng-GB/20201027N%20PTT%20gas%20station_Data.jpg" alt="banner">
             </div>
             <div class="content">
                 <h1>
-                    Bến xe Long An
+                    Trạm xăng dầu
                 </h1>
             </div>
         </section>
-        <section class="detail news-detail">
+        <section class="search">
             <div class="container">
-                <div class="detail-container">
-                    <div class="detail-body">
-                        <div class="detail-body--item">
-                            <h3 class="title">
-                                Thông tin
-                                <div class="actions">
-                                    <button class="btn-bookmark" fdprocessedid="6tjr26"><img
-                                            src="./assets/images/favorite.svg" alt="mục yêu thích"></button>
-                                </div>
-                            </h3>
-                            <div class="infor-detail">
-                                <ul>
-                                    <li>
-                                        <img src="./assets/images/place.svg" alt="location">
-                                        <span> Số 113, QL1, P2, TP Tân An, Long An</span>
-                                    </li>
-                                    <li>
-                                        <img src="./assets/images/phone.svg" alt="phone">
-                                        <span>02723 836306</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="detail-body--item">
-                            <h3 class="title">
-                                Mô tả
-                            </h3>
-                            <div class="detail-content">
-                                <p>
-                                    <img src="https://motortrip.vn/wp-content/uploads/2025/01/Ben-xe-Tan-An-Long-An-6.jpg" alt="">
-                                </p>
-                                <p>Bến xe Long An là một bến xe khách quan trọng nhất của Thành phố Long An.</p>
-                                <p>Bến xe khách nàylà đầu mối giao thông quan trọng kết nối giữa Sài Gòn và các tỉnh
-                                    miền Tây. Bến xe Long An phục vụ hành khách đến thành phố Hồ Chí Minh hoặc đi các
-                                    tỉnh đồng bằng Sông Cửu Long. Hiện nay có hơn 80 doanh nghiệp vận tải tham gia khai
-                                    thác 200 tuyến đường thuộc các tỉnh: Tiền Giang, Vĩnh Long, An Giang, Hậu Giang,
-                                    Đồng Tháp, Bạc Liêu, Cà Mau, Kiên Giang, Sóc Trăng, Cần Thơ, Trà Vinh, Bến Tre,… mỗi
-                                    ngày tiếp nhận nghìn lượt hành đi xe</p>
-                                <p>
-                                    Không những vậy có nhiều nhà xe đưa quý khách ra tận ngoài bắc như Hà Nội, Bắc
-                                    Ninh... cho khách có nhu cầu.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="detail-body--item">
-                            <h3 class="title">Bản đồ</h3>
-                            <div class="infor-map">
-                                <section class="map py-0">
-                                    <div class="map-wrap d-block">
-                                        <div id="map"></div>
-                                        <div class="sidebar d-none">
-                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
-                                                <li class="nav-item map-nav-item" role="presentation"
-                                                    data-type="bus">
-                                                    <button class="nav-link active" id="bus-map-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#bus-map" type="button"
-                                                        role="tab" aria-controls="bus-map" aria-selected="true">
-                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png"
-                                                            alt="resturant">
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content" id="mapTab">
-                                                <div class="tab-pane fade show active" id="bus-map" role="tabpanel"
-                                                    aria-labelledby="bus-map-tab">
-                                                    <div class="map-list">
-                                                        <div class="map-item" data-lat="10.537824636906599"
-                                                            data-lng="106.40475073924593">
-                                                            <img src="https://www.zappiamotors.com/wp-content/uploads/2024/02/ben-xe-long-an-cung-cap-thuc-an-nhanh-va-nuoc-giai-khat.jpg"
-                                                                alt="Bến xe Long An">
-                                                            <div>
-                                                                <div class="name">Bến xe Long An</div>
-                                                                <div class="address"> Số 113, QL1, P2, TP Tân An, Long An</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail-sidebar">
-                        <div class="sidebar-item">
-                            <h2 class="sidebar-title">Các bến xe khác</h2>
-                            <div class="detail-others">
-                                <div class="list">
-                                    <a href="#" class="item">
-                                        <div class="thumbnail">
-                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
-                                                alt="Bến xe khách Tân Trụ ">
-                                        </div>
-                                        <div class="content">
-                                            <div class="title">Bến xe khách Tân Trụ </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="thumbnail">
-                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
-                                                alt="Bến xe khách Bình Hòa Hưng">
-                                        </div>
-                                        <div class="content">
-                                            <div class="title">Bến xe khách Bình Hòa Hưng</div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="thumbnail">
-                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
-                                                alt="Bến xe khách Đức Huệ">
-                                        </div>
-                                        <div class="content">
-                                            <div class="title">Bến xe khách Đức Huệ
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="item">
-                                        <div class="thumbnail">
-                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
-                                                alt="Bến xe khách Hậu Nghĩa ">
-                                        </div>
-                                        <div class="content">
-                                            <div class="title">Bến xe khách Hậu Nghĩa </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail-bottom">
-                    <div class="comment">
-                        <div class="detail-form">
-                            <h3 class="title">
-                                Để lại bình luận
-                            </h3>
-                            <form action="#" id="comment-form" novalidate="novalidate">
-                                <div class="form-input">
-                                    <input type="text" name="author" id="author" placeholder="Họ tên * "
-                                        required="required">
-                                </div>
-                                <div class="form-input">
-                                    <textarea name="comment" id="message" cols="40" rows="3" aria-required="true"
-                                        placeholder="Viết bình luận..." required="required"></textarea>
-                                </div>
-                                <button class="button button-primary" type="submit">Bình luận</button>
-                            </form>
-                        </div>
-                        <div class="comment-list">
-                            <div class="detail-comment">
-                                <div class="avatar">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
-                                </div>
-                                <div class="infor">
-                                    <div class="title">
-                                        <div class="name">Huỳnh Minh Hải</div><span class="date">05/03/2025</span>
-                                    </div>
-                                    <span class="desc">
-                                        Tuyệt vời!!!
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <div class="rating-container">
-                            <h2>Chia sẻ thông tin</h2>
-                            <div class="socicals">
-                                <a href="#">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="social">
-                                </a>
-                                <a href="#">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="social">
-                                </a>
-                                <a href="#">
-                                    <img src="https://hidosport.vn/wp-content/uploads/2023/09/zalo-icon.png"
-                                        alt="social">
-                                </a>
-                            </div>
-                            <h2>Đánh giá</h2>
-                            <div class="stars" id="ratingStars">
-                                <span class="star" data-value="1">★</span>
-                                <span class="star" data-value="2">★</span>
-                                <span class="star" data-value="3">★</span>
-                                <span class="star" data-value="4">★</span>
-                                <span class="star" data-value="5">★</span>
-                            </div>
-                            <div class="result" id="ratingResult">
-                                <div>
-                                    <span id="averageRating">4.9</span>/5 (Tổng: <span id="totalVotes">84</span> lượt
-                                    đánh
-                                    giá)
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-item">
-                                        <div>5 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 90%;"></div>
-                                        </div>
-                                        <div>
-                                            90%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>4 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 5%;"></div>
-                                        </div>
-                                        <div>
-                                            5%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>3 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 5%;"></div>
-                                        </div>
-                                        <div>
-                                            5%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>2 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 0%;"></div>
-                                        </div>
-                                        <div>
-                                            0%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>1 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 0%;"></div>
-                                        </div>
-                                        <div>
-                                            0%
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                <div class="search-wrap">
+                    <div class="search-field">
+                        <input type="text" placeholder="Tìm kiếm">
+                        <button>
+                            <img src="./assets/images/search.svg" alt="search">
+                        </button>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="restaurant pt-0">
+            <div class="container">
+                <div class="component-list">
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH MTV NGỌC MAI" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH MTV NGỌC MAI</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            363, Ấp Vĩnh Hòa, Xã An Vĩnh Ngãi, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH TRUNG DŨNG LONG AN " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH TRUNG DŨNG LONG AN </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            108 Tuyến tránh Quốc Lộ 1, Phường 4, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH TRUNG DŨNG LONG AN " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH TRUNG DŨNG LONG AN </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            108 Tuyến tránh Quốc Lộ 1, Phường 4, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 579, Ngã 3 Mỹ Hạnh, Ấp Mới 2, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 579, Ngã 3 Mỹ Hạnh, Ấp Mới 2, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="PETROLIMEX - CỬA HÀNG 02" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">PETROLIMEX - CỬA HÀNG 02</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Đường Trương Định, phường 2, thành phố Tân An, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <button type="button" disabled="disabled" class="btn-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="4" d="M31 36L19 24l12-12"></path>
+                        </svg>
+                    </button>
+                    <ul class="pagination-list">
+                        <li class="number active">1</li>
+                        <li class="number">2</li>
+                        <li class="number">3</li>
+                    </ul>
+                    <button type="button" disabled="disabled" class="btn-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="4" d="m19 12l12 12l-12 12"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </section>
     </main>
@@ -575,7 +478,6 @@
 <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/library/leaflet/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
-<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <!-- js -->
 <script src="./assets/js/main.js"></script>

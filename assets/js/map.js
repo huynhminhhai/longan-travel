@@ -35,6 +35,10 @@ $(document).ready(function () {
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/2331/2331970.png',
                 ...defaultIconOptions,
             }),
+            oil: L.icon({
+                iconUrl: 'https://cdn-icons-png.flaticon.com/128/1791/1791150.png',
+                ...defaultIconOptions,
+            }),
             default: L.icon({
                 iconUrl: 'https://cdn-icons-png.flaticon.com/128/1483/1483336.png',
                 ...defaultIconOptions,
