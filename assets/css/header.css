@@ -55,6 +55,7 @@ header {
     left: 55%;
     top: 100%;
     background-color: var(--primary-color);
+    border-radius: 8px;
     -webkit-transition: all .3s;
     transition: all .3s;
 }

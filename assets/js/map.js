@@ -6,6 +6,7 @@ $(document).ready(function () {
         }).addTo(map);
 
         const markers = L.layerGroup().addTo(map);
+        let routingControl = null;
 
         const defaultIconOptions = {
             iconSize: [32, 32],
@@ -48,21 +49,98 @@ $(document).ready(function () {
             return bounds;
         }
 
+        function showRoute(destLat, destLng) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+                    console.log("Vị trí người dùng:", userLat, userLng);
+                    console.log("Điểm đến:", destLat, destLng);
+        
+                    if (routingControl) {
+                        map.removeControl(routingControl);
+                    }
+        
+                    const customFormatter = L.Util.extend({}, L.Routing.Formatter.prototype, {
+                        formatDistance: function(distance) {
+                            return distance >= 1000 ? (distance / 1000).toFixed(1) + " km" : distance + " m";
+                        },
+                        formatTime: function(time) {
+                            const minutes = Math.round(time / 60);
+                            return minutes >= 60 ? Math.floor(minutes / 60) + " giờ " + (minutes % 60) + " phút" : minutes + " phút";
+                        },
+                        formatInstruction: function(instr, i) {
+                            const directions = {
+                                "Head": "Đi thẳng",
+                                "Turn left": "Rẽ trái",
+                                "Turn right": "Rẽ phải",
+                                "Slight left": "Rẽ trái nhẹ",
+                                "Slight right": "Rẽ phải nhẹ",
+                                "Continue": "Tiếp tục",
+                                "Enter roundabout": "Vào vòng xuyến",
+                                "Exit roundabout": "Ra khỏi vòng xuyến",
+                                "Arrive": "Đến nơi"
+                            };
+                            const direction = directions[instr.text] || instr.text;
+                            return `${i + 1}. ${direction} (${this.formatDistance(instr.distance)})`;
+                        }
+                    });
+        
+                    routingControl = L.Routing.control({
+                        waypoints: [
+                            L.latLng(userLat, userLng),
+                            L.latLng(destLat, destLng)
+                        ],
+                        routeWhileDragging: true,
+                        lineOptions: { styles: [{ color: 'blue', weight: 4 }] },
+                        show: true,
+                        formatter: customFormatter,
+                        summaryTemplate: '<h2>{name}</h2><h3>{distance} - {time}</h3>',
+                        instructionsTemplate: `
+                            <table class="routing-instructions">
+                                <thead>
+                                    <tr><th>Bước</th><th>Khoảng cách</th><th>Hướng dẫn</th></tr>
+                                </thead>
+                                <tbody>{instructions}</tbody>
+                            </table>
+                        `
+                    }).addTo(map);
+        
+                    L.marker([userLat, userLng], {
+                        icon: icons.default
+                    }).addTo(markers).bindPopup("Bạn đang ở đây").openPopup();
+        
+                    // Tạo bounds từ waypoints
+                    const waypoints = routingControl.getWaypoints();
+                    const bounds = L.latLngBounds(waypoints.map(wp => wp.latLng));
+                    map.fitBounds(bounds, { padding: [50, 50] });
+                }, function(error) {
+                    alert("Lỗi định vị: " + error.message);
+                }, {
+                    enableHighAccuracy: true,
+                    timeout: 30000,
+                    maximumAge: 0
+                });
+            } else {
+                alert("Trình duyệt không hỗ trợ định vị!");
+            }
+        }
+
         function loadMarkers(type) {
             markers.clearLayers();
             allMarkers = [];
-
+        
             const icon = icons[type] || icons.default;
             const activeTabPane = document.querySelector(`#${type}-map`);
             const items = activeTabPane.querySelectorAll('.map-item');
-
+        
             items.forEach(item => {
                 const lat = parseFloat(item.getAttribute('data-lat'));
                 const lng = parseFloat(item.getAttribute('data-lng'));
                 const img = item.querySelector('img').src;
                 const name = item.querySelector('.name').textContent;
                 const address = item.querySelector('.address').textContent;
-
+        
                 const marker = L.marker([lat, lng], {
                     icon,
                     title: name,
@@ -75,25 +153,31 @@ $(document).ready(function () {
                         <div class="card-body">
                             <div class="card-title">${name}</div>
                             <div class="card-text">
-                                <div>${address}</div>
-                                <a href="https://maps.google.com/?q=${lat},${lng}">Google Map</a>
+                                <div><strong>Địa chỉ:</strong> ${address}</div>
+                                <a href="https://maps.google.com/?q=${lat},${lng}" target="_blank">Xem trên Google Maps</a>
+                                <br>
+                                <button class="btn-route" data-lat="${lat}" data-lng="${lng}">Chỉ đường</button>
                             </div>
                         </div>
                     </div>
                 `);
-
+        
+                marker.on('popupopen', function() {
+                    const btn = marker.getPopup().getElement().querySelector('.btn-route');
+                    btn.addEventListener('click', function() {
+                        showRoute(lat, lng);
+                    });
+                });
+        
                 item._marker = marker;
                 allMarkers.push(marker);
             });
-
+        
             const bounds = getMarkersBounds(markers);
             if (bounds.isValid()) {
-                map.fitBounds(bounds, {
-                    paddingTopLeft: [0, 100],
-                    maxZoom: 14
-                });
+                map.fitBounds(bounds, { paddingTopLeft: [0, 100], maxZoom: 14 });
             }
-
+        
             if (map.searchControl) {
                 map.removeControl(map.searchControl);
             }
@@ -118,11 +202,11 @@ $(document).ready(function () {
                         }
                     });
                 },
-                textPlaceholder: 'Tìm kiếm địa điểm...',
-                textErr: 'Không tìm thấy địa điểm',
-                textCancel: 'Hủy',
+                textPlaceholder: 'Tìm kiếm địa điểm...', // Đã là tiếng Việt
+                textErr: 'Không tìm thấy địa điểm',     // Đã là tiếng Việt
+                textCancel: 'Hủy'                       // Đã là tiếng Việt
             });
-
+        
             map.addControl(map.searchControl);
         }
 

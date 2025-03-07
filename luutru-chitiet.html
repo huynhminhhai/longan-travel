@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -283,7 +284,8 @@
                                 <ul>
                                     <li>
                                         <img src="./assets/images/place.svg" alt="location">
-                                        <span>Đường Rạch Tre, ấp 5, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An</span>
+                                        <span>Đường Rạch Tre, ấp 5, xã An Thạnh, huyện Bến Lức, tỉnh Long An Tỉnh Long
+                                            An</span>
                                     </li>
                                     <li>
                                         <img src="./assets/images/email.svg" alt="email">
@@ -299,44 +301,68 @@
                         <div class="detail-body--item">
                             <h3 class="title">Mô tả</h3>
                             <div class="detail-content">
-                                <div style="text-align: justify; line-height: 30px; transition: 0.7s;"
-                                    class="description animate-in fadeInLeft animated" data-speed="0.7"
-                                    data-show-screen="0.69">
-                                    <p><strong> </strong></p>
+                                <div class="hotel-description-policy">
+                                    <p><strong>CTY CP DỊCH VỤ THƯƠNG MẠI DU LỊCH PHÚ QUÝ</strong></p>
 
-                                    <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span
-                                            style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span
-                                                    style="font-size:14.0pt"><span
-                                                        style="font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Nhà
-                                                        Trăm Cột được xây dựng vào những năm 1901-1903, tại ấp Trung, xã
-                                                        Long Hựu Đông, huyện Cần Đước. Nhà có diện tích
-                                                        882m<sup>2</sup>, tọa lạc trên một khu vườn rộng
-                                                        4.044m<sup>2</sup>, chính diện hướng Tây Bắc. Nhà được xây dựng
-                                                        hoàn toàn bằng gỗ (gỗ đỏ, gỗ mật), mái lợp ngói âm dương, nền
-                                                        nhà bằng đá tảng cao 0,9m, mặt nền lát gạch tàu lục giác. Nhìn
-                                                        trên bình đồ, Nhà Trăm Cột có kiểu chữ quốc, 3 gian, 2 chái. Nhà
-                                                        gồm có hai phần: phần phía trước được bày trí theo kiểu ngoại
-                                                        khách - nội tự (ngoài tiếp khách, trong thờ tự), phần phía sau
-                                                        dùng để ở và sinh hoạt.</span></span></span></span></p>
+                                    <p><strong>Khu Du Lịch Sinh Thái Vàm Cỏ</strong> và nhà hàng Vàm Cỏ được lấy cảm
+                                        hứng và bắt nguồn từ con sông Vàm Cỏ Đông thơ mộng uốn lượn chảy quanh địa bàn
+                                        các huyện Đức Hòa, Đức Huệ, Bến Lức, Cần Đước của tỉnh Long An. Do đó, sông Vàm
+                                        Cỏ không những là sông mẹ chất chứa phù sa nuôi sống biết bao thế hệ mà nó còn
+                                        là con sông gắn liền với tuổi thơ của biết bao người trong đó có những người con
+                                        Long An sáng lập lên Khu Du Lịch Sinh Thái Vàm Cỏ này với mong muốn đóng góp một
+                                        chút công sức và trí tuệ bản thân vào sự phát triển của địa phương và tạo ra các
+                                        giá trị hữu ích cho cộng đồng. Đó là lý do mà Vàm Cỏ Farmstay ra đời.</p>
 
-                                    <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span
-                                            style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span
-                                                    style="font-size:14.0pt"><span
-                                                        style="font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Theo
-                                                        các nhà nghiên cứu, Nhà Trăm Cột có kiểu thức kiến trúc thời
-                                                        Nguyễn, về đại thể mang dấu ấn rõ rệt của phong cách Huế nhưng
-                                                        có nhiều nét tiểu dị trong đề tài trang trí, tạo được sự phong
-                                                        phú và đa dạng, phản ánh một giai đoạn lịch sử - văn hóa của
-                                                        vùng đất phương Nam cuối thế kỉ XIX đầu thế kỉ
-                                                        XX.</span></span></span></span></p>
+                                    <p><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/song_vam_co_tay_856179579.jpg"
+                                            style="heigth:undefinedpx; width:1024px"></p>
 
-                                    <p style="margin-left:0cm; margin-right:0cm; text-align:justify"><span
-                                            style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span
-                                                    style="font-size:14.0pt"><span
-                                                        style="font-family:&quot;Times New Roman&quot;,&quot;serif&quot;">Nhà
-                                                        Trăm Cột đã được Bộ Văn Hóa - Thông Tin xếp hạng là di tích kiến
-                                                        trúc nghệ thuật quốc gia tại Quyết định số 2890-VH/QĐ ngày
-                                                        27/09/1997./.</span></span></span></span></p>
+                                    <p>Với mong ước và sứ mệnh đó, định hướng phát triển của Vàm Cỏ là trở thành Khu Du
+                                        Lịch Sinh Thái kết hợp với các hoạt động du lịch sông nước và trải nghiệm du
+                                        lịch nông nghiệp: tham quan nông trại, vườn trái cây, tự mình thể nghiệm bằng
+                                        cách tham gia vào các hoạt động canh tác của người nông dân địa phương. Để phục
+                                        vụ cho định hướng phát triển đó Vàm Cỏ Farmstay tập trung đẩy mạnh vào các dịch
+                                        vụ nhằm đáp ứng nhu cầu ăn uống, nghỉ ngơi của du khách trước khi tham gia vào
+                                        các hoạt động trải nghiệm du lịch sông nước như:</p>
+
+                                    <p>•Nhà hàng ẩm thực Vàm Cỏ chuyên các món đồng quê dân dã, các món đồ rừng đặc sắc
+                                        và các món hải sản tươi sống.</p>
+
+                                    <p>•Homestay lưu trú với sự đầu tư bài bản, cơ sở vật chất đáp ứng tiêu chuẩn khách
+                                        sạn 3 sao, hoặc quý khách có thể trải nghiệm không gian sống thôn quê dân dã
+                                        bằng cách book nguyên chiếc thuyền nổi trên đầm sen, vừa thoáng đãng lại vừa gần
+                                        gũi thiên nhiên.</p>
+
+                                    <p>•Khu camping sát bờ sông.</p>
+
+                                    <p>•Dịch vụ câu cá giải trí.</p>
+
+                                    <p>•Du lịch sinh thái sông nước như: chèo xuồng ba lá đi hái bần, hái dừa nước. Chèo
+                                        thuyền sub trên sông, tham quan nông trại, tham quan vườn trái cây, tour ẩm thực
+                                        trên sông kết hợp với thưởng thức đờn ca tài tử…</p>
+
+                                    <p><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/don_ca_tai_tu_489548122.png"
+                                            style="heigth:undefinedpx; width:1124px"><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/cheo_thuyen_tren_song_tai_vamcofarmstay_592411100.png"
+                                            style="heigth:undefinedpx; width:1124px"><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/bbq3_134256834.png"
+                                            style="heigth:undefinedpx; width:1124px"><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/bbq_81918054.png"
+                                            style="heigth:undefinedpx; width:1124px"></p>
+
+                                    <p>Với khoảng cách địa lý chỉ cách Tp HCM 25km, mất từ 30-45 phút di chuyển mà cảnh
+                                        quan lại mang đậm nét dân dã miền tây như: đồng lúa, ao sen, rặng dừa nước, rặng
+                                        bần ven sông. Vàm Cỏ là điểm đến lý tưởng cho các gia đình hoặc nhóm bạn trẻ
+                                        muốn đi du lịch trải nghiệm trong ngày hoặc ở lại một đêm.</p>
+
+                                    <p><img alt=""
+                                            src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/compress/ban_do_duong_di_den_vamcofarmstay_608656059.png"
+                                            style="heigth:undefinedpx; width:1124px"></p>
+
+                                    <p>Xa rời phố thị đông đúc. Quý khách sẽ được hòa mình với thiên nhiên, sống lại
+                                        những ký ức tuổi thơ đã từng trải qua hoặc giúp thế hệ trẻ hiểu được khái niệm
+                                        và giá trị sống của thế hệ cha ông đi trước.</p>
 
                                 </div>
                             </div>
@@ -344,10 +370,38 @@
                         <div class="detail-body--item">
                             <h3 class="title">Bản đồ</h3>
                             <div class="infor-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.319092737683!2d106.68889887451381!3d10.482502364547523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317548f656b4a933%3A0x5386791bb374b5af!2zTmjDoCBUcsSDbSBD4buZdA!5e1!3m2!1svi!2s!4v1741237662377!5m2!1svi!2s"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <section class="map py-0">
+                                    <div class="map-wrap d-block">
+                                        <div id="map"></div>
+                                        <div class="sidebar d-none">
+                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
+                                                <li class="nav-item map-nav-item" role="presentation" data-type="tourist">
+                                                    <button class="nav-link active" id="tourist-map-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#tourist-map" type="button" role="tab"
+                                                        aria-controls="tourist-map" aria-selected="true">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png" alt="resturant">
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="mapTab">
+                                                <div class="tab-pane fade show active" id="tourist-map"
+                                                    role="tabpanel" aria-labelledby="tourist-map-tab">
+                                                    <div class="map-list">
+                                                        <div class="map-item" data-lat="10.482655336277755" data-lng="106.69146306623148">
+                                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toansauconkun994/thumb/1_647964214.jpg"
+                                                                alt="KHU DU LỊCH SINH THÁI VÀM CỎ FARMSTAY">
+                                                            <div>
+                                                                <div class="name">KHU DU LỊCH SINH THÁI VÀM CỎ FARMSTAY</div>
+                                                                <div class="address">Đường Rạch Tre, ấp 5, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -358,43 +412,43 @@
                                 <div class="list">
                                     <a href="#" class="item">
                                         <div class="thumbnail">
-                                            <img src="https://dulichtoivaban.com/wp-content/uploads/2023/08/Khu-du-lich-sinh-thai-Lang-Noi-Tan-Lap-o-Long-An.jpg.webp"
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/Tan%20An/Khac%20San%20Truong%20Diem/2018-04-06_637013868099419589.jpg"
                                                 alt="Trồng khoai mì ruột vàng mang lại thu
                                             nhập cao">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Làng nổi Tân Lập</div>
-                                            <div class="date">3,24km</div>
+                                            <div class="title">Khách sạn Trường Diễm</div>
+                                            <div class="date">13,21km</div>
                                         </div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="thumbnail">
-                                            <img src="https://cdn.media.dulich24.com.vn/diemden/cua-khau-binh-hiep-7264/cua-khau-binh-hiep-1.jpg"
-                                                alt="Cửa khẩu Quốc tế Bình Hiệp">
+                                            <img src="https://i.vntrip.vn/800x550/smart/https://statics.vntrip.vn/data-v2/hotels/611930/img_max/611930_1576550162_ru.jpg"
+                                                alt="Khách sạn Ruby">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Cửa khẩu Quốc tế Bình Hiệp</div>
-                                            <div class="date">3,24km</div>
+                                            <div class="title">Khách sạn Ruby</div>
+                                            <div class="date">13,21km</div>
                                         </div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="thumbnail">
-                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/dia_diem/bao_tang_long_an/unnamed_1_copy_637189302797678077.jpg"
-                                                alt="Bảo tàng Long An">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/trietnm.lan/Can%20Giuoc/Khach%20san%20Kim%20Linh/av_637025786230053746.jpg"
+                                                alt="Khách sạn Kim Linh">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Bảo tàng Long An
+                                            <div class="title">Khách sạn Kim Linh
                                             </div>
                                             <div class="date">10,95km</div>
                                         </div>
                                     </a>
                                     <a href="#" class="item">
                                         <div class="thumbnail">
-                                            <img src="https://houserentaldanang.com/wp-content/uploads/2023/09/Cong-vien-7-ky-quan-Da-Nang-7.jpg"
-                                                alt="Công viên 7 Kỳ Quan Thế Giới">
+                                            <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/toanlm.lan/luu_tru/ks_binh_minh_103110833.png"
+                                                alt="Khách sạn Bình Minh">
                                         </div>
                                         <div class="content">
-                                            <div class="title">Công viên 7 Kỳ Quan Thế Giới</div>
+                                            <div class="title">Khách sạn Bình Minh</div>
                                             <div class="date">13,21km</div>
                                         </div>
                                     </a>
@@ -631,6 +685,7 @@
 <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/library/leaflet/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <!-- js -->
 <script src="./assets/js/main.js"></script>

@@ -87,8 +87,8 @@
     --secondary-color: #80876d;
     --third-color: #c5a47e;
     --text-color: #3a3a3a;
-    --bg-color: #fefef4;
-    --bg-color-2: #fefef4;
+    --bg-color: #fff;
+    --bg-color-2: #fff;
 }
 
 ul {
@@ -553,7 +553,7 @@ section.section-py {
 .component-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 36px 24px;
     padding-top: 18px;
     position: relative;
     overflow-x: hidden;
@@ -966,7 +966,19 @@ section.section-py {
 }
 
 .infor-map .map .map-wrap {
-    grid-template-columns: calc(65% - 6px) calc(35% - 6px);
+    /* grid-template-columns: calc(65% - 6px) calc(35% - 6px); */
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.infor-map .map .map-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    max-height: 180px;
+}
+
+.infor-map .map .map-wrap #map {
+    height: 380px;
 }
 
 .infor-map .map .map-wrap .nav-tabs {
@@ -1129,6 +1141,20 @@ section.section-py {
 .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, #f5b301 0%, #ff66009e 100%);;
+}
+
+
+.btn-route {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-route:hover {
+    background-color: #0056b3;
 }
 
 /**

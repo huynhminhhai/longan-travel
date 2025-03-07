@@ -153,33 +153,36 @@ $(document).ready(function () {
         },
     });
 
-    new Swiper(".component-list", {
-        spaceBetween: 24,
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-            nextEl: ".swiper-btn-next",
-            prevEl: ".swiper-btn-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        autoplay: {
-            delay: 8000,
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
+    if ($('.component-list .swiper-wrapper').length > 0) {
+        new Swiper(".component-list", {
+            spaceBetween: 24,
+            slidesPerView: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
             },
-            991: {
-                slidesPerView: 3,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            768: {
-                slidesPerView: 2,
-            }
-        },
-    });
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2,
+                }
+            },
+        });
+    }
+
 
     const mainSwiper = new Swiper('.main-slider', {
         slidesPerView: 1,

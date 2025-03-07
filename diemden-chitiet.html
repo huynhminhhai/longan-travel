@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -257,11 +258,11 @@
                                 <ul>
                                     <li>
                                         <img src="./assets/images/place.svg" alt="location">
-                                        <span>Đường Rạch Tre, ấp 5, Xã An Thạnh, Huyện Bến Lức, Tỉnh Long An</span>
+                                        <span>Ấp Cầu Ngang, Xã Long Hựu Đông, Huyện Cần Đước, Tỉnh Long An</span>
                                     </li>
                                     <li>
                                         <img src="./assets/images/email.svg" alt="email">
-                                        <span>cskh@vamcofarmstay.com</span>
+                                        <span>dulichthongminh.longan@gmail.com</span>
                                     </li>
                                     <li>
                                         <img src="./assets/images/phone.svg" alt="phone">
@@ -318,10 +319,38 @@
                         <div class="detail-body--item">
                             <h3 class="title">Bản đồ</h3>
                             <div class="infor-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.319092737683!2d106.68889887451381!3d10.482502364547523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317548f656b4a933%3A0x5386791bb374b5af!2zTmjDoCBUcsSDbSBD4buZdA!5e1!3m2!1svi!2s!4v1741237662377!5m2!1svi!2s"
-                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <section class="map py-0">
+                                    <div class="map-wrap d-block">
+                                        <div id="map"></div>
+                                        <div class="sidebar d-none">
+                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
+                                                <li class="nav-item map-nav-item" role="presentation" data-type="tourist">
+                                                    <button class="nav-link active" id="tourist-map-tab" data-bs-toggle="tab"
+                                                        data-bs-target="#tourist-map" type="button" role="tab"
+                                                        aria-controls="tourist-map" aria-selected="true">
+                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png" alt="resturant">
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="mapTab">
+                                                <div class="tab-pane fade show active" id="tourist-map"
+                                                    role="tabpanel" aria-labelledby="tourist-map-tab">
+                                                    <div class="map-list">
+                                                        <div class="map-item" data-lat="10.482655336277755" data-lng="106.69146306623148">
+                                                            <img src="https://ik.imagekit.io/tvlk/blog/2023/11/nha-tram-cot-cover.jpg"
+                                                                alt="Nhà Trăm Cột">
+                                                            <div>
+                                                                <div class="name">Nhà Trăm Cột</div>
+                                                                <div class="address">Ấp Cầu Ngang, Xã Long Hựu Đông, Huyện Cần Đước, Tỉnh Long An</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -419,7 +448,7 @@
                                             class="date">05/03/2025</span>
                                     </div>
                                     <span class="desc">
-                                        Bài viết hay quá, thông tin rất hữu ích!
+                                        Phong cảnh rất đẹp, không khí trong lành, phù hợp nghỉ dưỡng cuối tuần. Có nhiều góc sống ảo siêu xịn.
                                     </span>
                                 </div>
                             </div>
@@ -619,6 +648,8 @@
 <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/library/leaflet/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
 <!-- js -->
 <script src="./assets/js/main.js"></script>
