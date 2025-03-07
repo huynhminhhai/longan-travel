@@ -12,6 +12,21 @@ const data = [
 
 $(document).ready(function () {
 
+    $('.btn-feedback').click(function() {
+        $('.feedback-form').addClass('active')
+        $('.blur').addClass('active')
+    })
+
+    $('.feedback-form .close').click(function() {
+        $('.feedback-form').removeClass('active')
+        $('.blur').removeClass('active')
+    })
+
+    $('.blur').click(function() {
+        $('.feedback-form').removeClass('active')
+        $('.blur').removeClass('active')
+    })
+
     /**
     * SEARCHING 
     **/

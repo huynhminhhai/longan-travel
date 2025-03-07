@@ -198,15 +198,10 @@ header .search-button {
     padding-top: 12px;
 }
 
-.search-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .search-input {
     position: relative;
     width: 80%;
+    margin-inline: auto;
 }
 
 .search-input input {
@@ -318,6 +313,9 @@ header .search-button {
 
 .language .dropdown-item {
     padding: 4px 12px;
+    display: flex;
+        align-items: center;
+        gap: 6px;
 }
 
 .language .dropdown-menu img {
