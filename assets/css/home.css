@@ -1231,11 +1231,29 @@
 @media screen and (max-width: 1200px) {
 
     /**
+    * BANNER
+    **/
+
+    .banner .banner-img {
+        width: 100%;
+        height: calc(35vh - 76px);
+    }
+
+    .banner .content h1 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .banner .content {
+        transform: translate(-50%, -30%);
+    }
+
+    /**
     * NEWS
     **/
 
     .news .news-list {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .detail .detail-container {
@@ -1274,7 +1292,15 @@
 }
 
 @media screen and (max-width: 991px) {
-    
+
+    .banner .banner-img {
+        width: 100%;
+        height: calc(30vh - 76px);
+    }
+
+    .banner .content {
+        transform: translate(-50%, -60%);
+    }
 
     /**
     * DISCOVERY
@@ -1312,6 +1338,10 @@
 
     .news {
         padding-block: 60px;
+    }
+
+    .news .news-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .news .news-list .card-btn {
@@ -1371,6 +1401,17 @@
 
 @media screen and (max-width: 576px) {
 
+    .banner .content {
+        max-width: 80vw;
+        width: 80vw;
+        transform: translate(-50%, -65%);
+    }
+    
+    .banner .content h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
     /**
     * DISCOVERY
     **/
@@ -1420,6 +1461,10 @@
     /**
     *NEWS
     **/
+
+    .news .news-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     .news .news-list .news-item .card {
         flex-direction: column;
@@ -1523,7 +1568,15 @@
     **/
 
     .search {
-        padding-block: 60px;
+        height: 100px;
+    }
+
+    .search .search-main {
+        grid-template-columns: 1fr;
+    }
+
+    .search .search-wrap {
+        padding: 24px 18px;
     }
 
     .search-button .group-btn {

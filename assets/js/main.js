@@ -215,10 +215,10 @@ $(document).ready(function () {
                     slidesPerView: 4,
                 },
                 991: {
-                    slidesPerView: 3,
+                    slidesPerView: 3.2,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.2,
                 }
             },
         });

@@ -1331,6 +1331,18 @@ a.button-primary {
     section {
         padding-block: 60px;
     }
+
+    /**
+    * DETAIL
+    **/
+
+    .detail .detail-container {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-bottom {
+        grid-template-columns: 1fr;
+    }
 }
 
 /**
