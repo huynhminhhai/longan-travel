@@ -27,6 +27,14 @@ $(document).ready(function () {
         $('.blur').removeClass('active')
     })
 
+    $('.album-item').click(function() {
+        $('.album-popup').addClass('active')
+    })
+
+    $('.album-popup .close').click(function() {
+        $('.album-popup').removeClass('active')
+    })
+
     /**
     * SEARCHING 
     **/
@@ -92,6 +100,21 @@ $(document).ready(function () {
     /**
     * SLIDERS
     **/
+
+    new Swiper(".album-slide", {
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-btn-next",
+            prevEl: ".swiper-btn-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 8000,
+        },
+    });
 
     new Swiper(".banner-slider", {
         loop: true,

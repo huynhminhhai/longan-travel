@@ -170,6 +170,10 @@
     transform: translateY(0%);
 }
 
+.destination.gallery .destination-list .card:hover .card-body {
+    transform: translateY(77%);
+}
+
 .destination .destination-list .card-img {
     height: 240px;
     width: 100%;
@@ -220,6 +224,15 @@
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.destination .destination-list .card-title img {
+    width: 22px;
+    height: auto;
+    filter: brightness(0) invert(1);
 }
 
 .destination .destination-list .card-text {
@@ -1116,4 +1129,92 @@
     font-size: 12px;
     font-weight: 600;
     padding: 6px;
+}
+
+/**
+* ALBUM
+**/
+
+.album {
+    padding: 120px 0;
+    background-color: var(--black-color);
+}
+
+.album .section-title {
+    color: var(--white-color);
+}
+
+.album .album-item {
+    cursor: pointer;
+}
+
+.album .album-item img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: all 0.3s linear;
+}
+
+.album .album-item:hover img {
+    transform: scale(1.04);
+}
+
+.album .album-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px 12px;
+}
+
+.album .album-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    left: 0;
+    z-index: 1002;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 48px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s linear;
+}
+
+.album .album-popup.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.album .album-slide {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.album .album-slide .album-img {
+    height: 100%;
+    width: 100%;
+}
+
+.album .album-slide .album-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.album .swiper-pagination-bullet {
+    background-color: var(--white-color);
+}
+
+.album .album-popup .close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+}
+
+.album .album-popup .close img {
+    width: 20px;
+    height: auto;
 }
