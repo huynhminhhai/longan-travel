@@ -1,7 +1,4 @@
 const data = [
-    // Ủy viên Ban Chấp hành Đảng bộ
-    { category: "Ủy viên Đảng bộ", title: "Nguyễn Văn A", details: "Bí thư Huyện ủy Tân Trụ", link: './member-detail.html' },
-    { category: "Ủy viên Đảng bộ", title: "Trần Thị B", details: "Phó Bí thư - Chủ tịch UBND huyện", link: './member-detail.html' },
     // Tin tức, sự kiện
     { category: "Tin tức", title: "Đại hội Đảng bộ Tân Trụ 2025", details: "Diễn ra ngày 20/2/2025", link: './news-detail.html' },
     { category: "Tin tức", title: "Khánh thành cầu mới", details: "Tại xã Nhựt Ninh", link: './news-detail.html' },
@@ -154,9 +151,11 @@ $(document).ready(function () {
                 },
                 991: {
                     slidesPerView: 1.5,
+                    centeredSlides: true,
                 },
                 768: {
-                    slidesPerView: 1,
+                    slidesPerView: 1.2,
+                    centeredSlides: false,
                 }
             },
         });
@@ -165,7 +164,40 @@ $(document).ready(function () {
     if ($('.guide-list .swiper-wrapper').length > 0) {
         new Swiper(".guide-list", {
             spaceBetween: 24,
-            slidesPerView: 1,
+            slidesPerView: 1.5,
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 8000,
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                },
+                991: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2.4,
+                    centeredSlides: false,
+                }
+            },
+        });
+    }
+
+    
+    if ($('.news-list .swiper-wrapper').length > 0) {
+        new Swiper(".news-list", {
+            spaceBetween: 24,
+            slidesPerView: 1.2,
             loop: true,
             navigation: {
                 nextEl: ".swiper-btn-next",
@@ -193,11 +225,10 @@ $(document).ready(function () {
     }
 
 
-
     if ($('.component-list .swiper-wrapper').length > 0) {
         new Swiper(".component-list", {
             spaceBetween: 24,
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             loop: true,
             navigation: {
                 nextEl: ".swiper-btn-next",
@@ -218,7 +249,7 @@ $(document).ready(function () {
                     slidesPerView: 3,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.2,
                 }
             },
         });
@@ -246,6 +277,14 @@ $(document).ready(function () {
 
     mainSwiper.controller.control = thumbnailSwiper;
     thumbnailSwiper.controller.control = mainSwiper;
+
+    /**
+    ** mobile header
+    **/
+
+    $('.menu-mb').click(function () {
+        $('.navbar').toggleClass('active');
+    })
 
 
 });

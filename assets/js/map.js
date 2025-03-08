@@ -262,7 +262,7 @@ $(document).ready(function () {
         loadMarkers(initialType);
     }
 
-    if ($('#bus-map').length > 0) {
+    if ($('#bus-schedule-map').length > 0) {
         const busMap = L.map('bus-map').setView([10.5333, 106.4167], 10);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,

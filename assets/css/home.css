@@ -224,15 +224,14 @@
     -webkit-line-clamp: 1;
     line-clamp: 1;
     -webkit-box-orient: vertical;
-    display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
 .destination .destination-list .card-title img {
     width: 22px;
     height: auto;
     filter: brightness(0) invert(1);
+    margin-left: 6px;
+    margin-bottom: 6px;
 }
 
 .destination .destination-list .card-text {
@@ -319,6 +318,10 @@
     overflow: hidden;
 }
 
+/* .news .swiper-pagination {
+    display: none;
+} */
+
 .news .seemore {
     width: fit-content;
     margin-inline: auto;
@@ -354,6 +357,8 @@
     gap: 56px 24px;
     padding-top: 24px;
     padding-bottom: 6px;
+    overflow-x: hidden;
+    position: relative;
 }
 
 .news .news-list .news-item .card {
@@ -1217,4 +1222,339 @@
 .album .album-popup .close img {
     width: 20px;
     height: auto;
+}
+
+/**
+* 1200
+**/
+
+@media screen and (max-width: 1200px) {
+
+    /**
+    * NEWS
+    **/
+
+    .news .news-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .detail .detail-container {
+        padding-inline: 0;
+    }
+
+    #news-detail .news {
+        padding-top: 60px;
+    }
+
+    .news .swiper-pagination {
+        display: block;
+    }
+
+    /**
+    * DESTINATION
+    **/
+
+    .destination .destination-heading .desc {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+
+    .destination .destination-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FOOD */
+    .food .food-item.swiper-slide-active {
+        opacity: 1;
+        scale: 1.05;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    
+
+    /**
+    * DISCOVERY
+    **/
+
+    .discover .discover-container {
+        grid-template-columns: 1fr;
+    }
+
+    .discover .discover-container .title {
+        font-size: 38px;
+        line-height: 48px;
+    }
+
+    .discover .group-images {
+        display: none;
+    }
+
+    .discover .discover-container .images {
+        position: unset;
+    }
+
+    .discover .images .shape-map {
+        position: absolute;
+        left: 65%;
+        top: 0;
+        transform: translate(-50%, 35%);
+        width: 70%;
+        height: auto;
+    }
+
+    /**
+    * NEWS
+    **/
+
+    .news {
+        padding-block: 60px;
+    }
+
+    .news .news-list .card-btn {
+        margin-top: 12px;
+    }
+
+    /**
+    * FOOD
+    **/
+
+    .food {
+        padding-block: 60px;
+    }
+
+    .food .food-item {
+        gap: 24px;
+        padding-inline: 24px;
+    }
+
+    .food .food-item.swiper-slide-active {
+        scale: 1;
+    }
+
+    .food .food-item .food-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .food .food-item.swiper-slide {
+        padding-bottom: 0;
+    }
+
+    /* MAP */
+
+    .map .map-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .map .map-list {
+        max-height: 180px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .map {
+        padding-block: 0 60px;
+    }
+
+    .guide {
+        padding-block: 60px 60px;
+    }
+}
+
+/**
+* 576
+**/
+
+@media screen and (max-width: 576px) {
+
+    /**
+    * DISCOVERY
+    **/
+
+    .discover .images .shape-map {
+        transform: translate(-10%, 75%);
+    }
+
+    .discover .discover-container {
+        gap: 0;
+    }
+
+    /**
+    * DESTINATION
+    **/
+
+    .destination {
+        padding-block: 40px;
+    }
+
+    /**
+    * SEARCH
+    **/
+
+    .search-container.search-sub {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        box-shadow: unset;
+        padding-block: 0;
+        padding-inline: 0;
+    }
+
+    .project .member-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .member-button {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .member-button a {
+        width: 100%;
+    }
+
+    /**
+    *NEWS
+    **/
+
+    .news .news-list .news-item .card {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .news .news-list .card-img {
+        height: 200px;
+        width: 100%;
+    }
+
+    #news-detail .news {
+        padding-top: 0px;
+    }
+
+    .detail .detail-header .title {
+        font-size: 24px;
+        line-height: 34px;
+        margin-block: 6px;
+    }
+
+    .detail .detail-header .time {
+        font-size: 14px;
+    }
+
+    .detail .detail-header {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .detail .detail-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .detail {
+        padding-block: 60px;
+    }
+
+    .detail .detail-header .type {
+        font-size: 18px;
+    }
+
+    /**
+    * DESTINATION
+    **/
+
+    .destination .destination-list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+    }
+
+    .destination {
+        padding-block: 40px;
+    }
+
+    .destination .destination-heading .title {
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .destination .destination-heading .title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .destination .destination-heading .title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .destination .destination-heading .desc {
+        text-align: center;
+    }
+
+    /**
+    * FOOD
+    **/
+
+    .food {
+        padding-block: 40px;
+    }
+
+    .food .food-item {
+        grid-template-columns: repeat(1, 1fr);
+        padding-inline: 0;
+    }
+
+    .food .card-button {
+        margin-top: 24px;
+    }
+
+    .food .food-item.swiper-slide {
+        padding-top: 0;
+    }
+
+    /**
+    * SEARCH
+    **/
+
+    .search {
+        padding-block: 60px;
+    }
+
+    .search-button .group-btn {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .search-button {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-input,
+    .search-button {
+        width: 100%;
+    }
+
+    header .search-button {
+        width: 100%;
+    }
+
+    .search-container {
+        padding-inline: 12px;
+        padding-block: 36px;
+    }
+
+    .map .map-list {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-list {
+        padding-top: 0;
+        padding-bottom: 32px;
+    }
 }

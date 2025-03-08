@@ -92,3 +92,79 @@ footer {
     width: 14px;
     height: auto;
 }
+
+/**
+* 991px
+**/
+
+@media screen and (max-width: 991px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .footer-bottom .code-by {
+        justify-content: center;
+    }
+
+    .footer-top .head .name {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .footer-top .head .list .item {
+        line-height: 18px;
+        margin-bottom: 4px;
+        justify-content: center;
+    }
+
+    .footer .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 0;
+        gap: 24px;
+    }
+
+    .footer .footer-left {
+        text-align: center;
+    }
+
+    .footer .footer-left .desc {
+        width: 100%;
+        max-width: 450px;
+        margin-inline: auto;
+    }
+
+    .footer .footer-wrap {
+        justify-content: center;
+    }
+
+    .footer .footer-right .content {
+        text-align: center;
+    }
+
+    .code-by {
+        justify-content: center;
+    }
+}
+
+/**
+* 576px
+**/
+
+@media screen and (max-width: 576px) {
+    .footer-top .title {
+        margin-bottom: 24px;
+    }
+
+    .footer-top .head {
+        margin-bottom: 24px;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .footer-top .menu {
+        align-items: start;
+    }
+}
