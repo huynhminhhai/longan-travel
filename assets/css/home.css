@@ -1289,6 +1289,18 @@
         opacity: 1;
         scale: 1.05;
     }
+
+    .food.food-page .food-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /**
+    * GUIDE
+    **/
+
+    .guide-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1374,6 +1386,10 @@
         padding-bottom: 0;
     }
 
+    .food.food-page .food-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     /* MAP */
 
     .map .map-wrap {
@@ -1390,8 +1406,24 @@
         padding-block: 0 60px;
     }
 
+    /**
+    * GUIDE
+    **/
+
+    .guide-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .guide {
         padding-block: 60px 60px;
+    }
+
+    /**
+    * ALBUM
+    **/
+
+    .album .album-list {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -1402,14 +1434,14 @@
 @media screen and (max-width: 576px) {
 
     .banner .content {
-        max-width: 80vw;
-        width: 80vw;
+        max-width: 90vw;
+        width: 90vw;
         transform: translate(-50%, -65%);
     }
     
     .banner .content h1 {
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 18px;
+        line-height: 28px;
     }
 
     /**
@@ -1501,11 +1533,29 @@
     }
 
     .detail {
-        padding-block: 60px;
+        padding-block: 20px 60px;
     }
 
     .detail .detail-header .type {
         font-size: 18px;
+    }
+
+    .detail .detail-container {
+        gap: 12px;
+    }
+
+    .detail-comment .title {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 6px;
+    }
+
+    .detail-comment .date {
+        margin-left: 0;
+    }
+
+    .detail-comment {
+        gap: 12px;
     }
 
     /**
@@ -1556,11 +1606,20 @@
     }
 
     .food .card-button {
-        margin-top: 24px;
+        margin-top: 12px;
     }
 
     .food .food-item.swiper-slide {
         padding-top: 0;
+    }
+
+    .food.food-page .food-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .food.food-page .food-item .food-img {
+        height: 210px;
+        display: block;
     }
 
     /**
@@ -1568,7 +1627,8 @@
     **/
 
     .search {
-        height: 100px;
+        height: fit-content;
+        transform: translateY(-20%);
     }
 
     .search .search-main {
@@ -1576,7 +1636,7 @@
     }
 
     .search .search-wrap {
-        padding: 24px 18px;
+        padding: 24px;
     }
 
     .search-button .group-btn {
@@ -1606,8 +1666,37 @@
         grid-template-columns: 1fr;
     }
 
+    /**
+    * GUIDE
+    **/
+
+    .guide-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .guide-list {
         padding-top: 0;
         padding-bottom: 32px;
+    }
+
+    .detail-body--item .guide-list .card-body {
+        display: none;
+    }
+
+
+    /**
+    * ALBUM
+    **/
+
+    .album {
+        padding: 60px 0;
+    }
+
+    .album .album-popup {
+        padding: 48px 12px;
+    }
+
+    .album .album-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
