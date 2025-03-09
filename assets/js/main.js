@@ -181,9 +181,11 @@ $(document).ready(function () {
             breakpoints: {
                 1200: {
                     slidesPerView: 4,
+                    centeredSlides: false,
                 },
                 991: {
                     slidesPerView: 3,
+                    centeredSlides: false,
                 },
                 768: {
                     slidesPerView: 2.4,
