@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cổng thông tin du lịch - Phản ánh</title>
+    <title>Cổng thông tin du lịch - Đăng ký</title>
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- library -->
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/library/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/library/leaflet/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
 
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/header.css">
@@ -201,216 +202,34 @@
         </div>
     </header>
     <main>
-        <div class="feedback-form popup">
-            <div class="popup-container">
-                <button class="close">
-                    <img src="https://hoanmy.com/wp-content/themes/tot-bvhoanmy/assets/images/icons/close-new.svg"
-                        alt="close">
-                </button>
-                <div class="popup-wrap">
-                    <div class="popup-form">
-                        <div class="title">Gửi Phản Ánh</div>
-                        <form action="#">
-                            <div class="row">
-                                <div class="col-12 px-1 mb-2">
-                                    <div>
-                                        <input type="text" id="name" name="name"
-                                            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                            placeholder="Nhập tên của bạn" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 px-1 mb-2">
-                                    <div>
-                                        <input type="text" id="phone" name="phone"
-                                            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                            placeholder="Nhập số điện thoại của bạn" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 px-1 mb-2">
-                                    <div>
-                                        <select id="category" name="category"
-                                            class="mt-1 block w-full border border-gray-300 rounded-md p-2" required>
-                                            <option value="lưu trú">Loại phản ánh</option>
-                                            <option value="lưu trú">Lưu trú</option>
-                                            <option value="vệ sinh">Vệ sinh</option>
-                                            <option value="dịch vụ">Dịch vụ</option>
-                                            <option value="an ninh">An ninh</option>
-                                            <option value="khác">Khác</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mb-2">
-                                    <div>
-                                        <textarea id="content" name="content" rows="4"
-                                            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                            placeholder="Mô tả vấn đề bạn gặp phải" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1 mb-2">
-                                    <div>
-                                        <input type="text" id="location" name="location"
-                                            class="mt-1 block w-full border border-gray-300 rounded-md p-2"
-                                            placeholder="Địa điểm bạn gặp vấn đề" required>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1">
-                                    <div>
-                                        <label for="image" class="block text-sm font-medium text-gray-700">Tải lên ảnh (nếu có)</label>
-                                        <input type="file" id="image" name="image" class="mt-1 w-full border border-gray-300 rounded-md p-2 d-none" accept="image/*">
-                                        <div class="add-upload"><img  src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" alt=""></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 px-1">
-                                    <div class="flex justify-center">
-                                        <button type="submit"
-                                            class="button button-primary button-l">Gửi
-                                            phản ánh</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </form>
-                    </div>
-                    <div class="popup-img">
-                        <img src="https://ik.imagekit.io/tvlk/blog/2022/12/dia-diem-du-lich-long-an-3.jpg?tr=q-70,c-at_max,w-500,h-300,dpr-2"
-                            alt="img">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section class="banner">
-            <div class="banner-img">
-                <img src="https://pic.pikbest.com/best/video_preview_img/2303/6452082.jpg" alt="banner">
-            </div>
-            <div class="content">
-                <h1>
-                    Phản ánh - Kiến nghị
-                </h1>
-            </div>
-        </section>
-        <section class="search">
-            <div class="container">
-                <div class="search-wrap">
-                    <div class="search-main">
-                        <div class="search-field">
-                            <select name="category" id="category">
-                                <option value="tatca">Kiến nghị công khai</option>
-                                <option value="tatca">Kiến nghị của tôi</option>
-                                <option value="vanhoa-giaitri">Nhà hàng đạt chuẩn</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 3 sao</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 4 sao</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 5 sao</option>
-                            </select>
+        <section class="auth">
+            <img src="https://vinhtour.vn/wp-content/uploads/2024/09/VT_Khu-Du-Lich-Canh-Dong-Bat-Tan-Long-An-Ve-Dep-Moc-Mac-Dam-Chat-Tay-Nam-Bo1.jpg"
+                alt="bg-cover" class="bg-cover">
+            <div class="form-auth">
+                <h1 class="title">Chào Mừng Trở Lại</h1>
+                <div class="desc">Đăng ký tài khoản để khám phá Long An với thông tin du lịch, sự kiện và trải nghiệm hấp dẫn!</div>
+                <div class="form">
+                    <form action="#">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Nhập họ tên" required>
                         </div>
-                        <div class="search-field">
-                            <input type="text" placeholder="Tìm kiếm">
-                            <button>
-                                <img src="./assets/images/search.svg" alt="search">
-                            </button>
+                        <div>
+                            <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
                         </div>
-                    </div>
-                    <div class="add d-flex justify-content-start">
-                        <div class="button button-primary btn-feedback"> Thêm phản ánh</div>
-                    </div>
+                        <div>
+                            <input type="password" id="password" name="password" placeholder="Nhập lại mật khẩu" required>
+                        </div>
+                        <div>
+                            <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <div>
+                            <button class="button button-primary">Đăng ký</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </section>
-        <section class="restaurant pt-0">
-            <div class="container">
-                <div class="component-list">
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="card-img">
-                                <img src="https://cdn.baohatinh.vn/images/0ca7eb3967d4c4b19af6304f7e9668165c0f7da9bd8bb0f9674daf66ed5ebdcf9f17a3335e88d2afa25859ff7d822818/105d4102103t51950l0.jpg"
-                                    alt="Cơ sở lưu trú xuống cấp" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Cơ sở lưu trú xuống cấp</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            Khách sạn A, Đường Hùng Vương, Phường 2, TP. Tân An, Long An
-                                        </li>
-                                        <li>
-                                            <img src="./assets/images/date.svg" alt="date">
-                                            08:00 - 07/03/2025
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="card-img">
-                                <img src="https://images2.thanhnien.vn/528068263637045248/2023/7/4/566742nhahang03-1688480354618161996545.jpg"
-                                    alt="Quán ăn Ba Cua, Quốc lộ 1A, Thị trấn Bến Lức, huyện Bến Lức, Long An"
-                                    class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Quán ăn Ba Cua, Quốc lộ 1A, Thị trấn Bến Lức, huyện Bến Lức,
-                                    Long An</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            Ấp 2, xã Bình Hòa Hưng, Huyện Đức Huệ, tỉnh Long An
-                                        </li>
-                                        <li>
-                                            <img src="./assets/images/date.svg" alt="date">
-                                            9:00 - 06/03/2025
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="card-img">
-                                <img src="https://nld.mediacdn.vn/k:thumb_w/540/2016/4-chot-thay-1462291201461/cac-diem-du-lich-day-ngap-rac.jpg"
-                                    alt="Xả rác bừa bãi tại điểm du lịch" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Xả rác bừa bãi tại điểm du lịch</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            Bến Xe Tân Trụ cũ, Nguyễn Trung Trực, tt. Tân Trụ, Tân Trụ, Long An, Việt
-                                            Nam Thị trấn Tân Trụ, Huyện Tân Trụ, Tỉnh Long An
-                                        </li>
-                                        <li>
-                                            <img src="./assets/images/date.svg" alt="date">
-                                            9:00 - 06/03/2025
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                </div>
-                <div class="pagination">
-                    <button type="button" disabled="disabled" class="btn-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="4" d="M31 36L19 24l12-12"></path>
-                        </svg>
-                    </button>
-                    <ul class="pagination-list">
-                        <li class="number active">1</li>
-                        <li class="number">2</li>
-                        <li class="number">3</li>
-                    </ul>
-                    <button type="button" disabled="disabled" class="btn-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="4" d="m19 12l12 12l-12 12"></path>
-                        </svg>
-                    </button>
+                <div class="or">Hoặc</div>
+                <div class="change-auth">
+                    Bạn có tài khoản? <a href="./login.html">Đăng nhập</a>
                 </div>
             </div>
         </section>
@@ -524,6 +343,7 @@
 <script src="./assets/library/swiper/swiper-bundle.min.js"></script>
 <script src="./assets/library/leaflet/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet-search@3.0.2/dist/leaflet-search.min.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
 
 <!-- js -->
 <script src="./assets/js/main.js"></script>
