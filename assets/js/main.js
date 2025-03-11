@@ -199,7 +199,7 @@ $(document).ready(function () {
     if ($('.news-list .swiper-wrapper').length > 0) {
         new Swiper(".news-list", {
             spaceBetween: 24,
-            slidesPerView: 1.2,
+            slidesPerView: 1.15,
             loop: true,
             navigation: {
                 nextEl: ".swiper-btn-next",
@@ -230,7 +230,7 @@ $(document).ready(function () {
     if ($('.component-list .swiper-wrapper').length > 0) {
         new Swiper(".component-list", {
             spaceBetween: 24,
-            slidesPerView: 1.2,
+            slidesPerView: 1.15,
             loop: true,
             navigation: {
                 nextEl: ".swiper-btn-next",

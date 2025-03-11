@@ -1500,6 +1500,10 @@ a.button-primary {
 
 @media screen and (max-width: 576px) {
 
+    section.section-py {
+        padding-block: 24px 0;
+    }
+
     .component-list .component-item .card-img {
         height: 210px;
     }
@@ -1618,6 +1622,10 @@ a.button-primary {
 
     .component-list {
         padding-bottom: 2px;
+    }
+
+    .infor-map .map .map-list {
+        grid-template-columns: 1fr;
     }
     
 }

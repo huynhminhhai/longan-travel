@@ -670,8 +670,15 @@
 
 .food .food-item .name {
     font-size: 24px;
-    line-height: 26px;
+    line-height: 34px;
     letter-spacing: 0.5px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .food .food-item .category {
@@ -1048,7 +1055,7 @@
     border-radius: 8px;
 }
 
-.map .map-list .map-item > div {
+.map .map-list .map-item>div {
     flex: 1 0 0;
     padding-top: 4px;
 }
@@ -1579,7 +1586,7 @@
         width: 90vw;
         transform: translate(-50%, -65%);
     }
-    
+
     .banner .content h1 {
         font-size: 18px;
         line-height: 28px;
@@ -1634,6 +1641,18 @@
     /**
     *NEWS
     **/
+
+    .news .seemore {
+        margin-top: 0;
+    }
+
+    .news .news-list .card-title {
+        min-height: unset;
+    }
+
+    .news .news-list .card-body {
+        padding-top: 0;
+    }
 
     .news .news-list {
         grid-template-columns: repeat(1, 1fr);
