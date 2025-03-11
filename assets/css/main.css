@@ -265,6 +265,7 @@ section.section-py {
 .dropdown-item {
     font-size: 12px;
     padding-block: 8px;
+    border-bottom: 1px solid #f4f4f4;
     transition: all 0.3s linear;
 }
 
@@ -1305,6 +1306,11 @@ a.button-primary {
     outline: none;
     padding: 0;
     border: 2px solid var(--secondary-color);
+    border-radius: 100%;
+}
+
+div.radio-group input[type=radio] {
+    border-radius: 100%;
 }
 
 .radio-group input[type=radio]:checked {
