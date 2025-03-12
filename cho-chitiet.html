@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cổng thông tin du lịch - Chợ</title>
+    <title>Cổng thông tin du lịch - Chi tiết chợ</title>
     <link rel="icon" type="image/png" href="./assets/images/logo.png">
 
     <!-- library -->
@@ -196,179 +196,243 @@
         </div>
     </header>
     <main>
-        <section class="banner">
-            <div class="banner-img">
-                <img src="https://www.nyc.gov/assets/foodpolicy/images/content/pages/essexmarket.jpg" alt="banner">
-            </div>
-            <div class="content">
-                <h1>
-                    Chợ
-                </h1>
-            </div>
-        </section>
-        <section class="search">
+        <section class="detail news-detail">
             <div class="container">
-                <div class="search-wrap">
-                    <div class="search-main">
-                        <div class="search-field">
-                            <select name="category" id="category">
-                                <option value="tatca">Bến Lức</option>
-                                <option value="vanhoa-giaitri">Đức Hòa</option>
-                            </select>
+                <div class="detail-container">
+                    <div class="detail-body">
+                        <div class="detail-title">
+                            <h1 class="title">Chợ Bến Lức </h1>
+                            <div class="actions">
+                                <button class="btn-bookmark"><img src="./assets/images/favorite.svg"
+                                        alt="mục yêu thích"></button>
+                            </div>
                         </div>
-                        <div class="search-field">
-                            <input type="text" placeholder="Tìm kiếm">
-                            <button>
-                                <img src="./assets/images/search.svg" alt="search">
-                            </button>
+                        <div class="detail-body--item">
+                            <h3 class="title">
+                                Thông tin
+                            </h3>
+                            <div class="infor-detail">
+                                <ul>
+                                    <li>
+                                        <img src="./assets/images/place.svg" alt="location">
+                                        <span>234 Bùi Thị Đồng, TT. Bến Lức, Bến Lức, Long An</span>
+                                    </li>
+                                    <li>
+                                        <img src="./assets/images/phone.svg" alt="phone">
+                                        <span>02723 836306</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-body--item">
+                            <h3 class="title">
+                                Mô tả
+                            </h3>
+                            <div class="detail-content">
+                                <p>
+                                    Chợ Bến Lức trực thuộc huyện Bến Lức nằm phía Đông Bắc của tỉnh Long An, là cửa ngõ phía Bắc của miền Tây Nam Bộ, cách trung tâm TP.HCM khoảng 30km về hướng Tây Nam và cách TP Tân An 15km về hướng Đông Bắc, có vị trí địa lý:
+                                </p>
+                                <p>
+                                    <ul>
+                                        <li>Phía Bắc giáp Đức Hoà, Đức Huệ.</li>
+                                        <li>Phía Nam giáp Cần Giuộc, Cần Đước, Tân Trụ.</li>
+                                        <li>Phía Đông giáp Bình Chánh.</li>
+                                        <li>Phía Tây giáp Thủ Thừa.</li>
+                                    </ul>
+                                </p>
+                                <p>
+                                    Chợ Bến Lức nằm ở xã Bến Lức, huyện Bến Lức, tỉnh Long An, miền Tây Nam Bộ. Đây là một trong những điểm thương mại truyền thống quan trọng của huyện và là nơi tập trung giao thương và mua bán hàng hóa của người dân trong và ngoài địa phương.
+                                </p>
+                                <p><img src="https://nhadatlongan.net.vn/wp-content/uploads/2024/02/AF1QipP2UIuUNOB3hHpXW_3GNqMzyFzR3TzUPFg2PK4s901-k-no.jpeg?v=1708750531" alt=""></p>
+                                <p>Bến xe khách nàylà đầu mối giao thông quan trọng kết nối giữa Sài Gòn và các tỉnh
+                                    miền Tây. Bến xe Long An phục vụ hành khách đến thành phố Hồ Chí Minh hoặc đi các
+                                    tỉnh đồng bằng Sông Cửu Long. Hiện nay có hơn 80 doanh nghiệp vận tải tham gia khai
+                                    thác 200 tuyến đường thuộc các tỉnh: Tiền Giang, Vĩnh Long, An Giang, Hậu Giang,
+                                    Đồng Tháp, Bạc Liêu, Cà Mau, Kiên Giang, Sóc Trăng, Cần Thơ, Trà Vinh, Bến Tre,… mỗi
+                                    ngày tiếp nhận nghìn lượt hành đi xe</p>
+                                <p>
+                                    Không những vậy có nhiều nhà xe đưa quý khách ra tận ngoài bắc như Hà Nội, Bắc
+                                    Ninh... cho khách có nhu cầu.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="detail-body--item">
+                            <h3 class="title">Bản đồ</h3>
+                            <div class="infor-map">
+                                <section class="map py-0">
+                                    <div class="map-wrap d-block">
+                                        <div id="map-single"></div>
+                                        <div class="map-item d-none" data-lat="10.638629622391395"
+                                            data-lng="106.4806798969184" data-icon="market">
+                                            <img src="https://file4.batdongsan.com.vn/resize/745x510/2023/05/06/20230506154916-509b_wm.jpg"
+                                                alt="Chợ Bến Lức">
+                                            <div>
+                                                <div class="name">Chợ Bến Lức</div>
+                                                <div class="address">234 Bùi Thị Đồng, TT. Bến Lức, Bến Lức, Long An</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-sidebar">
+                        <div class="sidebar-item">
+                            <h2 class="sidebar-title">Các bến xe khác</h2>
+                            <div class="detail-others">
+                                <div class="list">
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://global-uploads.webflow.com/60af8c708c6f35480d067652/6228d5526caecd51b260c7b5_screenshot_1646843202.png"
+                                                alt="Chợ Gò Đen">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Chợ Gò Đen</div>
+                                            <div class="date">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh Long An</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw8enta46cpn83@resize_ss640x400"
+                                                alt="Chợ Thuận Đạo">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Chợ Thuận Đạo</div>
+                                            <div class="date">78 KP 8, TT. Bến Lức, Bến Lức, Long An</div>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="item">
+                                        <div class="thumbnail">
+                                            <img src="https://file4.batdongsan.com.vn/resize/745x510/2023/06/06/20230606132703-4050_wm.jpg"
+                                                alt="Chợ Nhựt Chánh">
+                                        </div>
+                                        <div class="content">
+                                            <div class="title">Chợ Nhựt Chánh
+                                            </div>
+                                            <div class="date">78 KP 8, TT. Bến Lức, Bến Lức, Long An</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-bottom">
+                    <div class="comment">
+                        <div class="detail-form">
+                            <h3 class="title">
+                                Để lại bình luận
+                            </h3>
+                            <form action="#" id="comment-form" novalidate="novalidate">
+                                <div class="form-input">
+                                    <input type="text" name="author" id="author" placeholder="Họ tên * "
+                                        required="required">
+                                </div>
+                                <div class="form-input">
+                                    <textarea name="comment" id="message" cols="40" rows="3" aria-required="true"
+                                        placeholder="Viết bình luận..." required="required"></textarea>
+                                </div>
+                                <button class="button button-primary" type="submit">Bình luận</button>
+                            </form>
+                        </div>
+                        <div class="comment-list">
+                            <div class="detail-comment">
+                                <div class="avatar">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
+                                </div>
+                                <div class="infor">
+                                    <div class="title">
+                                        <div class="name">Huỳnh Minh Hải</div><span class="date">05/03/2025</span>
+                                    </div>
+                                    <span class="desc">
+                                        Tuyệt vời!!!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="rating-container">
+                            <h2>Chia sẻ thông tin</h2>
+                            <div class="socicals">
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="social">
+                                </a>
+                                <a href="#">
+                                    <img src="https://hidosport.vn/wp-content/uploads/2023/09/zalo-icon.png"
+                                        alt="social">
+                                </a>
+                            </div>
+                            <h2>Đánh giá</h2>
+                            <div class="stars" id="ratingStars">
+                                <span class="star" data-value="1">★</span>
+                                <span class="star" data-value="2">★</span>
+                                <span class="star" data-value="3">★</span>
+                                <span class="star" data-value="4">★</span>
+                                <span class="star" data-value="5">★</span>
+                            </div>
+                            <div class="result" id="ratingResult">
+                                <div>
+                                    <span id="averageRating">4.9</span>/5 (Tổng: <span id="totalVotes">84</span> lượt
+                                    đánh
+                                    giá)
+                                </div>
+                                <div class="progress-container">
+                                    <div class="progress-item">
+                                        <div>5 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 90%;"></div>
+                                        </div>
+                                        <div>
+                                            90%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>4 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>3 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 5%;"></div>
+                                        </div>
+                                        <div>
+                                            5%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>2 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div>1 sao</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 0%;"></div>
+                                        </div>
+                                        <div>
+                                            0%
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="restaurant pt-0">
-            <div class="container">
-                <div class="component-list">
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="near">
-                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
-                                <span>0.3km</span>
-                            </div>
-                            <div class="card-img">
-                                <img src="https://file4.batdongsan.com.vn/resize/745x510/2023/05/06/20230506154916-509b_wm.jpg"
-                                    alt="Chợ Bến Lức " class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Chợ Bến Lức </div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            234 Bùi Thị Đồng, TT. Bến Lức, Bến Lức, Long An
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="near">
-                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
-                                <span>0.3km</span>
-                            </div>
-                            <div class="card-img">
-                                <img src="https://global-uploads.webflow.com/60af8c708c6f35480d067652/6228d5526caecd51b260c7b5_screenshot_1646843202.png"
-                                    alt="Chợ Gò Đen" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Chợ Gò Đen</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh Long An
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="near">
-                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
-                                <span>0.3km</span>
-                            </div>
-                            <div class="card-img">
-                                <img src="https://down-vn.img.susercontent.com/vn-11134259-7r98o-lw8enta46cpn83@resize_ss640x400"
-                                    alt="Chợ Thuận Đạo" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Chợ Thuận Đạo</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            78 KP 8, TT. Bến Lức, Bến Lức, Long An
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="near">
-                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
-                                <span>0.3km</span>
-                            </div>
-                            <div class="card-img">
-                                <img src="https://file4.batdongsan.com.vn/resize/745x510/2023/06/06/20230606132703-4050_wm.jpg"
-                                    alt="Chợ Nhựt Chánh" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Chợ Nhựt Chánh</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            78 KP 8, TT. Bến Lức, Bến Lức, Long An
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                    <div class="component-item">
-                        <a href="#" class="card">
-                            <div class="near">
-                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
-                                <span>0.3km</span>
-                            </div>
-                            <div class="card-img">
-                                <img src="https://daiachau.vn/wp-content/uploads/2020/11/DJI_0671.jpg"
-                                    alt="Chợ Thủ Thừa" class="card-top-img">
-                            </div>
-                            <div class="card-body">
-                                <div class="card-title">Chợ Thủ Thừa</div>
-                                <div class="card-text">
-                                    <ul class="infor">
-                                        <li>
-                                            <img src="./assets/images/place.svg" alt="place">
-                                            78 KP 8, TT. Bến Lức, Bến Lức, Long An
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </a>
-                    </div>
-                </div>
-                <div class="pagination">
-                    <button type="button" disabled="disabled" class="btn-prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="4" d="M31 36L19 24l12-12"></path>
-                        </svg>
-                    </button>
-                    <ul class="pagination-list">
-                        <li class="number active">1</li>
-                        <li class="number">2</li>
-                        <li class="number">3</li>
-                    </ul>
-                    <button type="button" disabled="disabled" class="btn-next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="4" d="m19 12l12 12l-12 12"></path>
-                        </svg>
-                    </button>
-                </div>
             </div>
         </section>
     </main>

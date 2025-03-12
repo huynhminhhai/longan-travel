@@ -184,7 +184,15 @@ header .search-container {
 }
 
 header .search-input #results li {
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
+    font-size: 13px;
+    color: var(--white-color);
+}
+
+header .search-container .search-wrap {
+    display: grid;
+    grid-template-columns: calc(25% - 6px) calc(75% - 6px);
+    gap: 12px;
 }
 
 header .search-container.active {
@@ -198,13 +206,15 @@ header .search-button {
     padding-top: 12px;
 }
 
-.search-input {
+.search-input,
+.search-select {
     position: relative;
-    width: 80%;
+    width: 100%;
     margin-inline: auto;
 }
 
-.search-input input {
+.search-input input,
+.search-select select {
     width: 100%;
     height: 42px;
     margin-inline: auto;
@@ -213,14 +223,18 @@ header .search-button {
     border-radius: 24px;
     border: 1px solid #5d5d5d;
     color: #5d5d5d;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
     background-color: var(--bg-color);
 }
 
+.search-select select {
+    appearance: none;
+}
+
 .search-input #results {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + 2px);
     left: 0;
     right: 0;
     border-radius: 8px;
@@ -237,32 +251,35 @@ header .search-button {
 }
 
 .search-input #results li:not(:last-child) {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .search-input #results li {
     padding: 8px 24px;
-    background-color: var(--white-color);
-    background-color: var(--bg-color-2);
     cursor: pointer;
 }
 
 .search-input #results li a {
-    font-size: 14px;
-    color: var(--text-color);
+    font-size: 13px;
+    color: var(--white-color);
     transition: all 0.3s linear;
 }
 
 .search-input #results li a:hover {
-    color: var(--primary-color);
+    color: var(--white-color);
 }
 
-.icon-search {
+.icon-search,
+.icon-down {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 12px;
     width: 18px;
+}
+
+.icon-down {
+    width: 26px;
 }
 
 .search-button .text {
@@ -465,5 +482,9 @@ header .search-button {
 
     .header .navbar .nav-link img {
         margin-left: 6px;
+    }
+
+    header .search-container .search-wrap {
+        grid-template-columns: 1fr;
     }
 }

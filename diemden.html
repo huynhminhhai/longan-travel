@@ -212,9 +212,8 @@
                     <div class="search-main">
                         <div class="search-field">
                             <select name="category" id="category">
-                                <option value="tatca">Đặc điểm nổi bật</option>
-                                <option value="tatca">Nổi tiếng</option>
-                                <option value="vanhoa-giaitri">Khu vực ít người biết đến</option>
+                                <option value="tatca">Tất cả</option>
+                                <option value="tatca">Xung quanh</option>
                             </select>
                         </div>
                         <div class="search-field">
@@ -224,12 +223,31 @@
                             </button>
                         </div>
                     </div>
+                    <div class="filter">
+                        <div class="text">
+                            <img src="./assets/images/mage--filter.svg" alt="Filter"> Lọc
+                        </div>
+                        <div class="option">
+                            <div class="item">
+                                <select name="option-day" id="option-day">
+                                    <option value="">Chi phí</option>
+                                </select>
+                                <!-- <img src="./assets/images/mage--filter.svg" alt="select"> -->
+                            </div>
+                            <div class="item">
+                                <select name="option-person" id="option-person">
+                                    <option value="">Loại địa điểm</option>
+                                </select>
+                                <!-- <img src="./assets/images/mage--filter.svg" alt="select"> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="destination pt-0">
             <div class="container">
-                <div class="destination-list">
+                <div class="destination-list ">
                     <div class="destination-item">
                         <div class="card">
                             <div class="card-img">
@@ -323,10 +341,124 @@
                         </div>
                     </div>
                 </div>
+                <div class="destination-list d-none">
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://ik.imagekit.io/tvlk/blog/2023/11/nha-tram-cot-cover.jpg"
+                                    alt="Nhà Trăm Cột" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Nhà Trăm Cột</div>
+                                <div class="card-text">
+                                    Nhà trăm cột tọa lạc tại số 128, ấp Cầu Ngang, xã Long Hựu Đông, huyện Cần Đước,
+                                    tỉnh Long An, Việt Nam. Đây là một di tích lịch sử cấp quốc gia, và là một trọng
+                                    điểm du lịch của tỉnh.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>2.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://dulichtoivaban.com/wp-content/uploads/2023/08/Khu-du-lich-sinh-thai-Lang-Noi-Tan-Lap-o-Long-An.jpg.webp"
+                                    alt="Làng nổi Tân Lập" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Làng nổi Tân Lập</div>
+                                <div class="card-text">
+                                    Khu rừng tràm xanh mướt với hệ sinh thái ngập nước đặc trưng, nổi tiếng với con
+                                    đường mòn xuyên rừng và tháp quan sát cao 38m.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>3.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://cdn.media.dulich24.com.vn/diemden/cua-khau-binh-hiep-7264/cua-khau-binh-hiep-1.jpg"
+                                    alt="Cửa khẩu Quốc tế Bình Hiệp" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Cửa khẩu Quốc tế Bình Hiệp</div>
+                                <div class="card-text">
+                                    Điểm giao thương quan trọng giữa Việt Nam và Campuchia, thu hút người dân địa phương
+                                    và khách qua lại.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>5.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/dia_diem/bao_tang_long_an/unnamed_1_copy_637189302797678077.jpg"
+                                    alt="Bảo tàng Long An" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bảo tàng Long An</div>
+                                <div class="card-text">
+                                    Nằm tại thành phố Tân An, bảo tàng trưng bày nhiều hiện vật về lịch sử, văn hóa và
+                                    thiên nhiên của tỉnh. Đây là nơi lý tưởng để tìm hiểu sâu hơn về vùng đất này.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-item">
+                        <div class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>5.4km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://houserentaldanang.com/wp-content/uploads/2023/09/Cong-vien-7-ky-quan-Da-Nang-7.jpg"
+                                    alt="Công viên 7 Kỳ Quan Thế Giới" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Công viên 7 Kỳ Quan Thế Giới</div>
+                                <div class="card-text">
+                                    Nằm trong khu đô thị Cát Tường Phú Sinh (huyện Đức Hòa), đây là điểm check-in độc
+                                    đáo với các mô hình thu nhỏ của 7 kỳ quan thế giới như Tháp Eiffel, Tượng Nữ Thần Tự
+                                    Do, Tháp nghiêng Pisa... Rất phù hợp cho những ai thích chụp ảnh sống ảo.
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-popup">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="pagination">
                     <button type="button" disabled="disabled" class="btn-prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="M31 36L19 24l12-12"></path>
                         </svg>
                     </button>
@@ -337,7 +469,7 @@
                     </ul>
                     <button type="button" disabled="disabled" class="btn-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="m19 12l12 12l-12 12"></path>
                         </svg>
                     </button>

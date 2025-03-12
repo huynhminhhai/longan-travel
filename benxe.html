@@ -208,18 +208,26 @@
         <section class="search">
             <div class="container">
                 <div class="search-wrap">
-                    <div class="search-field">
-                        <input type="text" placeholder="Tìm kiếm">
-                        <button>
-                            <img src="./assets/images/search.svg" alt="search">
-                        </button>
+                    <div class="search-main">
+                        <div class="search-field">
+                            <select name="category" id="category">
+                                <option value="tatca">Tất cả</option>
+                                <option value="tatca">Xung quanh</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <button>
+                                <img src="./assets/images/search.svg" alt="search">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="restaurant pt-0">
             <div class="container">
-                <div class="component-list">
+                <div class="component-list d-none">
                     <div class="component-item">
                         <a href="#" class="card">
                             <div class="card-img">
@@ -341,10 +349,156 @@
                         </a>
                     </div>
                 </div>
+                <div class="component-list">
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Tân Trụ " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Tân Trụ </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Ấp Tân Bình, TT Tân Trụ, Tân Trụ, Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Bình Hòa Hưng" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Bình Hòa Hưng</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Ấp 2, xã Bình Hòa Hưng, Huyện Đức Huệ, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Long An" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Long An</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Bến Xe Tân Trụ cũ, Nguyễn Trung Trực, tt. Tân Trụ, Tân Trụ, Long An, Việt Nam  Thị trấn Tân Trụ, Huyện Tân Trụ, Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Đức Huệ" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Đức Huệ</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            KV 1, thị trấn Đông Thành, Đức Huệ, Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Hậu Nghĩa " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Hậu Nghĩa </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Thị trấn Hậu Nghĩa, Đức Hòa, Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/sangvt.lan/tien_ich/benxe_637184791059233590.png"
+                                    alt="Bến xe khách Tân Hưng" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Bến xe khách Tân Hưng</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Ấp Gò Thuyền, thị trấn Tân Hưng, Tân Hưng, LA
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
                 <div class="pagination">
                     <button type="button" disabled="disabled" class="btn-prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="M31 36L19 24l12-12"></path>
                         </svg>
                     </button>
@@ -355,7 +509,7 @@
                     </ul>
                     <button type="button" disabled="disabled" class="btn-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="m19 12l12 12l-12 12"></path>
                         </svg>
                     </button>

@@ -148,7 +148,9 @@
                                 <img src="https://cdn-icons-png.flaticon.com/128/323/323319.png" alt="Tiếng Việt">
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><img src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN">EN</a></li>
+                                <li><a class="dropdown-item" href="#"><img
+                                            src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN">EN</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -208,18 +210,26 @@
         <section class="search">
             <div class="container">
                 <div class="search-wrap">
-                    <div class="search-field">
-                        <input type="text" placeholder="Tìm kiếm">
-                        <button>
-                            <img src="./assets/images/search.svg" alt="search">
-                        </button>
+                    <div class="search-main">
+                        <div class="search-field">
+                            <select name="category" id="category">
+                                <option value="tatca">Tất cả</option>
+                                <option value="tatca">Xung quanh</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <button>
+                                <img src="./assets/images/search.svg" alt="search">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="restaurant pt-0">
             <div class="container">
-                <div class="component-list">
+                <div class="component-list d-none">
                     <div class="component-item">
                         <a href="#" class="card">
                             <div class="card-img">
@@ -227,12 +237,12 @@
                                     alt="CÔNG TY TNHH DỊCH VỤ VẬN TẢI SAO ĐỎ  - CN LONG AN" class="card-top-img">
                             </div>
                             <div class="card-body">
-                                <div class="card-title">CÔNG TY TNHH DỊCH VỤ VẬN TẢI SAO ĐỎ  - CN LONG AN</div>
+                                <div class="card-title">CÔNG TY TNHH DỊCH VỤ VẬN TẢI SAO ĐỎ - CN LONG AN</div>
                                 <div class="card-text">
                                     <ul class="infor">
                                         <li>
                                             <img src="./assets/images/place.svg" alt="place">
-                                            Số 05, Trương Thị Sáu, Phường 3, TP. Tân An, Long An 
+                                            Số 05, Trương Thị Sáu, Phường 3, TP. Tân An, Long An
                                         </li>
                                     </ul>
                                 </div>
@@ -283,7 +293,7 @@
                     <div class="component-item">
                         <a href="#" class="card">
                             <div class="card-img">
-                                <img src="https://play-lh.googleusercontent.com/doLMDrq4T1qxg8Hzj0YnXVCA0sIM2LNtU769nUMIzrk8VLu0zq5bALdjscANqTKR0A=w240-h480-rw"
+                                <img src="https://pic.trangvangvietnam.com/395727637/logo.jpg"
                                     alt="CÔNG TY TNHH OPEN99 LONG AN" class="card-top-img">
                             </div>
                             <div class="card-body">
@@ -292,7 +302,7 @@
                                     <ul class="infor">
                                         <li>
                                             <img src="./assets/images/place.svg" alt="place">
-                                            Số 33, Phạm Văn Chiêu, Phường 6, TP. Tân An, Long An 
+                                            Số 33, Phạm Văn Chiêu, Phường 6, TP. Tân An, Long An
                                         </li>
                                     </ul>
                                 </div>
@@ -302,6 +312,128 @@
                     </div>
                     <div class="component-item">
                         <a href="#" class="card">
+                            <div class="card-img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvwhTLGTyjIa4XmAjs5Mq1RItMte7o3tGwG9VocOkRt6s-ftz4txz_GVVAz-jZoSO-sc&usqp=CAU"
+                                    alt="CN HỢP TÁC XÃ HÒA BÌNH XANH TẠI LONG AN" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CN HỢP TÁC XÃ HÒA BÌNH XANH TẠI LONG AN</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            29B Nguyễn Văn Tiếp, Phường 5, thành phố Tân An, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="component-list">
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://vieclamcantho.com.vn/public/upload/nhatuyendung/cty-tnhh-dich-vu-van-tai-sao-do---an-giang-taxi-sao-do1582333022.png"
+                                    alt="CÔNG TY TNHH DỊCH VỤ VẬN TẢI SAO ĐỎ  - CN LONG AN" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH DỊCH VỤ VẬN TẢI SAO ĐỎ - CN LONG AN</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 05, Trương Thị Sáu, Phường 3, TP. Tân An, Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://dautucophieu.net/wp-content/uploads/2017/03/c%E1%BB%95-phi%E1%BA%BFu-Mai-Linh..jpg"
+                                    alt="CN CÔNG TY CP TĐ MAI LINH TẠI LONG AN" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CN CÔNG TY CP TĐ MAI LINH TẠI LONG AN</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 650, Quốc lộ 1A, Phường 4, Thành phố Tân An, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://saigontaxi.vn/wp-content/uploads/2020/09/3bc872cd85067a582317-removebg-preview.png"
+                                    alt="C.TY CP TẬP ĐOÀN VẬN TẢI SÀI GÒN - CN LONG AN" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">C.TY CP TẬP ĐOÀN VẬN TẢI SÀI GÒN - CN LONG AN</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 650, Quốc lộ 1A, Phường 4, Thành phố Tân An, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://pic.trangvangvietnam.com/395727637/logo.jpg"
+                                    alt="CÔNG TY TNHH OPEN99 LONG AN" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH OPEN99 LONG AN</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 33, Phạm Văn Chiêu, Phường 6, TP. Tân An, Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
                             <div class="card-img">
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvwhTLGTyjIa4XmAjs5Mq1RItMte7o3tGwG9VocOkRt6s-ftz4txz_GVVAz-jZoSO-sc&usqp=CAU"
                                     alt="CN HỢP TÁC XÃ HÒA BÌNH XANH TẠI LONG AN" class="card-top-img">

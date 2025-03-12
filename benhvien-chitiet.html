@@ -276,35 +276,14 @@
                             <div class="infor-map">
                                 <section class="map py-0">
                                     <div class="map-wrap d-block">
-                                        <div id="map"></div>
-                                        <div class="sidebar d-none">
-                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
-                                                <li class="nav-item map-nav-item" role="presentation"
-                                                    data-type="hospital">
-                                                    <button class="nav-link active" id="hospital-map-tab"
-                                                        data-bs-toggle="tab" data-bs-target="#hospital-map" type="button"
-                                                        role="tab" aria-controls="hospital-map" aria-selected="true">
-                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png"
-                                                            alt="resturant">
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content" id="mapTab">
-                                                <div class="tab-pane fade show active" id="hospital-map" role="tabpanel"
-                                                    aria-labelledby="hospital-map-tab">
-                                                    <div class="map-list">
-                                                        <div class="map-item" data-lat="10.537824636906599"
-                                                            data-lng="106.40475073924593">
-                                                            <img src="https://media.la34.com.vn/upload/image/202502/medium/1318868_ngay_21_2_2025_ben_luc_trung_tam_y_te_huyen_xung_dang_la_la_co_dau_cua_trong_cong_tac_cham_soc_suc_khoe_nhan_dan_hinh_10_09271021.jpg"
-                                                                alt="Trung tâm Y tế huyện Bến Lức">
-                                                            <div>
-                                                                <div class="name">Trung tâm Y tế huyện Bến Lức</div>
-                                                                <div class="address">126 Nguyễn Hữu Thọ- KP3- TTBL- Bến Lức – Long An</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
+                                        <div id="map-single"></div>
+                                        <div class="map-item d-none" data-lat="10.640914341633634"
+                                            data-lng="106.48684143342535" data-icon="hospital">
+                                            <img src="https://ttytbenluc.com.vn/wp-content/uploads/2024/04/11-715x400.png"
+                                                alt="Trung tâm Y tế huyện Bến Lức">
+                                            <div>
+                                                <div class="name">Trung tâm Y tế huyện Bến Lức</div>
+                                                <div class="address">126 Nguyễn Hữu Thọ- KP3- TTBL- Bến Lức – Long An</div>
                                             </div>
                                         </div>
                                     </div>
@@ -369,121 +348,6 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="detail-bottom">
-                    <div class="comment">
-                        <div class="detail-form">
-                            <h3 class="title">
-                                Để lại bình luận
-                            </h3>
-                            <form action="#" id="comment-form" novalidate="novalidate">
-                                <div class="form-input">
-                                    <input type="text" name="author" id="author" placeholder="Họ tên * "
-                                        required="required">
-                                </div>
-                                <div class="form-input">
-                                    <textarea name="comment" id="message" cols="40" rows="3" aria-required="true"
-                                        placeholder="Viết bình luận..." required="required"></textarea>
-                                </div>
-                                <button class="button button-primary" type="submit">Bình luận</button>
-                            </form>
-                        </div>
-                        <div class="comment-list">
-                            <div class="detail-comment">
-                                <div class="avatar">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3608/3608172.png" alt="commnet">
-                                </div>
-                                <div class="infor">
-                                    <div class="title">
-                                        <div class="name">Huỳnh Minh Hải</div><span class="date">05/03/2025</span>
-                                    </div>
-                                    <span class="desc">
-                                        Tuyệt vời!!!
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rating">
-                        <div class="rating-container">
-                            <h2>Chia sẻ thông tin</h2>
-                            <div class="socicals">
-                                <a href="#">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png" alt="social">
-                                </a>
-                                <a href="#">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" alt="social">
-                                </a>
-                                <a href="#">
-                                    <img src="https://hidosport.vn/wp-content/uploads/2023/09/zalo-icon.png"
-                                        alt="social">
-                                </a>
-                            </div>
-                            <h2>Đánh giá</h2>
-                            <div class="stars" id="ratingStars">
-                                <span class="star" data-value="1">★</span>
-                                <span class="star" data-value="2">★</span>
-                                <span class="star" data-value="3">★</span>
-                                <span class="star" data-value="4">★</span>
-                                <span class="star" data-value="5">★</span>
-                            </div>
-                            <div class="result" id="ratingResult">
-                                <div>
-                                    <span id="averageRating">4.9</span>/5 (Tổng: <span id="totalVotes">84</span> lượt
-                                    đánh
-                                    giá)
-                                </div>
-                                <div class="progress-container">
-                                    <div class="progress-item">
-                                        <div>5 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 90%;"></div>
-                                        </div>
-                                        <div>
-                                            90%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>4 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 5%;"></div>
-                                        </div>
-                                        <div>
-                                            5%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>3 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 5%;"></div>
-                                        </div>
-                                        <div>
-                                            5%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>2 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 0%;"></div>
-                                        </div>
-                                        <div>
-                                            0%
-                                        </div>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div>1 sao</div>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill" style="width: 0%;"></div>
-                                        </div>
-                                        <div>
-                                            0%
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>

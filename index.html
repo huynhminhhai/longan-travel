@@ -176,9 +176,19 @@
         <div class="search-container">
             <div class="container">
                 <div class="search-wrap">
+                    <div class="search-select">
+                        <select name="search-category" id="search-category">
+                            <option value="0">Tất cả</option>
+                            <option value="1">Địa điểm</option>
+                            <option value="2">Đặc sản</option>
+                            <option value="3">Ẩm thực</option>
+                            <option value="4">Lưu trú</option>
+                            <option value="5">Lịch trình</option>
+                        </select>
+                        <img src="./assets/images/prime--angle-down.svg" alt="select" class="icon-down">
+                    </div>
                     <div class="search-input">
-                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin..."
-                            fdprocessedid="4i5j0h">
+                        <input type="text" id="search-bar" placeholder="Tìm kiếm nhanh thông tin...">
                         <img src="./assets/images/search.svg" alt="search" class="icon-search">
                         <ul id="results"></ul>
                     </div>
@@ -1334,10 +1344,34 @@
                                     <img src="https://cdn-icons-png.flaticon.com/128/1042/1042263.png" alt="bus">
                                 </button>
                             </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="shopping">
+                                <button class="nav-link" id="shopping-map-tab" data-bs-toggle="tab" data-bs-target="#shopping-map"
+                                    type="button" role="tab" aria-controls="shopping-map" aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/2331/2331970.png" alt="shopping">
+                                </button>
+                            </li>
                             <li class="nav-item map-nav-item" role="presentation" data-type="atm">
                                 <button class="nav-link" id="atm-map-tab" data-bs-toggle="tab" data-bs-target="#atm-map"
                                     type="button" role="tab" aria-controls="atm-map" aria-selected="false">
                                     <img src="https://cdn-icons-png.flaticon.com/128/3016/3016352.png" alt="atm">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="oil">
+                                <button class="nav-link" id="oil-map-tab" data-bs-toggle="tab" data-bs-target="#oil-map"
+                                    type="button" role="tab" aria-controls="oil-map" aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/1791/1791150.png" alt="oil">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="hospital">
+                                <button class="nav-link" id="hospital-map-tab" data-bs-toggle="tab" data-bs-target="#hospital-map"
+                                    type="button" role="tab" aria-controls="hospital-map" aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/3448/3448513.png" alt="hospital">
+                                </button>
+                            </li>
+                            <li class="nav-item map-nav-item" role="presentation" data-type="market">
+                                <button class="nav-link" id="market-map-tab" data-bs-toggle="tab" data-bs-target="#market-map"
+                                    type="button" role="tab" aria-controls="market-map" aria-selected="false">
+                                    <img src="https://cdn-icons-png.flaticon.com/128/862/862819.png" alt="market">
                                 </button>
                             </li>
                         </ul>
@@ -1361,6 +1395,118 @@
                                             <div class="name">Hải sản Hoàng</div>
                                             <div class="address">133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh
                                                 Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.763223570967911" data-lng="106.49590150436565">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/hai_san_phu_quy/hai_san_phu_quy_11_521496205.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">Hải sản Phú Quý</div>
+                                            <div class="address">09 Đường số 1, KDC Đường 10, Bến Lức, Long An 82600, Việt Nam</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.531656488407684" data-lng="106.41296748157455">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/gadat/compress/62254133_2244368959225034_2481820880326361088_n_540959930.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">QUÁN ĂN GÀ ĐẤT</div>
+                                            <div class="address">Số 139, Huỳnh Văn Tạo, phường 3, TP. Tân An, Long An Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.570939345512182" data-lng="106.71950533862979">
+                                        <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/tienthanhboat/274942203_126485476611165_5047535366436780864_n_628208154.jpg"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">TIẾN THÀNH BOATS</div>
+                                            <div class="address">Ấp Thạnh Trung, xã Phước Vĩnh Đông, Cần Giuộc, Long An Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.639404555029333" data-lng="106.48816424904123">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtmuziLY68Mz7MEKRbaksz_vcr1Zfa-ijDkQ&s"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">Nhà Hàng Tiệc Cưới Hải Âu</div>
+                                            <div class="address">72 Nguyễn Hữu Thọ Tỉnh Long An</div>
+                                        </div>
+                                    </div>
+                                    <div class="map-item" data-lat="10.529963" data-lng="106.408888">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkYNH9xXQcF6j9VLCIuZGzx5r4ZyM0HybxYw&s" 
+                                            alt="Nhà hàng 1">
+                                        <div>
+                                            <div class="name">Nhà Hàng Bách Hỷ</div>
+                                            <div class="address">234 Lê Lợi, Thành phố Tân An, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.620762" data-lng="106.482315">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtmuziLY68Mz7MEKRbaksz_vcr1Zfa-ijDkQ&s"
+                                            alt="Nhà hàng 2">
+                                        <div>
+                                            <div class="name">Nhà Hàng Hoa Viên</div>
+                                            <div class="address">56 Nguyễn Trung Trực, Bến Lức, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.700528" data-lng="106.416736">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtxI5EXk3i5L2A9lA_1pAq2UeHnGc9BG23mQ&s"
+                                            alt="Nhà hàng 3">
+                                        <div>
+                                            <div class="name">Nhà Hàng Á Đông</div>
+                                            <div class="address">12 Võ Văn Tần, Đức Hòa, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.548951" data-lng="106.413782">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgYH9QUWj1OImcqD1RfDpk83T8xZg_b6zWug&s"
+                                            alt="Nhà hàng 4">
+                                        <div>
+                                            <div class="name">Nhà Hàng Ẩm Thực Sông Vàm</div>
+                                            <div class="address">45 Trương Định, Thành phố Tân An, Long An</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="map-item" data-lat="10.605019" data-lng="106.495826">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNn_qZdV6_0-v47RqQHhJzz5szL-MKblXWWg&s" 
+                                            alt="Nhà hàng 5">
+                                        <div>
+                                            <div class="name">Nhà Hàng Hương Quê</div>
+                                            <div class="address">189 Nguyễn Thái Bình, Bến Lức, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.529100" data-lng="106.410200">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ9bITKEuD3zMkX3Gk6N5aRflY5dJH7e8tVw&s" 
+                                            alt="Nhà hàng 6">
+                                        <div>
+                                            <div class="name">Nhà Hàng Ẩm Thực Đồng Quê</div>
+                                            <div class="address">99 Trần Hưng Đạo, Thành phố Tân An, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.634750" data-lng="106.485460">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhwhcfOpwOT3D0tEYzLxVVArI6QvAHR9wzA&s"
+                                            alt="Nhà hàng 7">
+                                        <div>
+                                            <div class="name">Nhà Hàng Hoàng Gia</div>
+                                            <div class="address">88 Phan Văn Mảng, Bến Lức, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.545280" data-lng="106.423560">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqSmwaWbOdVrZHKiMVPHBGhrqLoX8lgrmDA&s"
+                                            alt="Nhà hàng 8">
+                                        <div>
+                                            <div class="name">Nhà Hàng Lan Rừng</div>
+                                            <div class="address">21 Nguyễn An Ninh, Thành phố Tân An, Long An</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="map-item" data-lat="10.689320" data-lng="106.413120">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrDXI7ihBGzMyGcPA6Jx6gIXY15CbKz7Ny2g&s"
+                                            alt="Nhà hàng 9">
+                                        <div>
+                                            <div class="name">Nhà Hàng Tre Xanh</div>
+                                            <div class="address">60 Lê Văn Lương, Đức Hòa, Long An</div>
                                         </div>
                                     </div>
                                 </div>

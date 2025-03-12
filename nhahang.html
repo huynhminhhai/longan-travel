@@ -211,12 +211,8 @@
                     <div class="search-main">
                         <div class="search-field">
                             <select name="category" id="category">
-                                <option value="tatca">Loại nhà hàng</option>
-                                <option value="tatca">Quán ăn địa phương</option>
-                                <option value="vanhoa-giaitri">Nhà hàng đạt chuẩn</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 3 sao</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 4 sao</option>
-                                <option value="vanhoa-giaitri">Nhà hàng 5 sao</option>
+                                <option value="tatca">Tất cả</option>
+                                <option value="tatca">Xung quanh</option>
                             </select>
                         </div>
                         <div class="search-field">
@@ -226,12 +222,31 @@
                             </button>
                         </div>
                     </div>
+                    <div class="filter">
+                        <div class="text">
+                            <img src="./assets/images/mage--filter.svg" alt="Filter"> Lọc
+                        </div>
+                        <div class="option">
+                            <div class="item">
+                                <select name="option-day" id="option-day">
+                                    <option value="">Giá</option>
+                                </select>
+                                <!-- <img src="./assets/images/mage--filter.svg" alt="select"> -->
+                            </div>
+                            <div class="item">
+                                <select name="option-person" id="option-person">
+                                    <option value="">Loại ẩm thực</option>
+                                </select>
+                                <!-- <img src="./assets/images/mage--filter.svg" alt="select"> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="restaurant pt-0">
             <div class="container">
-                <div class="component-list">
+                <div class="component-list d-none">
                     <div class="component-item">
                         <a href="#" class="card">
                             <div class="card-img">
@@ -334,10 +349,133 @@
                         </a>
                     </div>
                 </div>
+                <div class="component-list ">
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://file.hstatic.net/200000844097/file/st-lakes-golf-_-villas-goda-golf__27__6fcee2c4056e477cac6b367fb45011f2.png"
+                                    alt="Nhà Hàng Sân Golf West Lakes" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Nhà Hàng Sân Golf West Lakes</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 145, ĐT822, ấp Chánh, Đức Hòa, Long An Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal/Images/LAN/vamcofarmstay/hai_san_phu_quy/hai_san_phu_quy_11_521496205.jpg"
+                                    alt="HẢI SẢN PHÚ QUÝ" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">HẢI SẢN PHÚ QUÝ</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            09 Đường số 1, KDC Đường 10 Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://lh4.googleusercontent.com/proxy/1kWPmEJzM6rbgs0UMGzb9Wbd-mWw-PBlMjSNHHoUvJ7vqU8ZndjLHdo9lRdvR0Uzu3B6Da5DeFSJcESahFUPSVPqL0GaAzXbDHXFnw5djkkepJOU9pE0FyeLnHKPTHzG3so6tvXigKnW_so4kAlh7owKkQ"
+                                    alt="Hải sản Hoàng" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Hải sản Hoàng</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            133 Đường Phan Văn Mãng, KP9, Thị trấn Bến Lức, Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/khongthoigian_nhahang/286790269_106682885406028_1760308845243080320_n_994156856.jpg"
+                                    alt="Nhà Hàng Không Thời Gian" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">Nhà Hàng Không Thời Gian</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 48, Nguyễn Văn Tạo, Phường 4, Tp. Tân An, Long An Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://scontent.iocvnpt.com/resources/portal//Images/LAN/bangdc.lan/tienthanhboat/thumb/275123386_126484249944621_2786125216814893871_n_161423593.jpg"
+                                    alt="TIẾN THÀNH BOATS" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">TIẾN THÀNH BOATS</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Ấp Thạnh Trung, xã Phước Vĩnh Đông, Cần Giuộc, Long An Xã Phước Vĩnh
+                                            Đông, Huyện Cần Giuộc, Tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
                 <div class="pagination">
                     <button type="button" disabled="disabled" class="btn-prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="M31 36L19 24l12-12"></path>
                         </svg>
                     </button>
@@ -348,7 +486,7 @@
                     </ul>
                     <button type="button" disabled="disabled" class="btn-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="m19 12l12 12l-12 12"></path>
                         </svg>
                     </button>

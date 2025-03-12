@@ -1,10 +1,12 @@
 const data = [
     // Tin tức, sự kiện
-    { category: "Tin tức", title: "Đại hội Đảng bộ Tân Trụ 2025", details: "Diễn ra ngày 20/2/2025", link: './news-detail.html' },
-    { category: "Tin tức", title: "Khánh thành cầu mới", details: "Tại xã Nhựt Ninh", link: './news-detail.html' },
+    { category: "Tin tức", title: "Trồng khoai mì ruột vàng mang lại thu nhập cao", link: './news-detail.html' },
+    { category: "Sự kiện", title: "KHÁT VỌNG SÔNG VÀM 2024 - LONG AN ĐÃ SẴN SÀNG", link: './event-detail.html' },
+    // Tour
+    { category: "Tour", title: "Tour du lịch Làng nổi Tân Lập", link: './tour-chitiet.html' },
     // Điểm đến
-    { category: "Điểm đến", title: "Đường Cau Vua", details: "Xã Đức Tân - Đường chụp ảnh đẹp", link: './camera360.html#cho-tan-tru' },
-    { category: "Điểm đến", title: "Vàm Nhựt Tảo", details: "Xã An Nhựt Tân - Di tích lịch sử", link: './camera360.html#cho-tan-tru' },
+    { category: "Điểm đến nổi bật", title: "Nhà Trăm Cột", link: './diemden-chitiet.html' },
+    { category: "Điểm du lịch", title: "Trung tâm Nghiên cứu Bảo tồn và Phát triển Dược liệu Đồng Tháp Mười", link: './diemdulich-chitiet.html' },
 ];
 
 $(document).ready(function () {
@@ -59,13 +61,12 @@ $(document).ready(function () {
         }
 
         const filtered = data.filter(item =>
-            item.title.toLowerCase().includes(query.toLowerCase()) ||
-            item.details.toLowerCase().includes(query.toLowerCase())
+            item.title.toLowerCase().includes(query.toLowerCase())
         );
 
         filtered.forEach(item => {
             const li = document.createElement('li');
-            li.innerHTML = `<a href="${item.link}"><span class="category">[${item.category}]</span> ${item.title} - ${item.details}</a>`;
+            li.innerHTML = `<a href="${item.link}"><span class="category">[${item.category}]</span> ${item.title}</a>`;
             // li.onclick = () => {
             //     alert(`Bạn chọn: ${item.title} (${item.category})`);
             // };

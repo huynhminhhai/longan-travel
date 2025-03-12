@@ -208,18 +208,26 @@
         <section class="search">
             <div class="container">
                 <div class="search-wrap">
-                    <div class="search-field">
-                        <input type="text" placeholder="Tìm kiếm">
-                        <button>
-                            <img src="./assets/images/search.svg" alt="search">
-                        </button>
+                    <div class="search-main">
+                        <div class="search-field">
+                            <select name="category" id="category">
+                                <option value="tatca">Tất cả</option>
+                                <option value="tatca">Xung quanh</option>
+                            </select>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Tìm kiếm">
+                            <button>
+                                <img src="./assets/images/search.svg" alt="search">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="restaurant pt-0">
             <div class="container">
-                <div class="component-list">
+                <div class="component-list d-none">
                     <div class="component-item">
                         <a href="#" class="card">
                             <div class="card-img">
@@ -341,10 +349,156 @@
                         </a>
                     </div>
                 </div>
+                <div class="component-list">
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH MTV NGỌC MAI" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH MTV NGỌC MAI</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            363, Ấp Vĩnh Hòa, Xã An Vĩnh Ngãi, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH TRUNG DŨNG LONG AN " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH TRUNG DŨNG LONG AN </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            108 Tuyến tránh Quốc Lộ 1, Phường 4, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH TRUNG DŨNG LONG AN " class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH TRUNG DŨNG LONG AN </div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            108 Tuyến tránh Quốc Lộ 1, Phường 4, Thành phố Tân An, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 579, Ngã 3 Mỹ Hạnh, Ấp Mới 2, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">CÔNG TY TNHH VẬT TƯ XĂNG DẦU LÊ TRUNG</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Số 579, Ngã 3 Mỹ Hạnh, Ấp Mới 2, Xã Mỹ Hạnh Nam, Huyện Đức Hoà, Tỉnh Long An, Việt Nam
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="component-item">
+                        <a href="#" class="card">
+                            <div class="near">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1483/1483336.png" alt="distance">
+                                <span>0.3km</span>
+                            </div>
+                            <div class="card-img">
+                                <img src="https://opgplus.com/wp-content/uploads/2023/08/gas-station.jpeg"
+                                    alt="PETROLIMEX - CỬA HÀNG 02" class="card-top-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">PETROLIMEX - CỬA HÀNG 02</div>
+                                <div class="card-text">
+                                    <ul class="infor">
+                                        <li>
+                                            <img src="./assets/images/place.svg" alt="place">
+                                            Đường Trương Định, phường 2, thành phố Tân An, tỉnh Long An
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
                 <div class="pagination">
                     <button type="button" disabled="disabled" class="btn-prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="M31 36L19 24l12-12"></path>
                         </svg>
                     </button>
@@ -355,7 +509,7 @@
                     </ul>
                     <button type="button" disabled="disabled" class="btn-next">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path fill="none" stroke="#842029" stroke-linecap="round" stroke-linejoin="round"
+                            <path fill="none" stroke="#355933" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="4" d="m19 12l12 12l-12 12"></path>
                         </svg>
                     </button>

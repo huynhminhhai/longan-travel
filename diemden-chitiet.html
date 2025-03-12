@@ -149,7 +149,9 @@
                                 <img src="https://cdn-icons-png.flaticon.com/128/323/323319.png" alt="Tiếng Việt">
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"><img src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN">EN</a></li>
+                                <li><a class="dropdown-item" href="#"><img
+                                            src="https://cdn-icons-png.flaticon.com/128/197/197485.png" alt="EN">EN</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -309,32 +311,15 @@
                             <div class="infor-map">
                                 <section class="map py-0">
                                     <div class="map-wrap d-block">
-                                        <div id="map"></div>
-                                        <div class="sidebar d-none">
-                                            <ul class="nav nav-tabs" id="mapTab" role="tablist">
-                                                <li class="nav-item map-nav-item" role="presentation" data-type="tourist">
-                                                    <button class="nav-link active" id="tourist-map-tab" data-bs-toggle="tab"
-                                                        data-bs-target="#tourist-map" type="button" role="tab"
-                                                        aria-controls="tourist-map" aria-selected="true">
-                                                        <img src="https://cdn-icons-png.flaticon.com/128/948/948036.png" alt="resturant">
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                            <div class="tab-content" id="mapTab">
-                                                <div class="tab-pane fade show active" id="tourist-map"
-                                                    role="tabpanel" aria-labelledby="tourist-map-tab">
-                                                    <div class="map-list">
-                                                        <div class="map-item" data-lat="10.482655336277755" data-lng="106.69146306623148">
-                                                            <img src="https://ik.imagekit.io/tvlk/blog/2023/11/nha-tram-cot-cover.jpg"
-                                                                alt="Nhà Trăm Cột">
-                                                            <div>
-                                                                <div class="name">Nhà Trăm Cột</div>
-                                                                <div class="address">Ấp Cầu Ngang, Xã Long Hựu Đông, Huyện Cần Đước, Tỉnh Long An</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
+                                        <div id="map-single"></div>
+                                        <div class="map-item d-none" data-lat="10.482655336277755"
+                                            data-lng="106.69146306623148" data-icon="tourist">
+                                            <img src="https://ik.imagekit.io/tvlk/blog/2023/11/nha-tram-cot-cover.jpg"
+                                                alt="Nhà Trăm Cột">
+                                            <div>
+                                                <div class="name">Nhà Trăm Cột</div>
+                                                <div class="address">Ấp Cầu Ngang, Xã Long Hựu Đông, Huyện Cần Đước,
+                                                    Tỉnh Long An</div>
                                             </div>
                                         </div>
                                     </div>
@@ -436,7 +421,8 @@
                                             class="date">05/03/2025</span>
                                     </div>
                                     <span class="desc">
-                                        Phong cảnh rất đẹp, không khí trong lành, phù hợp nghỉ dưỡng cuối tuần. Có nhiều góc sống ảo siêu xịn.
+                                        Phong cảnh rất đẹp, không khí trong lành, phù hợp nghỉ dưỡng cuối tuần. Có nhiều
+                                        góc sống ảo siêu xịn.
                                     </span>
                                 </div>
                             </div>
