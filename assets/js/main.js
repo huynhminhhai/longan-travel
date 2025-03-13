@@ -261,7 +261,7 @@ $(document).ready(function () {
 
     const mainSwiper = new Swiper('.main-slider', {
         loop: true,
-        centeredSlides: true,
+        loopedSlides: 4,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -274,11 +274,12 @@ $(document).ready(function () {
         spaceBetween: 10,
         centeredSlides: true,
         loop: true,
-        slideToClickedSlide: true
+        slideToClickedSlide: true,
+        loopedSlides: 4
     });
 
-    thumbnailSwiper.controller.control = mainSwiper;
     mainSwiper.controller.control = thumbnailSwiper;
+    thumbnailSwiper.controller.control = mainSwiper;
 
     /**
     ** mobile header
